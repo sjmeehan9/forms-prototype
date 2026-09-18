@@ -12,6 +12,8 @@ import type { StorageAdapter, StoredFile, StoredItem } from "../types.js";
 import { FrameioApiError, FrameioClient, type FrameioNode } from "./client.js";
 
 const UPLOAD_COMPLETION_TIMEOUT_MS = 120_000;
+const DOWNLOAD_LINK_TIMEOUT_MS = 90_000;
+const DOWNLOAD_LINK_RETRY_MS = 5_000;
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -69,12 +71,26 @@ export class FrameioStorageAdapter implements StorageAdapter {
     }
   }
 
-  async download(fileId: string, destination: string): Promise<StoredFile> {
-    const node = await this.client.file(this.accountId, fileId, "media_links.original");
-    const url = node.media_links?.original?.download_url;
-    if (!url) {
-      throw new PrototypeError("download", `Frame.io returned no original download link for ${node.name} (${fileId}); file status is ${node.status ?? "unknown"}`);
+  /** Freshly uploaded files can lack an original download link for a short time; poll before giving up. */
+  private async originalDownloadUrl(fileId: string): Promise<{ node: FrameioNode; url: string }> {
+    const deadline = Date.now() + DOWNLOAD_LINK_TIMEOUT_MS;
+    let node = await this.client.file(this.accountId, fileId, "media_links.original");
+    for (;;) {
+      const url = node.media_links?.original?.download_url;
+      if (url) {
+        return { node, url };
+      }
+      if (Date.now() > deadline) {
+        throw new PrototypeError("download", `Frame.io returned no original download link for ${node.name} (${fileId}) within ${DOWNLOAD_LINK_TIMEOUT_MS} ms; file status is ${node.status ?? "unknown"}`);
+      }
+      this.log.info(`waiting for Frame.io to finish processing ${node.name} before download`);
+      await sleep(DOWNLOAD_LINK_RETRY_MS);
+      node = await this.client.file(this.accountId, fileId, "media_links.original");
     }
+  }
+
+  async download(fileId: string, destination: string): Promise<StoredFile> {
+    const { node, url } = await this.originalDownloadUrl(fileId);
     const response = await fetch(url);
     if (!response.ok || !response.body) {
       throw new PrototypeError("download", `download of ${node.name} failed with HTTP ${response.status}`);

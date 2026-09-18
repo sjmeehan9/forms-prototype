@@ -46,3 +46,30 @@ export function messageOf(error: unknown): string {
   }
   return String(error);
 }
+
+/**
+ * UXP exposes InDesign enumeration values as objects, so `===` against a constant never matches.
+ * Adobe's guidance is to compare the string forms of both sides.
+ */
+export function enumEquals(actual: unknown, expected: unknown): boolean {
+  if (actual === expected) {
+    return true;
+  }
+  if (actual === undefined || actual === null || expected === undefined || expected === null) {
+    return false;
+  }
+  return String(actual) === String(expected);
+}
+
+export function enumName(value: unknown): string {
+  try {
+    return String(value);
+  } catch {
+    return "unknown";
+  }
+}
+
+/** InDesign reports font names as "Family<TAB>Style"; make them readable. */
+export function normalizeFontName(name: unknown): string {
+  return String(name).replace(/\t+/g, " ").replace(/\s+/g, " ").trim();
+}

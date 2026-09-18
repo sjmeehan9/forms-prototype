@@ -207,10 +207,22 @@ export const UxpJobSchema = z.discriminatedUnion("type", [
     bundle: z.string().min(1),
     outputDir: z.string().min(1),
   }),
+  /** Development helper: build a synthetic content library and templates from a register and manifests. */
+  z.object({
+    schemaVersion,
+    jobId: z.string().min(1),
+    type: z.literal("create-samples"),
+    register: z.string().min(1),
+    manifestDir: z.string().min(1),
+    brandDir: z.string().min(1),
+    libraryOutput: z.string().min(1),
+    templateOutputDir: z.string().min(1),
+  }),
 ]);
 export type UxpJob = z.infer<typeof UxpJobSchema>;
 export type ExtractContentJob = Extract<UxpJob, { type: "extract-content" }>;
 export type ComposeDocumentJob = Extract<UxpJob, { type: "compose-document" }>;
+export type CreateSamplesJob = Extract<UxpJob, { type: "create-samples" }>;
 
 export const UxpChecksSchema = z.object({
   overset: z.boolean(),

@@ -11,7 +11,7 @@ import {
 } from "@prototype/contracts";
 import { exportInteractivePdf, exportPrintPdf, saveIndd } from "./export";
 import { runPreflight } from "./preflight";
-import { blocksToStoryText, completedResult, failedResult, hasCheckFailures, messageOf, paragraphStyleFor } from "./text-model";
+import { blocksToStoryText, completedResult, enumEquals, enumName, failedResult, hasCheckFailures, messageOf, normalizeFontName, paragraphStyleFor } from "./text-model";
 import { ensureFolder, nativePathOf, readText, type Entry } from "./uxp-fs";
 
 type Item = any;
@@ -144,9 +144,13 @@ function collectChecks(doc: any, notes: string[]): UxpChecks {
   const stories: Item[] = doc.stories.everyItem().getElements();
   const overset = stories.some((story) => story.overflows === true);
   const links: Item[] = doc.links.everyItem().getElements();
-  const missingLinks = links.filter((link) => link.status !== LinkStatus.NORMAL).map((link) => String(link.name));
+  const missingLinks = links
+    .filter((link) => !enumEquals(link.status, LinkStatus.NORMAL))
+    .map((link) => `${String(link.name)} (status ${enumName(link.status)})`);
   const fonts: Item[] = doc.fonts.everyItem().getElements();
-  const missingFonts = fonts.filter((font) => font.status !== FontStatus.INSTALLED).map((font) => String(font.name));
+  const missingFonts = fonts
+    .filter((font) => !enumEquals(font.status, FontStatus.INSTALLED))
+    .map((font) => `${normalizeFontName(font.name)} (status ${enumName(font.status)})`);
   const preflight = runPreflight(doc);
   notes.push(...preflight.notes);
   return { overset, missingLinks, missingFonts, preflightErrors: preflight.errors };

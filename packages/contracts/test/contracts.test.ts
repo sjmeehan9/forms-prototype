@@ -62,6 +62,15 @@ describe("contracts", () => {
     ).toThrow(ContractError);
   });
 
+  it("accepts the create-samples helper job", () => {
+    const job = parseWithSchema(
+      UxpJobSchema,
+      { schemaVersion: 1, jobId: "s", type: "create-samples", register: "r.json", manifestDir: "m", brandDir: "b", libraryOutput: "lib.indd", templateOutputDir: "t" },
+      "job",
+    );
+    expect(job.type).toBe("create-samples");
+  });
+
   it("requires the checks block on results", () => {
     expect(() =>
       parseWithSchema(UxpResultSchema, { schemaVersion: 1, jobId: "j1", status: "completed", outputs: [] }, "result"),

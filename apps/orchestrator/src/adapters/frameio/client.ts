@@ -125,6 +125,10 @@ export class FrameioClient {
     return (await this.request<Single<FrameioNode>>("GET", `/v4/accounts/${accountId}/files/${fileId}`, { query: { include } })).data;
   }
 
+  async deleteFile(accountId: string, fileId: string): Promise<void> {
+    await this.request<unknown>("DELETE", `/v4/accounts/${accountId}/files/${fileId}`);
+  }
+
   async moveFile(accountId: string, fileId: string, parentFolderId: string): Promise<FrameioNode> {
     return (await this.request<Single<FrameioNode>>("PATCH", `/v4/accounts/${accountId}/files/${fileId}/move`, { body: { data: { parent_id: parentFolderId } } })).data;
   }

@@ -7,10 +7,14 @@ import { errorDetails, errorMessage } from "./domain/models.js";
 import { createLogger } from "./log.js";
 import { bootstrapFrameio } from "./orchestrator/bootstrap-frameio.js";
 import { createContext } from "./orchestrator/context.js";
+import { createSamples } from "./orchestrator/create-samples.js";
 import { assertExpectedE2E, runFixtureE2E } from "./orchestrator/fixture-e2e.js";
 import { watch } from "./orchestrator/poller.js";
 import { probeFrameio } from "./orchestrator/probe-frameio.js";
+import { requestFrameio } from "./orchestrator/request-frameio.js";
 import { runRequest, type RunOutcome } from "./orchestrator/run-request.js";
+import { listFrameio } from "./orchestrator/list-frameio.js";
+import { seedFrameio } from "./orchestrator/seed-frameio.js";
 import { APPLICATION_VERSION } from "./version.js";
 
 const log = createLogger();
@@ -107,6 +111,64 @@ program
     const config = await loadConfig({ overrides: overrides() });
     const results = await probeFrameio(config, log, { keep: options.keep });
     log.info(JSON.stringify(results, null, 2));
+  });
+
+program
+  .command("seed-frameio")
+  .description("Upload the synthetic fixture source package into the Frame.io layout and optionally create a request")
+  .option("--request <name>", "also create this request folder under Ready to generate")
+  .option("--replace", "delete same-named files before uploading", false)
+  .option("--from <dir>", "seed from this store instead of the fixture, e.g. .prototype/local-frameio after create-samples")
+  .action(async (options: { request?: string; replace: boolean; from?: string }) => {
+    const config = await loadConfig({ overrides: overrides() });
+    const summary = await seedFrameio(config, log, { requestName: options.request, replace: options.replace, from: options.from });
+    log.info(`uploaded ${summary.uploaded} file(s), skipped ${summary.skipped} existing, replaced ${summary.replaced}`);
+    if (summary.requestFolderId) {
+      log.info(`request ${options.request} is waiting in Ready to generate (${summary.requestFolderId})`);
+    }
+  });
+
+program
+  .command("create-samples")
+  .description("Ask the running InDesign panel to build the synthetic content library and templates into the local store")
+  .action(async () => {
+    const config = await loadConfig({ overrides: { ...overrides(), STORAGE_MODE: "local", COMPOSITION_MODE: "uxp" } });
+    const result = await createSamples(config, log);
+    for (const output of result.outputs) {
+      log.info(`  created ${output}`);
+    }
+    for (const note of result.notes ?? []) {
+      log.info(`  ${note}`);
+    }
+    log.info("next: npm run prototype -- --storage local --composition uxp run req-001-initial-build");
+  });
+
+program
+  .command("request-frameio <name>")
+  .description("Create a request folder with request.json under Ready to generate in Frame.io")
+  .option("--json <file>", "upload this request.json instead of generating one")
+  .option("--raw", "skip validation of --json (stages an invalid request on purpose)", false)
+  .option("--documents <ids>", "comma-separated document ids to limit the request")
+  .option("--brands <ids>", "comma-separated brand ids to limit the request")
+  .action(async (name: string, options: { json?: string; raw: boolean; documents?: string; brands?: string }) => {
+    const config = await loadConfig({ overrides: overrides() });
+    await requestFrameio(config, log, {
+      name,
+      jsonFile: options.json,
+      raw: options.raw,
+      documentIds: options.documents?.split(",").map((id) => id.trim()).filter(Boolean),
+      brandIds: options.brands?.split(",").map((id) => id.trim()).filter(Boolean),
+    });
+  });
+
+program
+  .command("list-frameio [path...]")
+  .description("Print the Frame.io project tree below a folder path given by names, e.g. \"03 Generated variants\"")
+  .option("--depth <n>", "maximum folder depth to descend", "4")
+  .action(async (segments: string[], options: { depth: string }) => {
+    const config = await loadConfig({ overrides: overrides() });
+    const lines = await listFrameio(config, log, segments, Number(options.depth));
+    console.log(lines.join("\n"));
   });
 
 program

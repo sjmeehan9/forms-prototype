@@ -1,6 +1,6 @@
 import { ListType, SaveOptions, app } from "indesign";
 import type { ComponentBlock, ExtractContentJob, UxpResult } from "@prototype/contracts";
-import { completedResult } from "./text-model";
+import { completedResult, enumEquals } from "./text-model";
 import { ensureFolder, nativePathOf, segments, writeTextAtomic, type Entry } from "./uxp-fs";
 
 type Item = any;
@@ -49,14 +49,16 @@ export function paragraphsToBlocks(paragraphs: Item[]): ComponentBlock[] {
     } catch {
       style = undefined;
     }
-    let isList = false;
+    let isList = /list/i.test(style ?? "");
     let level = 1;
     try {
       const listType = paragraph.bulletsAndNumberingListType;
-      isList = listType !== undefined && listType !== ListType.NO_LIST;
+      if (listType !== undefined && listType !== null) {
+        isList = isList || !enumEquals(listType, ListType.NO_LIST);
+      }
       level = Number(paragraph.numberingLevel) || 1;
     } catch {
-      isList = false;
+      // Keep the style-name fallback when the list properties are unavailable.
     }
     blocks.push(isList ? { type: "list-item", text, level, style } : { type: "paragraph", text, style });
   }

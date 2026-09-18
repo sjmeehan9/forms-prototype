@@ -21,6 +21,10 @@
     "auth:frameio": "npm run prototype --silent -- auth-frameio",
     "bootstrap:frameio": "npm run prototype --silent -- bootstrap-frameio",
     "probe:frameio": "npm run prototype --silent -- probe-frameio",
+    "seed:frameio": "npm run prototype --silent -- seed-frameio",
+    "list:frameio": "npm run prototype --silent -- list-frameio",
+    "request:frameio": "npm run prototype --silent -- request-frameio",
+    "samples:create": "npm run prototype --silent -- create-samples",
     "fixture:e2e": "npm run prototype --silent -- fixture-e2e"
   },
   "devDependencies": {

@@ -1,6 +1,7 @@
 import path from "node:path";
 import { UxpResultSchema, parseWithSchema, type UxpJob, type UxpResult } from "@prototype/contracts";
 import { PrototypeError } from "../../domain/models.js";
+import { rm } from "node:fs/promises";
 import { ensureDir, pathExists, readJson, writeJsonAtomic } from "../../util/fs.js";
 import type { CompositionAdapter } from "../types.js";
 
@@ -50,11 +51,20 @@ export class LocalQueueCompositionAdapter implements CompositionAdapter {
     private readonly pollMs = 500,
   ) {}
 
+  /** Remove any leftover result or failed job file with this id so a re-run cannot read stale output. */
+  private async clearStale(paths: QueuePaths, jobId: string): Promise<void> {
+    for (const stale of [path.join(paths.outbox, `${jobId}.json`), path.join(paths.failed, `${jobId}.json`), path.join(paths.processing, `${jobId}.json`)]) {
+      await rm(stale, { force: true });
+    }
+  }
+
   async submit(job: UxpJob): Promise<void> {
     const paths = await ensureQueue(this.home);
+    await this.clearStale(paths, job.jobId);
     await writeJobAtomic(paths.inbox, job);
   }
 
+  /** Waits for `outbox/<jobId>.json`, then removes it; the caller keeps the parsed result as evidence. */
   async wait(jobId: string): Promise<UxpResult> {
     const paths = queuePaths(this.home);
     const resultFile = path.join(paths.outbox, `${jobId}.json`);
@@ -72,6 +82,7 @@ export class LocalQueueCompositionAdapter implements CompositionAdapter {
     if (result.jobId !== jobId) {
       throw new PrototypeError("compose", `UXP result file ${resultFile} carries job id ${result.jobId}, expected ${jobId}`);
     }
+    await rm(resultFile, { force: true });
     return result;
   }
 }

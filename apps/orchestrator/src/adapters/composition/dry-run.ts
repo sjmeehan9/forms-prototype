@@ -83,7 +83,10 @@ export class DryRunCompositionAdapter implements CompositionAdapter {
     if (job.type === "extract-content") {
       return this.extract(job);
     }
-    return this.compose(job);
+    if (job.type === "compose-document") {
+      return this.compose(job);
+    }
+    return { schemaVersion: 1, jobId: job.jobId, status: "failed", outputs: [], checks: CLEAN_CHECKS, error: `${job.type} needs the InDesign panel; it is not available in dry-run mode` };
   }
 
   private async extract(job: Extract<UxpJob, { type: "extract-content" }>): Promise<UxpResult> {

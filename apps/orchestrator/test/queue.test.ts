@@ -35,6 +35,19 @@ describe("local queue", () => {
     await expect(adapter.wait("job-2")).rejects.toThrow(/carries job id other/);
   });
 
+  it("clears stale results on submit and consumes results after reading", async () => {
+    const home = await tempDir();
+    const paths = await ensureQueue(home);
+    const stale = path.join(paths.outbox, "job-3.json");
+    await writeFile(stale, JSON.stringify({ schemaVersion: 1, jobId: "job-3", status: "failed", outputs: [], checks: { overset: false, missingLinks: [], missingFonts: [], preflightErrors: [] } }));
+    const adapter = new LocalQueueCompositionAdapter(home, 500, 20);
+    await adapter.submit({ schemaVersion: 1, jobId: "job-3", type: "extract-content", inputIndd: "in.indd", outputJson: "out.json" });
+    expect(await readdir(paths.outbox)).toEqual([]);
+    await writeFile(stale, JSON.stringify({ schemaVersion: 1, jobId: "job-3", status: "completed", outputs: ["out.json"], checks: { overset: false, missingLinks: [], missingFonts: [], preflightErrors: [] } }));
+    expect((await adapter.wait("job-3")).status).toBe("completed");
+    expect(await readdir(paths.outbox)).toEqual([]);
+  });
+
   it("never leaves a .tmp file behind", async () => {
     const home = await tempDir();
     const file = await writeJobAtomic(queuePaths(home).inbox, { schemaVersion: 1, jobId: "j", type: "compose-document", template: "t", bundle: "b", outputDir: "o" });

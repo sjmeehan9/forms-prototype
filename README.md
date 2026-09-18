@@ -57,8 +57,8 @@ client id or secret anywhere else.
 | `TLS_CERT_FILE`, `TLS_KEY_FILE` | `<home>/tls/localhost*.pem` | Certificate for the local OAuth callback. |
 
 Files the application keeps under `PROTOTYPE_HOME` (all ignored by git): `auth.json` (OAuth tokens, mode 600),
-`frameio.json` (discovered ids and folder layout), `state.json` (processed requests and the last successful
-source snapshot), `capabilities.json`, `tls/`, `queue/{inbox,processing,outbox,failed}`, `work/<request>/`
+`frameio.json` (discovered ids and folder layout), `state.json` and `state.local.json` (processed requests and
+the last successful source snapshot, one per storage mode), `capabilities.json`, `tls/`, `queue/{inbox,processing,outbox,failed}`, `work/<request>/`
 and `local-frameio/`.
 
 ## Frame.io setup (one time)
@@ -89,6 +89,14 @@ and `local-frameio/`.
    npm run probe:frameio
    ```
 
+4. Optional: upload the synthetic fixture into the layout and queue a request, to exercise the Frame.io loop
+   before real InDesign files exist. `--replace` swaps same-named files; `--request <name>` creates a request
+   folder in `Ready to generate`.
+
+   ```bash
+   npm run seed:frameio -- --request req-001-initial-build
+   ```
+
 ## InDesign panel (UXP)
 
 1. Build the plugin bundle into `apps/indesign-plugin/dist`.
@@ -103,6 +111,24 @@ and `local-frameio/`.
    `PROTOTYPE_HOME`). The choice is remembered across InDesign sessions.
 4. Click Start worker. Keep InDesign and the panel open while builds run; the worker scans `queue/inbox` every
    two seconds and processes one job at a time. Results are written atomically to `queue/outbox`.
+5. Smoke test with real InDesign files. The first command asks the panel to build a synthetic content library
+   and the three templates from the fixture into the local store (`.prototype/local-frameio`). The second runs
+   the seeded request through the genuine extract and compose path; outputs land in
+   `.prototype/local-frameio/03 Generated variants`.
+
+   ```bash
+   npm run samples:create
+   ```
+
+   ```bash
+   npm run prototype -- --storage local --composition uxp run req-001-initial-build
+   ```
+
+   To move the real library and templates into Frame.io afterwards, replacing the text placeholders:
+
+   ```bash
+   npm run seed:frameio -- --from .prototype/local-frameio --replace
+   ```
 
 ## Running
 
@@ -121,6 +147,13 @@ npm run prototype -- run req-001-initial-build
 Global options go before the command: `--storage local|frameio`, `--composition uxp|dry-run|firefly`,
 `--home <dir>`. For example `npm run prototype -- --composition dry-run watch` exercises the Frame.io loop
 without InDesign.
+
+Create a request folder from the terminal instead of the Frame.io UI (optionally limited to some documents or
+brands, or staging a deliberately invalid `request.json` with `--json <file> --raw`):
+
+```bash
+npm run request:frameio -- req-005-example
+```
 
 A request is a folder inside `00 Requests/Ready to generate`. It may contain a `request.json`
 (`schemaVersion`, `requestId`, `requestedAt`, optional `source` ids, optional `documentIds` and `brandIds`);

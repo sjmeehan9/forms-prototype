@@ -13,6 +13,9 @@ declare module "indesign" {
   export const LinkStatus: any;
   export const FontStatus: any;
   export const ListType: any;
+  export const MeasurementUnits: any;
+  export const AutoSizingTypeEnum: any;
+  export const AutoSizingReferenceEnum: any;
 }
 
 declare module "uxp" {

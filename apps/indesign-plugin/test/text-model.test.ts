@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { blocksToStoryText, completedResult, failedResult, hasCheckFailures, paragraphStyleFor, parseJobText } from "../src/text-model";
+import { blocksToStoryText, completedResult, enumEquals, failedResult, hasCheckFailures, normalizeFontName, paragraphStyleFor, parseJobText } from "../src/text-model";
 import { flattenAggregatedResults } from "../src/preflight-results";
 
 describe("text model", () => {
@@ -29,10 +29,35 @@ describe("text model", () => {
 });
 
 describe("preflight results", () => {
-  it("flattens InDesign aggregated results into readable lines", () => {
-    const results = ["[Basic]", "doc.indd", [["TEXT", [["Overset text", [["1", "Text frame on page 1"]]]]], ["LINKS", [["Missing link", [["2", "logo.svg"]]]]]]];
-    expect(flattenAggregatedResults(results)).toEqual(["TEXT > Overset text: 1 Text frame on page 1", "LINKS > Missing link: 2 logo.svg"]);
+  it("flattens the nested shape InDesign returns into one line per finding", () => {
+    const description = "Problem: Missing font\nFix: Edit the source file to apply a different font.";
+    const details = [["Problem", "Missing font"], ["Fix", "Edit the source file to apply a different font."]];
+    const results = [
+      "[Basic]",
+      "doc.indd",
+      [
+        ["TEXT (4)", [["Missing font (4)", [["Arial (2)", [["logo-brand-a.svg", "1", description, details], ["diagram.benefits.svg", "1", description, details]]]]]]],
+        ["LINKS (1)", [["Missing link (1)", [["photo.jpg", "2", "Problem: Missing link", [["Problem", "Missing link"]]]]]]],
+      ],
+    ];
+    expect(flattenAggregatedResults(results)).toEqual([
+      "TEXT (4) > Missing font (4) > Arial (2) > logo-brand-a.svg | 1 | Problem: Missing font / Fix: Edit the source file to apply a different font.",
+      "TEXT (4) > Missing font (4) > Arial (2) > diagram.benefits.svg | 1 | Problem: Missing font / Fix: Edit the source file to apply a different font.",
+      "LINKS (1) > Missing link (1) > photo.jpg | 2 | Problem: Missing link",
+    ]);
     expect(flattenAggregatedResults(["[Basic]", "doc.indd", []])).toEqual([]);
     expect(flattenAggregatedResults("unexpected")).toEqual(["unexpected"]);
+  });
+});
+
+describe("enum helpers", () => {
+  it("compares UXP enum objects by their string form", () => {
+    const normal = { toString: () => "1852797549" };
+    const other = { toString: () => "1819242340" };
+    expect(enumEquals(normal, { toString: () => "1852797549" })).toBe(true);
+    expect(enumEquals(normal, other)).toBe(false);
+    expect(enumEquals(undefined, normal)).toBe(false);
+    expect(enumEquals(7, 7)).toBe(true);
+    expect(normalizeFontName("Minion Pro\tRegular")).toBe("Minion Pro Regular");
   });
 });

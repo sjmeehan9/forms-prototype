@@ -89,19 +89,24 @@ function mergeSource(defaults: Partial<BuildRequestSource>, fromRequest: Partial
   return result.data;
 }
 
-async function extractComponents(ctx: RunContext, pkg: SourcePackage, workDir: string, requestSlug: string): Promise<ComponentRegister> {
+async function recordResult(workDir: string, result: UxpResult): Promise<void> {
+  await writeJsonAtomic(path.join(workDir, "results", `${result.jobId}.json`), result);
+}
+
+async function extractComponents(ctx: RunContext, pkg: SourcePackage, workDir: string, jobPrefix: string): Promise<ComponentRegister> {
   const outputJson = path.join(workDir, "extracted", "component-register.json");
   await ensureDir(path.dirname(outputJson));
   const job: UxpJob = {
     schemaVersion: 1,
-    jobId: `${requestSlug}--extract`,
+    jobId: `${jobPrefix}--extract`,
     type: "extract-content",
     inputIndd: toJobPath(ctx, pkg.contentLibrary.absolutePath),
     outputJson: toJobPath(ctx, outputJson),
   };
-  ctx.log.info(`[${requestSlug}] extracting reusable content from ${pkg.contentLibrary.name} (job ${job.jobId})`);
+  ctx.log.info(`[${jobPrefix}] extracting reusable content from ${pkg.contentLibrary.name} (job ${job.jobId})`);
   await ctx.composition.submit(job);
   const result = await ctx.composition.wait(job.jobId);
+  await recordResult(workDir, result);
   if (result.status !== "completed") {
     throw new PrototypeError("extract", `content extraction failed: ${result.error ?? "no error detail from InDesign"}`, result.notes ?? []);
   }
@@ -139,7 +144,7 @@ function checkProblems(result: UxpResult): string[] {
 
 type ComposedTarget = { outputs: ReleaseOutput[]; localPaths: Map<string, string>; checks: TargetChecks; bundlePath: string };
 
-async function composeTarget(ctx: RunContext, model: SourceModel, target: OutputTarget, workDir: string, requestSlug: string, started: Date): Promise<ComposedTarget> {
+async function composeTarget(ctx: RunContext, model: SourceModel, target: OutputTarget, workDir: string, jobPrefix: string, started: Date): Promise<ComposedTarget> {
   const manifest = model.manifests.find((m) => m.id === target.documentId);
   const brand = model.brands.find((b) => b.id === target.brandId);
   if (!manifest || !brand) {
@@ -152,15 +157,16 @@ async function composeTarget(ctx: RunContext, model: SourceModel, target: Output
   await ensureDir(outputDir);
   const job: UxpJob = {
     schemaVersion: 1,
-    jobId: `${requestSlug}--${bundle.outputBaseName}`,
+    jobId: `${jobPrefix}--${bundle.outputBaseName}`,
     type: "compose-document",
     template: bundle.template,
     bundle: toJobPath(ctx, bundlePath),
     outputDir: toJobPath(ctx, outputDir),
   };
-  ctx.log.info(`[${requestSlug}] composing ${bundle.outputBaseName} (job ${job.jobId})`);
+  ctx.log.info(`[${jobPrefix}] composing ${bundle.outputBaseName} (job ${job.jobId})`);
   await ctx.composition.submit(job);
   const result = await ctx.composition.wait(job.jobId);
+  await recordResult(workDir, result);
   const checks: TargetChecks = { ...result.checks, documentId: target.documentId, brandId: target.brandId };
   const problems = checkProblems(result);
   if (problems.length > 0) {
@@ -228,6 +234,8 @@ export async function runRequest(ctx: RunContext, ref: BuildRequestRef): Promise
   const workDir = path.join(ctx.config.home, "work", requestSlug);
   const { log } = ctx;
   const started = ctx.now();
+  /** Job ids must be unique per run so a re-run of the same request never reads a stale queue result. */
+  const jobPrefix = `${requestSlug}--${started.toISOString().replace(/[-:.TZ]/g, "").slice(0, 14)}`;
   let stage = "claim";
   let requestId = requestFolder;
 
@@ -249,7 +257,7 @@ export async function runRequest(ctx: RunContext, ref: BuildRequestRef): Promise
     const pkg = await downloadSourcePackage(ctx.storage, source, path.join(workDir, "source"), log);
 
     stage = "extract";
-    const register = await extractComponents(ctx, pkg, workDir, requestSlug);
+    const register = await extractComponents(ctx, pkg, workDir, jobPrefix);
 
     stage = "validate";
     const model = await loadSourceModel(pkg, register);
@@ -278,7 +286,7 @@ export async function runRequest(ctx: RunContext, ref: BuildRequestRef): Promise
     const localPaths = new Map<string, string>();
     const checks: TargetChecks[] = [];
     for (const entry of selected) {
-      const composed = await composeTarget(ctx, model, entry.target, workDir, requestSlug, started);
+      const composed = await composeTarget(ctx, model, entry.target, workDir, jobPrefix, started);
       outputs.push(...composed.outputs);
       checks.push(composed.checks);
       for (const [releasePath, localPath] of composed.localPaths) {

@@ -1,6 +1,7 @@
 import { app } from "indesign";
 import type { UxpJob, UxpResult } from "@prototype/contracts";
 import { composeDocument } from "./compose";
+import { createSamples } from "./create-samples";
 import { extractContent } from "./extract-content";
 import { failedResult, messageOf, parseJobText } from "./text-model";
 import { deleteEntry, ensureFolder, getEntry, listJsonFiles, moveEntry, readEntryText, writeTextAtomic, type Entry } from "./uxp-fs";
@@ -102,7 +103,13 @@ export class QueueWorker {
 
     let result: UxpResult;
     try {
-      result = job.type === "extract-content" ? await extractContent(root, job) : await composeDocument(root, job);
+      if (job.type === "extract-content") {
+        result = await extractContent(root, job);
+      } else if (job.type === "compose-document") {
+        result = await composeDocument(root, job);
+      } else {
+        result = await createSamples(root, job);
+      }
     } catch (error) {
       result = failedResult(job.jobId, messageOf(error));
     }

@@ -32,7 +32,7 @@ export type ContextOptions = { now?: () => Date; resetLocalStore?: boolean };
 /** Wire adapters for the configured storage and composition modes. */
 export async function createContext(config: AppConfig, log: Logger, options: ContextOptions = {}): Promise<RunContext> {
   await ensureDir(config.home);
-  const state = new StateStore(path.join(config.home, "state.json"));
+  const state = new StateStore(path.join(config.home, config.storageMode === "local" ? "state.local.json" : "state.json"));
   await state.load();
   const isProcessed = (folderId: string): boolean => state.isProcessed(folderId);
 
