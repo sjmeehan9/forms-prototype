@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "membership-form",
+  "archetype": "form",
+  "templateId": "membership-form.indt",
+  "brandIds": ["brand-a", "brand-b"],
+  "bindings": [
+    { "target": "data:fund.name", "source": { "type": "data", "key": "fund.name" } },
+    { "target": "data:contact.phone", "source": { "type": "data", "key": "contact.phone" } },
+    { "target": "content:form.instructions", "source": { "type": "component", "id": "form.instructions" } },
+    { "target": "content:privacy.notice", "source": { "type": "component", "id": "privacy.notice" } },
+    { "target": "asset:brand.logo", "source": { "type": "asset", "id": "brand.logo" } }
+  ],
+  "styleMap": { "heading": "Heading 2", "body": "Body", "list-item": "List Bullet" },
+  "formFields": [
+    { "name": "member.givenName", "type": "text", "binding": "field:member.givenName", "description": "Given name", "required": true, "tabOrder": 1 },
+    { "name": "member.familyName", "type": "text", "binding": "field:member.familyName", "description": "Family name", "required": true, "tabOrder": 2 },
+    { "name": "member.email", "type": "text", "binding": "field:member.email", "description": "Email address", "tabOrder": 3 },
+    { "name": "member.state", "type": "combo", "binding": "field:member.state", "description": "State or territory", "options": ["ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"], "tabOrder": 4 },
+    { "name": "contribution.frequency", "type": "radio", "binding": "field:contribution.frequency.fortnightly", "description": "Contribute fortnightly", "exportValue": "fortnightly", "group": "contribution.frequency", "tabOrder": 5 },
+    { "name": "contribution.frequency", "type": "radio", "binding": "field:contribution.frequency.monthly", "description": "Contribute monthly", "exportValue": "monthly", "group": "contribution.frequency", "tabOrder": 6 },
+    { "name": "consent.privacy", "type": "checkbox", "binding": "field:consent.privacy", "description": "I have read the privacy notice", "required": true, "exportValue": "Yes", "tabOrder": 7 },
+    { "name": "member.signature", "type": "signature", "binding": "field:member.signature", "description": "Member signature", "tabOrder": 8 }
+  ],
+  "output": { "printPdf": false, "interactivePdf": true, "saveIndd": true }
+}

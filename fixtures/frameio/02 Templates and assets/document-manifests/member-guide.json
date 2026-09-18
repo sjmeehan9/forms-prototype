@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "member-guide",
+  "archetype": "long-guide",
+  "templateId": "member-guide.indt",
+  "brandIds": ["brand-a", "brand-b"],
+  "bindings": [
+    { "target": "data:fund.name", "source": { "type": "data", "key": "fund.name" } },
+    { "target": "data:fees.admin.annual", "source": { "type": "data", "key": "fees.admin.annual" } },
+    { "target": "data:guide.effectiveDate", "source": { "type": "data", "key": "guide.effectiveDate" } },
+    { "target": "content:guide.introduction", "source": { "type": "component", "id": "guide.introduction" } },
+    { "target": "content:benefits.summary", "source": { "type": "component", "id": "benefits.summary" } },
+    { "target": "content:fees.explained", "source": { "type": "component", "id": "fees.explained" } },
+    { "target": "content:privacy.notice", "source": { "type": "component", "id": "privacy.notice" } },
+    { "target": "asset:brand.logo", "source": { "type": "asset", "id": "brand.logo" } }
+  ],
+  "styleMap": { "heading": "Heading 1", "body": "Body", "list-item": "List Bullet", "list-item.2": "List Bullet 2" },
+  "output": { "printPdf": true, "interactivePdf": true, "saveIndd": true }
+}

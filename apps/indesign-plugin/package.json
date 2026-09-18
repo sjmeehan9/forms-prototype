@@ -1,0 +1,14 @@
+{
+  "name": "@prototype/indesign-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Persistent InDesign UXP panel that processes queued extract and compose jobs",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "@prototype/contracts": "*",
+    "zod": "^4.6.5"
+  }
+}

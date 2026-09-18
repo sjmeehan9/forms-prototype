@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "sourceHash": "fixture",
+  "components": [
+    {
+      "id": "privacy.notice",
+      "status": "approved",
+      "owner": "Privacy Officer",
+      "effectiveFrom": "2026-01-01",
+      "blocks": [
+        { "type": "paragraph", "text": "Privacy notice", "style": "heading" },
+        { "type": "paragraph", "text": "We collect your personal information to administer your membership and to contact you about your account. We only share it with service providers who help us do so.", "style": "body" },
+        { "type": "paragraph", "text": "You can ask for a copy of the information we hold about you at any time by contacting us.", "style": "body" }
+      ]
+    },
+    {
+      "id": "form.instructions",
+      "status": "approved",
+      "owner": "Member Services",
+      "effectiveFrom": "2026-01-01",
+      "blocks": [
+        { "type": "paragraph", "text": "How to complete this form", "style": "heading" },
+        { "type": "list-item", "text": "Use black ink and block letters.", "level": 1 },
+        { "type": "list-item", "text": "Sign and date the declaration.", "level": 1 },
+        { "type": "list-item", "text": "Return the form using the contact details on this page.", "level": 1 }
+      ]
+    },
+    {
+      "id": "benefits.summary",
+      "status": "approved",
+      "owner": "Product Team",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        { "type": "paragraph", "text": "Your benefits at a glance", "style": "heading" },
+        { "type": "paragraph", "text": "Membership gives you a retirement account, insurance cover and access to online tools.", "style": "body" },
+        { "type": "list-item", "text": "Competitive fees with no hidden charges.", "level": 1 },
+        { "type": "list-item", "text": "Insurance cover that starts when your account opens.", "level": 1 },
+        { "type": "list-item", "text": "Online access to your balance and statements.", "level": 1 }
+      ]
+    },
+    {
+      "id": "guide.introduction",
+      "status": "approved",
+      "owner": "Product Team",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        { "type": "paragraph", "text": "About this guide", "style": "heading" },
+        { "type": "paragraph", "text": "This guide explains how your membership works, what it costs and how to get help. Keep it with your welcome letter.", "style": "body" }
+      ]
+    },
+    {
+      "id": "fees.explained",
+      "status": "approved",
+      "owner": "Product Team",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        { "type": "paragraph", "text": "Fees and costs", "style": "heading" },
+        { "type": "paragraph", "text": "An administration fee is deducted from your account each year. Investment fees vary by option and are shown in your annual statement.", "style": "body" }
+      ]
+    },
+    {
+      "id": "future.clause",
+      "status": "draft",
+      "owner": "Legal",
+      "blocks": [
+        { "type": "paragraph", "text": "This clause is still in draft and must not appear in any generated document.", "style": "body" }
+      ]
+    }
+  ]
+}

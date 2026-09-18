@@ -1,2 +1,27 @@
-# Environment Variables
-.env*
+# Secrets and local configuration (never commit)
+.env
+.env.local
+.env.*.local
+!.env.example
+*.pem
+*.key
+
+# Local prototype state: OAuth tokens, Frame.io layout, queue, work dirs, outputs
+.prototype/
+
+# Dependencies and build output
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Adobe packages, business documents and generated outputs are never committed.
+# Small synthetic placeholders under fixtures/ are the only exception.
+*.indd
+*.indt
+*.idml
+*.pdf
+!fixtures/**/*.indd
+!fixtures/**/*.indt
+
+# OS noise
+.DS_Store

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "benefits-flyer",
+  "archetype": "short-guide",
+  "templateId": "benefits-flyer.indt",
+  "brandIds": ["brand-a", "brand-b"],
+  "bindings": [
+    { "target": "data:fund.name", "source": { "type": "data", "key": "fund.name" } },
+    { "target": "data:contact.phone", "source": { "type": "data", "key": "contact.phone" } },
+    { "target": "data:fees.admin.annual", "source": { "type": "data", "key": "fees.admin.annual" } },
+    { "target": "content:benefits.summary", "source": { "type": "component", "id": "benefits.summary" } },
+    { "target": "content:privacy.notice", "source": { "type": "component", "id": "privacy.notice" } },
+    { "target": "asset:brand.logo", "source": { "type": "asset", "id": "brand.logo" } },
+    { "target": "asset:diagram.benefits", "source": { "type": "asset", "id": "diagram.benefits" } }
+  ],
+  "styleMap": { "heading": "Heading 1", "body": "Body", "list-item": "List Bullet" },
+  "output": { "printPdf": true, "interactivePdf": false, "saveIndd": true }
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "brand-b",
+  "name": "Northwind Super",
+  "swatches": {
+    "brand.primary": { "cmyk": [0, 80, 60, 10] },
+    "brand.accent": { "cmyk": [60, 0, 100, 0] }
+  },
+  "assets": {
+    "brand.logo": "logo-brand-b.svg"
+  },
+  "data": {
+    "fund.name": "Northwind Super"
+  },
+  "mandatoryComponentIds": ["privacy.notice"]
+}

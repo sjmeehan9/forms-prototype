@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body { font-family: system-ui, sans-serif; font-size: 12px; padding: 12px; color: #dddddd; }
+      h1 { font-size: 14px; margin: 0 0 10px; }
+      .row { margin: 8px 0; }
+      .label { color: #999999; }
+      button { margin-right: 6px; }
+      pre { white-space: pre-wrap; word-break: break-word; background: #222222; padding: 6px; max-height: 180px; overflow: auto; }
+    </style>
+  </head>
+  <body>
+    <h1>Prototype Queue Worker</h1>
+    <div class="row"><button id="select-folder">Select .prototype folder</button></div>
+    <div class="row"><span class="label">Folder:</span> <span id="folder-path">not selected</span></div>
+    <div class="row">
+      <button id="start-worker" disabled>Start worker</button>
+      <button id="stop-worker" disabled>Stop worker</button>
+    </div>
+    <div class="row"><span class="label">Worker:</span> <span id="worker-state">stopped</span></div>
+    <div class="row"><span class="label">Current job:</span> <span id="current-job">none</span></div>
+    <div class="row"><span class="label">Processed:</span> <span id="processed-count">0</span></div>
+    <div class="row"><span class="label">Last result:</span></div>
+    <pre id="last-result">none</pre>
+    <script src="index.js"></script>
+  </body>
+</html>

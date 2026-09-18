@@ -1,0 +1,16 @@
+{
+  "name": "@prototype/orchestrator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mock Workfront orchestration plus reusable integration and composition logic",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/cli.ts --bundle --platform=node --format=esm --target=node22 --outfile=dist/cli.js --external:zod --external:commander --external:csv-parse --log-level=warning"
+  },
+  "dependencies": {
+    "@prototype/contracts": "*",
+    "commander": "^15.0.0",
+    "csv-parse": "^7.0.2",
+    "zod": "^4.6.5"
+  }
+}

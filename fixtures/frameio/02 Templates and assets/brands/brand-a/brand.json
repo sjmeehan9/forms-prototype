@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "brand-a",
+  "name": "Example Fund",
+  "swatches": {
+    "brand.primary": { "cmyk": [100, 60, 0, 20] },
+    "brand.accent": { "cmyk": [0, 40, 100, 0] }
+  },
+  "assets": {
+    "brand.logo": "logo-brand-a.svg"
+  },
+  "mandatoryComponentIds": ["privacy.notice"]
+}

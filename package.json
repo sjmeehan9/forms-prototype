@@ -1,0 +1,32 @@
+{
+  "name": "forms-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Adobe-based Keystone alternative prototype: local orchestrator plus an InDesign UXP queue worker",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p packages/contracts/tsconfig.json && tsc -p apps/orchestrator/tsconfig.json && tsc -p apps/indesign-plugin/tsconfig.json",
+    "test": "vitest run",
+    "build": "npm run build:orchestrator && npm run plugin:build",
+    "build:orchestrator": "npm run build --workspace apps/orchestrator",
+    "plugin:build": "npm run build --workspace apps/indesign-plugin",
+    "prototype": "npm run build:orchestrator --silent && node apps/orchestrator/dist/cli.js",
+    "auth:frameio": "npm run prototype --silent -- auth-frameio",
+    "bootstrap:frameio": "npm run prototype --silent -- bootstrap-frameio",
+    "probe:frameio": "npm run prototype --silent -- probe-frameio",
+    "fixture:e2e": "npm run prototype --silent -- fixture-e2e"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.1",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.1"
+  }
+}

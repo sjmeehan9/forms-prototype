@@ -1,0 +1,6 @@
+key,value,type,status,effectiveFrom,effectiveTo,source
+fund.name,Example Fund,string,approved,2026-01-01,,Product register
+contact.phone,1300 000 000,string,approved,2026-01-01,,Contact register
+fees.admin.annual,84,number,approved,2026-07-01,,Fee schedule 2026-27
+guide.effectiveDate,2026-07-01,date,approved,2026-07-01,,Product register
+eligibility.online,true,boolean,approved,2026-01-01,,Digital services
