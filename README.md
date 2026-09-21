@@ -188,11 +188,39 @@ on first use.
 - Document manifests, brand packs and the product data CSV follow the schemas in
   `packages/contracts/src/index.ts`; `fixtures/frameio` is a complete synthetic example.
 
+## Ingesting reference PDFs
+
+Reference PDFs are measured, never copied. The inventory tool needs macOS with the Xcode command line tools
+(`swiftc`, for PDFKit) and poppler (`brew install poppler`).
+
+```bash
+npm run ingest:inventory -- ~/Downloads/some-form.pdf --slug some-form
+```
+
+Inventories (fields, text geometry, page renders and a draft field table) are written to
+`.prototype/ingest/<slug>/`. They contain the source document's wording, so they are ignored by git and must
+never be copied into fixtures, Frame.io or Creative Cloud. The committed ingestion config lives in
+`fixtures/demo-forms/ingest/`: a shared field dictionary, a content plan and one map per document that ties each
+source field (by page and position) to a semantic name, a merge or a documented drop.
+
+```bash
+npm run ingest:validate
+```
+
+```bash
+npm run ingest:worksheet -- path/to/binding-worksheet.md
+```
+
+`ingest:validate` fails unless every source field is mapped or dropped exactly once and every name resolves in
+the dictionary. `ingest:worksheet` renders the binding worksheet for approval from the same files.
+
 ## Layout
 
 ```text
 apps/orchestrator/        Node CLI: config, domain logic, adapters, orchestration
 apps/indesign-plugin/     InDesign UXP panel (manifest v5), built with esbuild into dist/
 packages/contracts/       Zod schemas and types shared by both
-fixtures/frameio/         Synthetic store: requests, source content, templates, brands, manifests
+fixtures/frameio/         Synthetic store used by the automated tests
+fixtures/demo-forms/      Demo document set: ingestion config now, store and layouts next
+tools/pdf-inventory/      Reference PDF inventory, map validator and worksheet renderer
 ```

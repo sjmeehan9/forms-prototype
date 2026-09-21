@@ -25,7 +25,10 @@
     "list:frameio": "npm run prototype --silent -- list-frameio",
     "request:frameio": "npm run prototype --silent -- request-frameio",
     "samples:create": "npm run prototype --silent -- create-samples",
-    "fixture:e2e": "npm run prototype --silent -- fixture-e2e"
+    "fixture:e2e": "npm run prototype --silent -- fixture-e2e",
+    "ingest:inventory": "node tools/pdf-inventory/inventory.mjs",
+    "ingest:validate": "node tools/pdf-inventory/validate-maps.mjs",
+    "ingest:worksheet": "node tools/pdf-inventory/worksheet.mjs"
   },
   "devDependencies": {
     "@types/node": "^26.6.1",

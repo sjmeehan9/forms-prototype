@@ -1,0 +1,970 @@
+{
+  "schemaVersion": 1,
+  "documentId": "update-details",
+  "title": "Update your account details",
+  "archetype": "long-guide",
+  "templateId": "update-details.indt",
+  "source": {
+    "slug": "details",
+    "pages": 7
+  },
+  "pageMap": {
+    "1": 1,
+    "3": 2,
+    "4": 3,
+    "5": 4,
+    "6": 5,
+    "7": 6
+  },
+  "fields": [
+    {
+      "name": "member.number",
+      "type": "text",
+      "source": [
+        "p3#1 0"
+      ]
+    },
+    {
+      "name": "current.member.title",
+      "type": "combo",
+      "source": [
+        "p3#2 1.1"
+      ]
+    },
+    {
+      "name": "current.member.firstName",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p3#3 1.2"
+      ]
+    },
+    {
+      "name": "current.member.middleNames",
+      "type": "text",
+      "source": [
+        "p3#4 1.3"
+      ]
+    },
+    {
+      "name": "current.member.lastName",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p3#5 1.4"
+      ]
+    },
+    {
+      "name": "current.member.dateOfBirth",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p3#6 1.5"
+      ]
+    },
+    {
+      "name": "current.member.gender",
+      "type": "radio",
+      "exportValue": "male",
+      "required": true,
+      "source": [
+        "p3#7 1.6"
+      ]
+    },
+    {
+      "name": "current.member.gender",
+      "type": "radio",
+      "exportValue": "female",
+      "source": [
+        "p3#8 1.6"
+      ]
+    },
+    {
+      "name": "current.member.gender",
+      "type": "radio",
+      "exportValue": "other",
+      "source": [],
+      "bounds": {
+        "page": 3,
+        "left": 130,
+        "top": 297.1,
+        "width": 11.3,
+        "height": 17.7
+      }
+    },
+    {
+      "name": "current.address.residential.line1",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p3#9 1.7"
+      ]
+    },
+    {
+      "name": "current.address.residential.suburb",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p3#10 1.8"
+      ]
+    },
+    {
+      "name": "current.address.residential.state",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p3#11 1.9"
+      ]
+    },
+    {
+      "name": "current.address.residential.postcode",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p3#12 1.10"
+      ]
+    },
+    {
+      "name": "current.address.postal.line1",
+      "type": "text",
+      "source": [
+        "p3#13 1.11"
+      ]
+    },
+    {
+      "name": "current.address.postal.suburb",
+      "type": "text",
+      "source": [
+        "p3#14 1.12"
+      ]
+    },
+    {
+      "name": "current.address.postal.state",
+      "type": "text",
+      "source": [
+        "p3#15 1.13"
+      ]
+    },
+    {
+      "name": "current.address.postal.postcode",
+      "type": "text",
+      "source": [
+        "p3#16 1.14"
+      ]
+    },
+    {
+      "name": "current.member.phone.mobile",
+      "type": "text",
+      "source": [
+        "p3#17 1.15"
+      ]
+    },
+    {
+      "name": "current.member.phone.daytime",
+      "type": "text",
+      "source": [
+        "p3#18 1.16"
+      ]
+    },
+    {
+      "name": "current.member.email",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p3#19 1.17"
+      ]
+    },
+    {
+      "name": "change.account.accumulation",
+      "type": "checkbox",
+      "exportValue": "Yes",
+      "source": [
+        "p3#20 1.18"
+      ]
+    },
+    {
+      "name": "change.account.employerPlan",
+      "type": "checkbox",
+      "exportValue": "Yes",
+      "source": [
+        "p3#21 1.19"
+      ]
+    },
+    {
+      "name": "change.account.income",
+      "type": "checkbox",
+      "exportValue": "Yes",
+      "source": [
+        "p3#22 1.20"
+      ]
+    },
+    {
+      "name": "change.account.businessPlan",
+      "type": "checkbox",
+      "exportValue": "Yes",
+      "source": [
+        "p3#23 1.21"
+      ]
+    },
+    {
+      "name": "new.address.residential.line1",
+      "type": "text",
+      "source": [
+        "p4#1 2.1"
+      ]
+    },
+    {
+      "name": "new.address.residential.suburb",
+      "type": "text",
+      "source": [
+        "p4#2 2.2"
+      ]
+    },
+    {
+      "name": "new.address.residential.state",
+      "type": "text",
+      "source": [
+        "p4#3 2.3"
+      ]
+    },
+    {
+      "name": "new.address.residential.postcode",
+      "type": "text",
+      "source": [
+        "p4#4 2.4"
+      ]
+    },
+    {
+      "name": "new.address.postal.line1",
+      "type": "text",
+      "source": [
+        "p4#5 2.5"
+      ]
+    },
+    {
+      "name": "new.address.postal.suburb",
+      "type": "text",
+      "source": [
+        "p4#6 2.6"
+      ]
+    },
+    {
+      "name": "new.address.postal.state",
+      "type": "text",
+      "source": [
+        "p4#7 2.7"
+      ]
+    },
+    {
+      "name": "new.address.postal.postcode",
+      "type": "text",
+      "source": [
+        "p4#8 2.8"
+      ]
+    },
+    {
+      "name": "new.member.phone.mobile",
+      "type": "text",
+      "source": [
+        "p4#9 2.9"
+      ]
+    },
+    {
+      "name": "new.member.phone.daytime",
+      "type": "text",
+      "source": [
+        "p4#10 2.10"
+      ]
+    },
+    {
+      "name": "new.member.email",
+      "type": "text",
+      "source": [
+        "p4#11 2.11"
+      ]
+    },
+    {
+      "name": "new.member.title",
+      "type": "combo",
+      "source": [
+        "p4#12 3.1"
+      ],
+      "bounds": {
+        "page": 4,
+        "left": 28,
+        "top": 304.5,
+        "width": 62,
+        "height": 20.3
+      },
+      "note": "Widened from the source so a combo can show its value."
+    },
+    {
+      "name": "new.member.firstName",
+      "type": "text",
+      "source": [
+        "p4#13 3.2"
+      ],
+      "bounds": {
+        "page": 4,
+        "left": 98.3,
+        "top": 304.5,
+        "width": 199.9,
+        "height": 20.3
+      },
+      "note": "Shifted right to make room for the wider title control."
+    },
+    {
+      "name": "new.member.middleNames",
+      "type": "text",
+      "source": [
+        "p4#14 3.3"
+      ]
+    },
+    {
+      "name": "new.member.lastName",
+      "type": "text",
+      "source": [
+        "p4#18 3.4"
+      ]
+    },
+    {
+      "name": "new.member.dateOfBirth",
+      "type": "text",
+      "source": [
+        "p4#15 3.5"
+      ]
+    },
+    {
+      "name": "new.member.gender",
+      "type": "radio",
+      "exportValue": "male",
+      "source": [
+        "p4#16 3.6"
+      ]
+    },
+    {
+      "name": "new.member.gender",
+      "type": "radio",
+      "exportValue": "female",
+      "source": [
+        "p4#17 3.6"
+      ]
+    },
+    {
+      "name": "new.member.gender",
+      "type": "radio",
+      "exportValue": "other",
+      "source": [],
+      "bounds": {
+        "page": 4,
+        "left": 490,
+        "top": 339.4,
+        "width": 20.3,
+        "height": 20.3
+      }
+    },
+    {
+      "name": "bank.primary.accountName",
+      "type": "text",
+      "source": [
+        "p5#1 4.1"
+      ]
+    },
+    {
+      "name": "bank.primary.bsb",
+      "type": "text",
+      "source": [
+        "p5#3 4.2"
+      ],
+      "maxLength": 6
+    },
+    {
+      "name": "bank.primary.accountNumber",
+      "type": "text",
+      "source": [
+        "p5#2 4.3"
+      ],
+      "maxLength": 10
+    },
+    {
+      "name": "bank.primary.institution",
+      "type": "text",
+      "source": [
+        "p5#4 4.4"
+      ]
+    },
+    {
+      "name": "bank.secondary.accountName",
+      "type": "text",
+      "source": [
+        "p5#5 4.5"
+      ]
+    },
+    {
+      "name": "bank.secondary.bsb",
+      "type": "text",
+      "source": [
+        "p5#6 4.6"
+      ],
+      "maxLength": 6
+    },
+    {
+      "name": "bank.secondary.accountNumber",
+      "type": "text",
+      "source": [
+        "p5#7 4.7"
+      ],
+      "maxLength": 10
+    },
+    {
+      "name": "bank.secondary.institution",
+      "type": "text",
+      "source": [
+        "p5#8 4.8"
+      ]
+    },
+    {
+      "name": "income.amountType",
+      "type": "radio",
+      "exportValue": "minimum",
+      "source": [
+        "p5#9 5.1"
+      ]
+    },
+    {
+      "name": "income.amountType",
+      "type": "radio",
+      "exportValue": "specific",
+      "source": [
+        "p5#10 5.2"
+      ]
+    },
+    {
+      "name": "income.specificAmount",
+      "type": "text",
+      "source": [
+        "p5#11 5.3"
+      ]
+    },
+    {
+      "name": "income.amountType",
+      "type": "radio",
+      "exportValue": "maximum",
+      "source": [
+        "p5#12 5.4"
+      ]
+    },
+    {
+      "name": "income.amountType",
+      "type": "radio",
+      "exportValue": "maximumProRata",
+      "source": [
+        "p5#13 5.5"
+      ]
+    },
+    {
+      "name": "income.frequency",
+      "type": "radio",
+      "exportValue": "fortnightly",
+      "source": [
+        "p5#14 5.6"
+      ]
+    },
+    {
+      "name": "income.frequency",
+      "type": "radio",
+      "exportValue": "monthly",
+      "source": [
+        "p5#15 5.7"
+      ]
+    },
+    {
+      "name": "income.frequency",
+      "type": "radio",
+      "exportValue": "quarterly",
+      "source": [
+        "p5#16 5.8"
+      ]
+    },
+    {
+      "name": "income.frequency",
+      "type": "radio",
+      "exportValue": "halfYearly",
+      "source": [
+        "p5#17 5.9"
+      ]
+    },
+    {
+      "name": "income.frequency",
+      "type": "radio",
+      "exportValue": "yearly",
+      "source": [
+        "p5#18 5.10"
+      ]
+    },
+    {
+      "name": "income.startDate",
+      "type": "text",
+      "source": [
+        "p5#19 5.11"
+      ]
+    },
+    {
+      "name": "identity.consentElectronic",
+      "type": "checkbox",
+      "exportValue": "Yes",
+      "source": [
+        "p6#1 6.1"
+      ]
+    },
+    {
+      "name": "identity.licence.fullName",
+      "type": "text",
+      "source": [
+        "p6#2 6.2"
+      ]
+    },
+    {
+      "name": "identity.licence.number",
+      "type": "text",
+      "source": [
+        "p6#4 6.3"
+      ],
+      "maxLength": 10
+    },
+    {
+      "name": "identity.licence.cardNumber",
+      "type": "text",
+      "source": [
+        "p6#3 6.4"
+      ],
+      "maxLength": 10
+    },
+    {
+      "name": "identity.licence.state",
+      "type": "text",
+      "source": [
+        "p6#5 6.5"
+      ],
+      "maxLength": 3
+    },
+    {
+      "name": "identity.licence.expiry",
+      "type": "text",
+      "source": [
+        "p6#6 6.6"
+      ]
+    },
+    {
+      "name": "identity.passport.number",
+      "type": "text",
+      "source": [
+        "p6#7 6.7"
+      ],
+      "maxLength": 10
+    },
+    {
+      "name": "identity.passport.expiry",
+      "type": "text",
+      "source": [
+        "p6#8 6.8"
+      ]
+    },
+    {
+      "name": "identity.passport.fullName",
+      "type": "text",
+      "source": [
+        "p6#9 6.9"
+      ]
+    },
+    {
+      "name": "identity.passport.placeOfBirth",
+      "type": "text",
+      "source": [
+        "p6#10 6.10"
+      ]
+    },
+    {
+      "name": "identity.passport.countryOfBirth",
+      "type": "text",
+      "source": [
+        "p6#11 6.11"
+      ]
+    },
+    {
+      "name": "identity.passport.familyNameAtBirth",
+      "type": "text",
+      "source": [
+        "p6#12 6.12"
+      ]
+    },
+    {
+      "name": "identity.medicare.fullName",
+      "type": "text",
+      "source": [
+        "p6#13 6.13"
+      ]
+    },
+    {
+      "name": "identity.medicare.number",
+      "type": "text",
+      "source": [
+        "p6#14 6.14"
+      ],
+      "maxLength": 10
+    },
+    {
+      "name": "identity.medicare.expiry",
+      "type": "text",
+      "source": [
+        "p6#15 6.15",
+        "p6#16 6.16"
+      ]
+    },
+    {
+      "name": "identity.medicare.referenceNumber",
+      "type": "text",
+      "source": [
+        "p6#17 6.17"
+      ],
+      "maxLength": 1
+    },
+    {
+      "name": "identity.medicare.cardColour",
+      "type": "radio",
+      "exportValue": "green",
+      "source": [
+        "p6#18 6.18"
+      ]
+    },
+    {
+      "name": "identity.medicare.cardColour",
+      "type": "radio",
+      "exportValue": "blue",
+      "source": [
+        "p6#19 6.19"
+      ]
+    },
+    {
+      "name": "identity.medicare.cardColour",
+      "type": "radio",
+      "exportValue": "yellow",
+      "source": [
+        "p6#20 6.20"
+      ]
+    },
+    {
+      "name": "identity.documentBased",
+      "type": "checkbox",
+      "exportValue": "Yes",
+      "source": [
+        "p6#21 6.21"
+      ]
+    },
+    {
+      "name": "checklist.readGuide",
+      "type": "checkbox",
+      "exportValue": "Yes",
+      "source": [
+        "p7#1 7.1"
+      ]
+    },
+    {
+      "name": "checklist.mandatoryComplete",
+      "type": "checkbox",
+      "exportValue": "Yes",
+      "source": [
+        "p7#2 7.4"
+      ]
+    },
+    {
+      "name": "checklist.nameChanged",
+      "type": "checkbox",
+      "exportValue": "Yes",
+      "source": [
+        "p7#3 7.2"
+      ]
+    },
+    {
+      "name": "checklist.signingOnBehalf",
+      "type": "checkbox",
+      "exportValue": "Yes",
+      "source": [
+        "p7#4 7.5"
+      ]
+    },
+    {
+      "name": "checklist.signedAndDated",
+      "type": "checkbox",
+      "exportValue": "Yes",
+      "source": [
+        "p7#5 7.6"
+      ]
+    },
+    {
+      "name": "checklist.identityCorrected",
+      "type": "checkbox",
+      "exportValue": "Yes",
+      "source": [
+        "p7#6 7.3"
+      ]
+    },
+    {
+      "name": "checklist.incomeChange",
+      "type": "checkbox",
+      "exportValue": "Yes",
+      "source": [
+        "p7#7 7.7"
+      ]
+    },
+    {
+      "name": "declaration.name",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p7#8 8.1"
+      ]
+    },
+    {
+      "name": "declaration.signature",
+      "type": "signature",
+      "required": true,
+      "source": [],
+      "bounds": {
+        "page": 7,
+        "left": 28.1,
+        "top": 322.5,
+        "width": 217.4,
+        "height": 37.4
+      }
+    },
+    {
+      "name": "declaration.date",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p7#9 8.2"
+      ]
+    },
+    {
+      "name": "representative.name",
+      "type": "text",
+      "source": [
+        "p7#10 9.1"
+      ]
+    },
+    {
+      "name": "representative.signature",
+      "type": "signature",
+      "source": [],
+      "bounds": {
+        "page": 7,
+        "left": 28.1,
+        "top": 556.4,
+        "width": 217.4,
+        "height": 37.4
+      }
+    },
+    {
+      "name": "representative.date",
+      "type": "text",
+      "source": [
+        "p7#11 9.2"
+      ]
+    }
+  ],
+  "dropped": [
+    {
+      "source": [
+        "p7#12 10.1",
+        "p7#13 10.2"
+      ],
+      "reason": "Save and print buttons need Acrobat JavaScript actions, which are outside the prototype."
+    },
+    {
+      "sourcePage": 2,
+      "reason": "The intentionally blank page is removed; the rebuilt form has six pages."
+    }
+  ],
+  "content": [
+    {
+      "component": "guide.online.tip",
+      "page": 1,
+      "region": "upper sidebar panel"
+    },
+    {
+      "component": "guide.register.tip",
+      "page": 1,
+      "region": "lower sidebar panel"
+    },
+    {
+      "component": "guide.section.current",
+      "page": 1,
+      "region": "numbered explanation 1"
+    },
+    {
+      "component": "guide.section.contact",
+      "page": 1,
+      "region": "numbered explanation 2"
+    },
+    {
+      "component": "guide.section.personal",
+      "page": 1,
+      "region": "numbered explanation 3"
+    },
+    {
+      "component": "guide.section.income",
+      "page": 1,
+      "region": "numbered explanation 4 and 5"
+    },
+    {
+      "component": "guide.section.checklist",
+      "page": 1,
+      "region": "numbered explanation 6 to 10"
+    },
+    {
+      "component": "form.completion.instructions",
+      "page": 3,
+      "region": "under the form title"
+    },
+    {
+      "component": "tfn.notice",
+      "page": 3,
+      "region": "tax file number block in section 1"
+    },
+    {
+      "component": "identity.name.change.evidence",
+      "page": 4,
+      "region": "note under the new personal details"
+    },
+    {
+      "component": "income.account.explainer",
+      "page": 4,
+      "region": "pointer panel at the foot of the page"
+    },
+    {
+      "component": "bank.details.conditions",
+      "page": 5,
+      "region": "introduction to the bank account section"
+    },
+    {
+      "component": "income.payment.conditions",
+      "page": 5,
+      "region": "introduction to the payment section"
+    },
+    {
+      "component": "income.payment.footnotes",
+      "page": 5,
+      "region": "footnotes under the payment options"
+    },
+    {
+      "component": "identity.electronic.explainer",
+      "page": 6,
+      "region": "option 1 explanation"
+    },
+    {
+      "component": "identity.document.option",
+      "page": 6,
+      "region": "option 2 explanation"
+    },
+    {
+      "component": "declaration.update",
+      "page": 7,
+      "region": "member declaration"
+    },
+    {
+      "component": "declaration.representative",
+      "page": 7,
+      "region": "representative declaration"
+    },
+    {
+      "component": "return.instructions",
+      "page": 7,
+      "region": "final section"
+    },
+    {
+      "component": "privacy.statement",
+      "page": 7,
+      "region": "foot of the last page"
+    }
+  ],
+  "data": [
+    {
+      "key": "fund.name",
+      "page": 1,
+      "region": "footer issuer lines on every page"
+    },
+    {
+      "key": "contact.phone",
+      "page": 1,
+      "region": "contact block under the logo on pages 1 and 3"
+    },
+    {
+      "key": "contact.website",
+      "page": 1,
+      "region": "contact block under the logo"
+    },
+    {
+      "key": "contact.postal.address",
+      "page": 1,
+      "region": "contact block and return address"
+    },
+    {
+      "key": "contact.register.url",
+      "page": 1,
+      "region": "lower sidebar panel"
+    },
+    {
+      "key": "contact.identity.url",
+      "page": 6,
+      "region": "identity section pointers"
+    },
+    {
+      "key": "trustee.name",
+      "page": 1,
+      "region": "footer issuer lines"
+    },
+    {
+      "key": "trustee.abn",
+      "page": 1,
+      "region": "footer issuer lines"
+    },
+    {
+      "key": "trustee.afsl",
+      "page": 1,
+      "region": "footer issuer lines"
+    },
+    {
+      "key": "fund.abn",
+      "page": 1,
+      "region": "footer issuer lines"
+    },
+    {
+      "key": "form.update.code",
+      "page": 3,
+      "region": "footer form code"
+    },
+    {
+      "key": "contact.hours",
+      "page": 7,
+      "region": "help line in the return instructions"
+    },
+    {
+      "key": "contact.email",
+      "page": 7,
+      "region": "return instructions"
+    }
+  ],
+  "assets": [
+    {
+      "id": "brand.logo",
+      "page": 1,
+      "region": "top right on pages 1 and 3"
+    },
+    {
+      "id": "icon.online",
+      "page": 1,
+      "region": "online-service marker in the sidebar and section 5"
+    }
+  ]
+}

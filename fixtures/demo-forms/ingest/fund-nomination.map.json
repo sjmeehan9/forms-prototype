@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "documentId": "fund-nomination",
+  "title": "Nominate us as your super fund",
+  "archetype": "short-guide",
+  "templateId": "fund-nomination.indt",
+  "source": { "slug": "choice", "pages": 3 },
+  "pageMap": { "1": 1, "2": 2, "3": 3 },
+  "fields": [
+    { "name": "member.title", "type": "combo", "source": ["p1#3 Client1_Title", "p1#4 Client1_Title", "p1#5 Client1_Title", "p1#2 Client1_Title", "p1#6 Client1_Title", "p1#7 Client1_Title", "p1#1 Client1_Title_Other"] },
+    { "name": "member.lastName", "type": "text", "required": true, "source": ["p1#8 Client1_Last_Name"] },
+    { "name": "member.firstName", "type": "text", "required": true, "source": ["p1#9 Client1_Given_Name"] },
+    { "name": "address.residential.line1", "type": "text", "required": true, "source": ["p1#10 Client1_SCFN_Address_Street"] },
+    { "name": "address.residential.suburb", "type": "text", "required": true, "source": ["p1#11 Client1_SCFN_Address_Suburb"] },
+    { "name": "address.residential.state", "type": "text", "required": true, "source": ["p1#13 Client1_SCFN_Address_State"] },
+    { "name": "address.residential.postcode", "type": "text", "required": true, "source": ["p1#12 Client1_SCFN_Address_Postcode"] },
+    { "name": "member.dateOfBirth", "type": "text", "required": true, "source": ["p1#14 Client1_DOB_Day", "p1#15 Client1_DOB_Month", "p1#16 Client1_DOB_Year"] },
+    { "name": "member.employeeId", "type": "text", "source": ["p1#17 Client1_SCFN_Employee_ID"] },
+    { "name": "member.number", "type": "text", "source": ["p1#18 Client1_Member_Number"] },
+    { "name": "nomination.signature", "type": "signature", "required": true, "source": [], "bounds": { "page": 2, "left": 28.1, "top": 116.6, "width": 249.7, "height": 39.6 } },
+    { "name": "nomination.date", "type": "text", "required": true, "source": ["p2#1 Client1_SCFN_Date_Signed_Day", "p2#2 Client1_SCFN_Date_Signed_Month", "p2#3 Client1_SCFN_Date_Signed_Year"] },
+    { "name": "employer.dateAccepted", "type": "text", "source": ["p2#7 Client1_SCFN_Employer_Date_Fund_Accepted_Day", "p2#8 Client1_SCFN_Employer_Date_Fund_Accepted_Month", "p2#9 Client1_SCFN_Employer_Date_Fund_Accepted_Year"] },
+    { "name": "employer.dateActioned", "type": "text", "source": ["p2#4 Client1_SCFN_Employer_Date_Executed_Day", "p2#5 Client1_SCFN_Employer_Date_Executed_Month", "p2#6 Client1_SCFN_Employer_Date_Executed_Year"] }
+  ],
+  "dropped": [],
+  "content": [
+    { "component": "nomination.intro", "page": 1, "region": "callout box under the title" },
+    { "component": "privacy.statement", "page": 1, "region": "right column beside the callout" },
+    { "component": "form.completion.instructions", "page": 1, "region": "first line of the details section" },
+    { "component": "nomination.alternative", "page": 1, "region": "line below the fund details panel" },
+    { "component": "nomination.statement", "page": 2, "region": "nomination section above the signature" },
+    { "component": "employer.records.instructions", "page": 2, "region": "employer records panel" },
+    { "component": "compliance.letter.body", "page": 3, "region": "letter body" }
+  ],
+  "data": [
+    { "key": "fund.name", "page": 1, "region": "fund details panel, letter side column, footer" },
+    { "key": "fund.address", "page": 1, "region": "fund details panel and letter side column" },
+    { "key": "fund.abn", "page": 1, "region": "fund details panel, letter side column, footer" },
+    { "key": "fund.spin", "page": 1, "region": "fund details panel and letter side column" },
+    { "key": "fund.usi", "page": 1, "region": "fund details panel and letter side column" },
+    { "key": "contact.phone", "page": 1, "region": "fund details panel and letter" },
+    { "key": "contact.website", "page": 3, "region": "letter side column" },
+    { "key": "trustee.name", "page": 1, "region": "footer issuer line and letter side column" },
+    { "key": "trustee.abn", "page": 1, "region": "footer issuer line and letter side column" },
+    { "key": "trustee.afsl", "page": 1, "region": "footer issuer line and letter side column" },
+    { "key": "trustee.rse", "page": 3, "region": "letter side column" },
+    { "key": "letter.compliance.date", "page": 3, "region": "letter date line" },
+    { "key": "letter.signatory.name", "page": 3, "region": "letter sign-off" },
+    { "key": "letter.signatory.title", "page": 3, "region": "letter sign-off" },
+    { "key": "form.issue.date", "page": 1, "region": "footer issue line" },
+    { "key": "form.nomination.code", "page": 1, "region": "footer form code on pages 1 and 2" }
+  ],
+  "assets": [
+    { "id": "brand.logo", "page": 1, "region": "top right, repeated on the letter page" }
+  ]
+}

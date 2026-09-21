@@ -1,0 +1,448 @@
+{
+  "schemaVersion": 1,
+  "documentId": "consolidate-super",
+  "title": "Combine your super",
+  "archetype": "form",
+  "templateId": "consolidate-super.indt",
+  "source": {
+    "slug": "consolidate",
+    "pages": 2
+  },
+  "pageMap": {
+    "1": 1,
+    "2": 2
+  },
+  "fields": [
+    {
+      "name": "account.number",
+      "type": "text",
+      "source": [
+        "p1#2 Text1"
+      ],
+      "maxLength": 13
+    },
+    {
+      "name": "customer.number",
+      "type": "text",
+      "source": [
+        "p1#1 Text2"
+      ]
+    },
+    {
+      "name": "account.productName",
+      "type": "text",
+      "source": [
+        "p1#3 Text3"
+      ]
+    },
+    {
+      "name": "member.gender",
+      "type": "radio",
+      "exportValue": "male",
+      "source": [
+        "p1#6 Check Box1"
+      ]
+    },
+    {
+      "name": "member.gender",
+      "type": "radio",
+      "exportValue": "female",
+      "source": [
+        "p1#7 Check Box1"
+      ]
+    },
+    {
+      "name": "member.gender",
+      "type": "radio",
+      "exportValue": "other",
+      "source": [],
+      "bounds": {
+        "page": 1,
+        "left": 150,
+        "top": 335.7,
+        "width": 15.9,
+        "height": 15.8
+      }
+    },
+    {
+      "name": "member.title",
+      "type": "combo",
+      "source": [
+        "p1#8 Check Box2",
+        "p1#9 Check Box2",
+        "p1#10 Check Box2",
+        "p1#11 Check Box2",
+        "p1#5 Text5"
+      ]
+    },
+    {
+      "name": "member.firstName",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p1#12 Text6.0"
+      ]
+    },
+    {
+      "name": "member.middleNames",
+      "type": "text",
+      "source": [
+        "p1#13 Text7.0"
+      ]
+    },
+    {
+      "name": "member.lastName",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p1#14 Text6.1"
+      ]
+    },
+    {
+      "name": "member.previousNames",
+      "type": "text",
+      "source": [
+        "p1#15 Text7.1"
+      ]
+    },
+    {
+      "name": "member.email",
+      "type": "text",
+      "source": [
+        "p1#16 Text6.2"
+      ]
+    },
+    {
+      "name": "member.phone.daytime",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p1#17 Text8.0"
+      ],
+      "maxLength": 10
+    },
+    {
+      "name": "member.dateOfBirth",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p1#18 Text8.1"
+      ]
+    },
+    {
+      "name": "member.taxFileNumber",
+      "type": "text",
+      "source": [
+        "p1#19 Text8.2"
+      ],
+      "maxLength": 9
+    },
+    {
+      "name": "address.residential.unit",
+      "type": "text",
+      "source": [
+        "p1#20 Text9"
+      ],
+      "maxLength": 4
+    },
+    {
+      "name": "address.residential.streetNumber",
+      "type": "text",
+      "source": [
+        "p1#21 Text9a"
+      ],
+      "maxLength": 4
+    },
+    {
+      "name": "address.residential.streetName",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p1#22 Text9b"
+      ]
+    },
+    {
+      "name": "address.residential.suburb",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p1#23 Text10"
+      ]
+    },
+    {
+      "name": "address.residential.state",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p1#24 Text10a"
+      ],
+      "maxLength": 3
+    },
+    {
+      "name": "address.residential.postcode",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p1#25 Text10b"
+      ],
+      "maxLength": 4
+    },
+    {
+      "name": "address.residential.country",
+      "type": "text",
+      "source": [
+        "p1#26 Text10c"
+      ]
+    },
+    {
+      "name": "address.previous.unit",
+      "type": "text",
+      "source": [
+        "p2#1 Text11"
+      ],
+      "maxLength": 4
+    },
+    {
+      "name": "address.previous.streetNumber",
+      "type": "text",
+      "source": [
+        "p2#2 Text11a"
+      ],
+      "maxLength": 4
+    },
+    {
+      "name": "address.previous.streetName",
+      "type": "text",
+      "source": [
+        "p2#3 Text11b"
+      ]
+    },
+    {
+      "name": "address.previous.suburb",
+      "type": "text",
+      "source": [
+        "p2#4 Text12"
+      ]
+    },
+    {
+      "name": "address.previous.state",
+      "type": "text",
+      "source": [
+        "p2#5 Text12a"
+      ],
+      "maxLength": 3
+    },
+    {
+      "name": "address.previous.postcode",
+      "type": "text",
+      "source": [
+        "p2#6 Text12b"
+      ],
+      "maxLength": 4
+    },
+    {
+      "name": "address.previous.country",
+      "type": "text",
+      "source": [
+        "p2#7 Text12c"
+      ]
+    },
+    {
+      "name": "fromFund.name",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p2#8 Text13.0.0"
+      ]
+    },
+    {
+      "name": "fromFund.productName",
+      "type": "text",
+      "source": [
+        "p2#9 Text13.0.1"
+      ]
+    },
+    {
+      "name": "fromFund.memberNumber",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p2#10 Text13.1.0"
+      ],
+      "maxLength": 13
+    },
+    {
+      "name": "fromFund.usi",
+      "type": "text",
+      "source": [
+        "p2#11 Text13.1.1"
+      ]
+    },
+    {
+      "name": "fromFund.esa",
+      "type": "text",
+      "source": [
+        "p2#12 Text13.2.0"
+      ]
+    },
+    {
+      "name": "fromFund.abn",
+      "type": "text",
+      "source": [
+        "p2#13 Text13.2.1"
+      ]
+    },
+    {
+      "name": "transfer.amountType",
+      "type": "radio",
+      "exportValue": "total",
+      "required": true,
+      "source": [
+        "p2#14 Check Box3"
+      ]
+    },
+    {
+      "name": "transfer.amountType",
+      "type": "radio",
+      "exportValue": "partial",
+      "source": [
+        "p2#16 Check Box3"
+      ]
+    },
+    {
+      "name": "transfer.partialAmount",
+      "type": "text",
+      "source": [
+        "p2#15 Text14"
+      ]
+    },
+    {
+      "name": "declaration.name",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p2#17 Text15"
+      ]
+    },
+    {
+      "name": "declaration.signature",
+      "type": "signature",
+      "required": true,
+      "source": [],
+      "bounds": {
+        "page": 2,
+        "left": 60,
+        "top": 636,
+        "width": 135,
+        "height": 32
+      }
+    },
+    {
+      "name": "declaration.date",
+      "type": "text",
+      "required": true,
+      "source": [
+        "p2#18 Text16"
+      ]
+    }
+  ],
+  "dropped": [
+    {
+      "source": [
+        "p1#4 Text4"
+      ],
+      "reason": "The fund's own USI becomes governed data (fund.usi) printed in the template, not a member-entered field."
+    }
+  ],
+  "content": [
+    {
+      "component": "tfn.notice",
+      "page": 1,
+      "region": "shaded notice below the personal details"
+    },
+    {
+      "component": "privacy.statement",
+      "page": 1,
+      "region": "open area below the address section"
+    },
+    {
+      "component": "declaration.transfer",
+      "page": 2,
+      "region": "authorisation section, bulleted statements"
+    },
+    {
+      "component": "return.instructions",
+      "page": 2,
+      "region": "final section above the footer"
+    }
+  ],
+  "data": [
+    {
+      "key": "fund.name",
+      "page": 1,
+      "region": "section 1 heading line and footer"
+    },
+    {
+      "key": "fund.abn",
+      "page": 1,
+      "region": "section 1, replaces the pre-printed identifier, and footer"
+    },
+    {
+      "key": "fund.usi",
+      "page": 1,
+      "region": "section 1, replaces the member-entered USI field"
+    },
+    {
+      "key": "contact.website",
+      "page": 1,
+      "region": "introduction line"
+    },
+    {
+      "key": "contact.postal.address",
+      "page": 2,
+      "region": "return address block"
+    },
+    {
+      "key": "contact.email",
+      "page": 2,
+      "region": "return address block"
+    },
+    {
+      "key": "contact.phone",
+      "page": 2,
+      "region": "help line"
+    },
+    {
+      "key": "trustee.name",
+      "page": 1,
+      "region": "footer issuer line"
+    },
+    {
+      "key": "trustee.abn",
+      "page": 1,
+      "region": "footer issuer line"
+    },
+    {
+      "key": "trustee.afsl",
+      "page": 1,
+      "region": "footer issuer line"
+    },
+    {
+      "key": "form.consolidate.code",
+      "page": 2,
+      "region": "footer form code"
+    },
+    {
+      "key": "contact.hours",
+      "page": 2,
+      "region": "help line in the return instructions"
+    }
+  ],
+  "assets": [
+    {
+      "id": "brand.logo",
+      "page": 1,
+      "region": "top right of the header band"
+    }
+  ]
+}
