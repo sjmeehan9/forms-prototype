@@ -11,8 +11,8 @@ import { PrototypeError } from "../domain/models.js";
 import type { Logger } from "../log.js";
 import { ensureDir, pathExists, writeJsonAtomic } from "../util/fs.js";
 
-export type SeedOptions = { requestName?: string; replace: boolean; from?: string };
-export type SeedSummary = { uploaded: number; skipped: number; replaced: number; requestFolderId?: string };
+export type SeedOptions = { requestName?: string; replace: boolean; from?: string; prune?: boolean };
+export type SeedSummary = { uploaded: number; skipped: number; replaced: number; archived: number; requestFolderId?: string };
 
 /** Generated sidecars and placeholders that must not be uploaded as source. */
 const SKIP_FILES = new Set(["component-register.json", ".gitkeep", ".DS_Store"]);
@@ -23,6 +23,9 @@ type Seeder = {
   layout: FrameioLayout;
   log: Logger;
   replace: boolean;
+  prune: boolean;
+  /** Lazily created `99 Archive/<stamp>` folder that receives items no longer in the source store. */
+  archiveFolder: () => Promise<StoredItem>;
   summary: SeedSummary;
 };
 
@@ -61,6 +64,14 @@ async function uploadTree(seeder: Seeder, localDir: string, folderId: string): P
       uploadedByName.set(entry.name, await uploadFile(seeder, folderId, localPath, existing));
     }
   }
+  if (seeder.prune) {
+    const localNames = new Set(entries.filter((entry) => !SKIP_FILES.has(entry.name) && !entry.name.startsWith(".")).map((entry) => entry.name));
+    for (const item of existing.filter((candidate) => !localNames.has(candidate.name))) {
+      await seeder.storage.move(item, (await seeder.archiveFolder()).id);
+      seeder.log.info(`  archived ${item.name} (not in the source store)`);
+      seeder.summary.archived += 1;
+    }
+  }
   return uploadedByName;
 }
 
@@ -69,7 +80,15 @@ export async function seedFrameio(config: AppConfig, log: Logger, options: SeedO
   const layout = await loadFrameioLayout(config.home);
   const client = new FrameioClient(createTokenProvider(requireFrameioCredentials(config), config.home, log));
   const storage = new FrameioStorageAdapter(client, layout.accountId, log);
-  const seeder: Seeder = { storage, client, layout, log, replace: options.replace, summary: { uploaded: 0, skipped: 0, replaced: 0 } };
+  let archive: StoredItem | null = null;
+  const archiveFolder = async (): Promise<StoredItem> => {
+    if (!archive) {
+      const root = await storage.createFolder(layout.rootFolderId, "99 Archive");
+      archive = await storage.createFolder(root.id, new Date().toISOString().replace(/[:.]/g, "-"));
+    }
+    return archive;
+  };
+  const seeder: Seeder = { storage, client, layout, log, replace: options.replace, prune: options.prune ?? false, archiveFolder, summary: { uploaded: 0, skipped: 0, replaced: 0, archived: 0 } };
   const fixture = options.from ? path.resolve(config.rootDir, options.from) : config.fixtureStore;
   if (!(await pathExists(fixture))) {
     throw new PrototypeError("seed", `source store not found at ${fixture}`);
@@ -87,6 +106,19 @@ export async function seedFrameio(config: AppConfig, log: Logger, options: SeedO
   ] as const) {
     log.info(`seeding 02 Templates and assets/${name}`);
     await uploadTree(seeder, path.join(templatesRoot, name), folderId);
+  }
+
+  if (options.prune) {
+    // Clear earlier releases and finished requests so the project shows only the current document set.
+    const stale: StoredItem[] = [...(await storage.listChildren(layout.folders.generatedVariants))];
+    for (const stateFolderId of Object.values(layout.folders.states)) {
+      stale.push(...(await storage.listChildren(stateFolderId)));
+    }
+    for (const item of stale) {
+      await storage.move(item, (await archiveFolder()).id);
+      log.info(`  archived ${item.name}`);
+      seeder.summary.archived += 1;
+    }
   }
 
   const library = [...sourceFiles.values()].find((item) => /\.indd$/i.test(item.name));

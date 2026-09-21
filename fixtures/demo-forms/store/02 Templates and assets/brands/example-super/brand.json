@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "example-super",
+  "name": "Example Super",
+  "swatches": {
+    "brand.primary": { "cmyk": [90, 60, 0, 10] },
+    "brand.accent": { "cmyk": [0, 50, 100, 0] },
+    "brand.dark": { "cmyk": [100, 85, 20, 40] },
+    "brand.tint": { "cmyk": [8, 3, 0, 0] }
+  },
+  "assets": {
+    "brand.logo": "logo-example-super.svg"
+  },
+  "mandatoryComponentIds": ["privacy.statement"]
+}

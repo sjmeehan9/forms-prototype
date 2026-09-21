@@ -97,6 +97,40 @@ function parseBboxLayout(html) {
   return pages;
 }
 
+/** Bounding boxes of filled or stroked page shapes from `pdftocairo -svg`; glyph definitions are ignored. */
+function parseVectors(svg) {
+  const body = svg.replace(/<defs>[\s\S]*?<\/defs>/g, "");
+  const vectors = [];
+  const pathRe = /<path\b([^>]*)\/>/g;
+  let match;
+  while ((match = pathRe.exec(body)) !== null) {
+    const attrs = match[1];
+    const d = /\bd="([^"]*)"/.exec(attrs)?.[1];
+    if (!d) continue;
+    const fill = /\bfill="([^"]*)"/.exec(attrs)?.[1] ?? "";
+    const stroke = /\bstroke="([^"]*)"/.exec(attrs)?.[1] ?? "";
+    const strokeWidth = Number(/\bstroke-width="([\d.]+)"/.exec(attrs)?.[1] ?? 0);
+    const transform = /\btransform="matrix\(([^)]*)\)"/.exec(attrs)?.[1];
+    const m = transform ? transform.split(/[ ,]+/).map(Number) : [1, 0, 0, 1, 0, 0];
+    const numbers = d.match(/-?\d*\.?\d+(?:e-?\d+)?/g)?.map(Number) ?? [];
+    if (numbers.length < 4) continue;
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    for (let i = 0; i + 1 < numbers.length; i += 2) {
+      const x = m[0] * numbers[i] + m[2] * numbers[i + 1] + m[4];
+      const y = m[1] * numbers[i] + m[3] * numbers[i + 1] + m[5];
+      minX = Math.min(minX, x); maxX = Math.max(maxX, x);
+      minY = Math.min(minY, y); maxY = Math.max(maxY, y);
+    }
+    const width = maxX - minX;
+    const height = maxY - minY;
+    const painted = (fill && fill !== "none") || (stroke && stroke !== "none");
+    if (!painted || (width < 3 && height < 3)) continue;
+    const curved = /C/.test(d);
+    vectors.push({ left: round1(minX), top: round1(minY), width: round1(width), height: round1(height), fill: fill === "none" ? "" : fill, stroke: stroke === "none" ? "" : stroke, strokeWidth, curved });
+  }
+  return vectors;
+}
+
 function overlap(aStart, aEnd, bStart, bEnd) {
   return Math.max(0, Math.min(aEnd, bEnd) - Math.max(aStart, bStart));
 }
@@ -116,19 +150,23 @@ function labelCandidates(field, segments) {
     const verticalGap = field.top - segBottom;
     if (verticalGap >= -3 && verticalGap <= 24 && (overlap(segment.left, segRight, field.left, fieldRight) > 0 || Math.abs(segment.left - field.left) < 8)) {
       const score = verticalGap + Math.abs(segment.left - field.left) / 20;
-      if (!above || score < above.score) above = { text: segment.text, score };
+      if (!above || score < above.score) above = { text: segment.text, score, box: segment };
     }
     if (Math.abs(segCentreY - centreY) <= Math.max(6, field.height / 2) && segRight <= field.left + 3 && field.left - segRight <= 260) {
       const score = field.left - segRight;
-      if (!left || score < left.score) left = { text: segment.text, score };
+      if (!left || score < left.score) left = { text: segment.text, score, box: segment };
     }
     if (Math.abs(segCentreY - centreY) <= Math.max(6, field.height / 2) && segment.left >= fieldRight - 3 && segment.left - fieldRight <= 40) {
       const score = segment.left - fieldRight;
-      if (!right || score < right.score) right = { text: segment.text, score };
+      if (!right || score < right.score) right = { text: segment.text, score, box: segment };
     }
     void fieldBottom;
   }
-  return { above: above?.text ?? "", left: left?.text ?? "", right: right?.text ?? "" };
+  const box = (candidate) => (candidate ? { left: candidate.box.left, top: candidate.box.top, width: candidate.box.width, height: candidate.box.height } : null);
+  return {
+    labels: { above: above?.text ?? "", left: left?.text ?? "", right: right?.text ?? "" },
+    labelBoxes: { above: box(above), left: box(left), right: box(right) },
+  };
 }
 
 const args = parseArgs(process.argv.slice(2));
@@ -149,6 +187,18 @@ try {
   fonts = "(pdffonts failed)";
 }
 
+mkdirSync(path.join(outDir, "svg"), { recursive: true });
+const vectorPages = [];
+for (let pageNumber = 1; pageNumber <= fieldsJson.pages.length; pageNumber += 1) {
+  const svgFile = path.join(outDir, "svg", `page-${pageNumber}.svg`);
+  try {
+    execFileSync("pdftocairo", ["-svg", "-f", String(pageNumber), "-l", String(pageNumber), pdfPath, svgFile], { stdio: ["ignore", "ignore", "ignore"] });
+    vectorPages.push(parseVectors(readFileSync(svgFile, "utf8")));
+  } catch {
+    vectorPages.push([]);
+  }
+}
+
 const inventory = {
   schemaVersion: 1,
   source: { file: path.basename(pdfPath), sha256: createHash("sha256").update(readFileSync(pdfPath)).digest("hex"), ...fieldsJson.metadata },
@@ -159,9 +209,10 @@ const inventory = {
       width: page.width,
       height: page.height,
       segments,
+      vectors: vectorPages[index] ?? [],
       links: page.links,
       fields: page.fields
-        .map((field) => ({ ...field, labels: labelCandidates(field, segments) }))
+        .map((field) => ({ ...field, ...labelCandidates(field, segments) }))
         .sort((a, b) => a.top - b.top || a.left - b.left),
     };
   }),
@@ -182,6 +233,24 @@ for (const page of inventory.pages) {
   }
 }
 writeFileSync(path.join(outDir, "fields-draft.md"), `${lines.join("\n")}\n`);
+
+const segmentLines = [`# Text segments for ${inventory.source.file} (local only: contains source wording)`, ""];
+const vectorLines = [`# Page shapes for ${inventory.source.file}`, ""];
+for (const page of inventory.pages) {
+  segmentLines.push(`## Page ${page.number}`, "");
+  page.segments.forEach((segment, index) => {
+    segmentLines.push(`p${page.number}s${index}  [${segment.left},${segment.top} ${segment.width}x${segment.height}]  ${segment.text}`);
+  });
+  segmentLines.push("");
+  vectorLines.push(`## Page ${page.number}`, "");
+  page.vectors.forEach((vector, index) => {
+    if (vector.width < 8 && vector.height < 8) return;
+    vectorLines.push(`p${page.number}v${index}  [${vector.left},${vector.top} ${vector.width}x${vector.height}]  fill=${vector.fill || "-"} stroke=${vector.stroke || "-"}${vector.strokeWidth ? ` w=${vector.strokeWidth}` : ""}${vector.curved ? " curved" : ""}`);
+  });
+  vectorLines.push("");
+}
+writeFileSync(path.join(outDir, "segments.md"), `${segmentLines.join("\n")}\n`);
+writeFileSync(path.join(outDir, "vectors.md"), `${vectorLines.join("\n")}\n`);
 
 const total = inventory.pages.reduce((sum, page) => sum + page.fields.length, 0);
 console.log(`${slug}: ${inventory.source.pages} pages, ${total} fields → ${path.relative(repoRoot, outDir)}`);

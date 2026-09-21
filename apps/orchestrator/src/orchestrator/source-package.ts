@@ -3,7 +3,7 @@ import path from "node:path";
 import type { BuildRequestSource, ComponentRegister } from "@prototype/contracts";
 import { PrototypeError, type SourceFile, type SourceModel, type SourcePackage } from "../domain/models.js";
 import { parseBrandPack, parseDocumentManifest, parseProductData, validateSourceModel } from "../domain/schemas.js";
-import type { StorageAdapter, StoredFile } from "../adapters/types.js";
+import type { StorageAdapter, StoredFile, StoredItem } from "../adapters/types.js";
 import type { Logger } from "../log.js";
 import { ensureDir, fileSize, listFilesRecursive, readJson, sha256File } from "../util/fs.js";
 
@@ -33,7 +33,14 @@ async function downloadFile(storage: StorageAdapter, fileId: string, dir: string
 
 async function downloadFolder(storage: StorageAdapter, folderId: string, dir: string, info: Map<string, StorageInfo>, prefix: string): Promise<void> {
   await ensureDir(dir);
+  const newestByName = new Map<string, StoredItem>();
   for (const child of await storage.listChildren(folderId)) {
+    const kept = newestByName.get(`${child.type}:${child.name}`);
+    if (!kept || (child.updatedAt ?? "") > (kept.updatedAt ?? "")) {
+      newestByName.set(`${child.type}:${child.name}`, child);
+    }
+  }
+  for (const child of newestByName.values()) {
     if (child.type === "folder") {
       await downloadFolder(storage, child.id, path.join(dir, child.name), info, `${prefix}/${child.name}`);
     } else {

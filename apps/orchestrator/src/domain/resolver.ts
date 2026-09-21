@@ -58,9 +58,19 @@ export function usabilityIssue(kind: string, id: string, item: Governed, today: 
   return null;
 }
 
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+/** Typed values are formatted here, once, so templates never carry formatting rules. */
 export function formatDataValue(value: DataScalar, type: DataValueType): string {
   if (type === "boolean") {
     return value === true || value === "true" ? "Yes" : "No";
+  }
+  if (type === "date") {
+    const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(value));
+    const month = match ? MONTHS[Number(match[2]) - 1] : undefined;
+    if (match && month) {
+      return `${Number(match[3])} ${month} ${match[1]}`;
+    }
   }
   return String(value);
 }

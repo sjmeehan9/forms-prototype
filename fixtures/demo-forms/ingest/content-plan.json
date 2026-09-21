@@ -2,64 +2,252 @@
   "schemaVersion": 1,
   "description": "Reusable components, governed data and assets planned for the demo forms. All wording will be authored for the prototype; purposes below describe intent only.",
   "brands": [
-    { "id": "example-super", "name": "Example Super", "role": "primary brand; its values live in product-data.csv" },
-    { "id": "northwind-retirement", "name": "Northwind Retirement", "role": "second brand; its values are brand pack overrides" }
+    {
+      "id": "example-super",
+      "name": "Example Super",
+      "role": "primary brand; its values live in product-data.csv"
+    },
+    {
+      "id": "northwind-retirement",
+      "name": "Northwind Retirement",
+      "role": "second brand; its values are brand pack overrides"
+    }
   ],
   "components": {
-    "privacy.statement": { "purpose": "How personal information on a form is collected, used and protected, and where the privacy policy lives.", "shape": "heading and two paragraphs" },
-    "tfn.notice": { "purpose": "Why a tax file number is requested, that giving it is voluntary, and how it is used.", "shape": "one shaded paragraph" },
-    "form.completion.instructions": { "purpose": "How to fill in a form: pen colour, block letters, mandatory field marker.", "shape": "one short paragraph" },
-    "return.instructions": { "purpose": "How to send a completed form back and where to get help.", "shape": "heading and paragraph; contact facts come from data" },
-    "declaration.transfer": { "purpose": "Statements a member agrees to when asking to transfer a balance from another fund.", "shape": "lead-in and bulleted statements" },
-    "nomination.intro": { "purpose": "Who the nomination form is for and that it goes to the employer, not the fund.", "shape": "callout heading and paragraph" },
-    "nomination.alternative": { "purpose": "What to do when the member wants to nominate a different fund.", "shape": "one paragraph" },
-    "nomination.statement": { "purpose": "The member's nomination of the fund shown in the fund details panel.", "shape": "one sentence" },
-    "employer.records.instructions": { "purpose": "What the employer completes and how long the form must be kept.", "shape": "paragraph and emphasised note" },
-    "compliance.letter.body": { "purpose": "Trustee confirmations that the fund can accept employer contributions, how to pay, and the help line.", "shape": "salutation, lettered statements, two short sections" },
-    "guide.online.tip": { "purpose": "Details that can be changed online instead of by form.", "shape": "sidebar heading and paragraph" },
-    "guide.register.tip": { "purpose": "Invitation to register for online access.", "shape": "sidebar heading and paragraph" },
-    "guide.section.current": { "purpose": "What to enter in the current details section.", "shape": "heading and paragraph" },
-    "guide.section.contact": { "purpose": "What to enter in the new contact details section.", "shape": "heading and paragraph" },
-    "guide.section.personal": { "purpose": "What to enter when a name, birth date or gender changes, and the evidence needed.", "shape": "heading and paragraph" },
-    "guide.section.income": { "purpose": "Who completes the bank and payment sections.", "shape": "heading and two paragraphs" },
-    "guide.section.checklist": { "purpose": "Reminder to use the checklist, read the declaration and sign.", "shape": "heading and paragraph" },
-    "identity.name.change.evidence": { "purpose": "Evidence required when personal details change.", "shape": "one emphasised paragraph" },
-    "income.account.explainer": { "purpose": "What a retirement income account is and which sections to skip without one.", "shape": "heading and two paragraphs" },
-    "bank.details.conditions": { "purpose": "Conditions on the bank account that payments can go to.", "shape": "three paragraphs" },
-    "income.payment.conditions": { "purpose": "Minimum payment rule and that changes apply from the next payment.", "shape": "two paragraphs" },
-    "income.payment.footnotes": { "purpose": "Footnotes explaining the minimum, maximum and blank-section behaviour.", "shape": "small-print list" },
-    "identity.electronic.explainer": { "purpose": "How electronic identity verification works and what it is used for.", "shape": "heading and three paragraphs" },
-    "identity.document.option": { "purpose": "The certified-document alternative to electronic verification.", "shape": "heading and paragraph" },
-    "declaration.update": { "purpose": "Member declaration for a change of details, with the under-age note and signing note.", "shape": "three short paragraphs" },
-    "declaration.representative": { "purpose": "Declaration by a person signing on the member's behalf.", "shape": "lead-in and bulleted statements" }
+    "privacy.statement": {
+      "purpose": "How personal information on a form is collected, used and protected, and where the privacy policy lives.",
+      "shape": "heading and two paragraphs"
+    },
+    "tfn.notice": {
+      "purpose": "Why a tax file number is requested, that giving it is voluntary, and how it is used.",
+      "shape": "one shaded paragraph"
+    },
+    "form.completion.instructions": {
+      "purpose": "How to fill in a form: pen colour, block letters, mandatory field marker.",
+      "shape": "one short paragraph"
+    },
+    "return.instructions": {
+      "purpose": "How to send a completed form back and where to get help.",
+      "shape": "heading and paragraph; contact facts come from data"
+    },
+    "declaration.transfer": {
+      "purpose": "Statements a member agrees to when asking to transfer a balance from another fund.",
+      "shape": "lead-in and bulleted statements"
+    },
+    "nomination.intro": {
+      "purpose": "Who the nomination form is for and that it goes to the employer, not the fund.",
+      "shape": "callout heading and paragraph"
+    },
+    "nomination.alternative": {
+      "purpose": "What to do when the member wants to nominate a different fund.",
+      "shape": "one paragraph"
+    },
+    "nomination.statement": {
+      "purpose": "The member's nomination of the fund shown in the fund details panel.",
+      "shape": "one sentence"
+    },
+    "employer.records.instructions": {
+      "purpose": "What the employer completes after receiving the form.",
+      "shape": "one paragraph"
+    },
+    "employer.retention.note": {
+      "purpose": "How long the employer keeps the form and where it must not be sent.",
+      "shape": "one emphasised paragraph"
+    },
+    "compliance.letter.body": {
+      "purpose": "Trustee confirmations that the fund can accept employer contributions, how to pay, and the help line.",
+      "shape": "salutation, lettered statements, two short sections"
+    },
+    "guide.online.tip": {
+      "purpose": "Details that can be changed online instead of by form.",
+      "shape": "sidebar heading and paragraph"
+    },
+    "guide.register.tip": {
+      "purpose": "Invitation to register for online access.",
+      "shape": "sidebar heading and paragraph"
+    },
+    "guide.section.current": {
+      "purpose": "What to enter in the current details section.",
+      "shape": "heading and paragraph"
+    },
+    "guide.section.contact": {
+      "purpose": "What to enter in the new contact details section.",
+      "shape": "heading and paragraph"
+    },
+    "guide.section.personal": {
+      "purpose": "What to enter when a name, birth date or gender changes, and the evidence needed.",
+      "shape": "heading and paragraph"
+    },
+    "guide.section.income": {
+      "purpose": "Who completes the bank and payment sections.",
+      "shape": "heading and two paragraphs"
+    },
+    "guide.section.checklist": {
+      "purpose": "Reminder to use the checklist, read the declaration and sign.",
+      "shape": "heading and paragraph"
+    },
+    "identity.name.change.evidence": {
+      "purpose": "Evidence required when personal details change.",
+      "shape": "one emphasised paragraph"
+    },
+    "income.account.explainer": {
+      "purpose": "What a retirement income account is and which sections to skip without one.",
+      "shape": "heading and two paragraphs"
+    },
+    "bank.details.conditions": {
+      "purpose": "Conditions on the bank account that payments can go to.",
+      "shape": "three paragraphs"
+    },
+    "income.payment.conditions": {
+      "purpose": "Minimum payment rule and that changes apply from the next payment.",
+      "shape": "two paragraphs"
+    },
+    "income.payment.footnotes": {
+      "purpose": "Footnotes explaining the minimum, maximum and blank-section behaviour.",
+      "shape": "small-print list"
+    },
+    "identity.electronic.explainer": {
+      "purpose": "How electronic identity verification works and what it is used for.",
+      "shape": "heading and three paragraphs"
+    },
+    "identity.document.option": {
+      "purpose": "The certified-document alternative to electronic verification.",
+      "shape": "heading and paragraph"
+    },
+    "declaration.update": {
+      "purpose": "Member declaration for a change of details, with the under-age note and signing note.",
+      "shape": "three short paragraphs"
+    },
+    "declaration.representative": {
+      "purpose": "Declaration by a person signing on the member's behalf.",
+      "shape": "lead-in and bulleted statements"
+    }
   },
   "data": {
-    "fund.name": { "type": "string", "scope": "brand", "purpose": "Fund name in headings, panels and footers." },
-    "fund.abn": { "type": "string", "scope": "brand", "purpose": "Fund ABN; clearly fictitious values." },
-    "fund.usi": { "type": "string", "scope": "brand", "purpose": "Unique superannuation identifier." },
-    "fund.spin": { "type": "string", "scope": "brand", "purpose": "Legacy product identification number shown on the nomination form." },
-    "fund.address": { "type": "string", "scope": "brand", "purpose": "Fund street address on one line." },
-    "trustee.name": { "type": "string", "scope": "brand", "purpose": "Trustee legal name for issuer lines." },
-    "trustee.abn": { "type": "string", "scope": "brand", "purpose": "Trustee ABN." },
-    "trustee.afsl": { "type": "string", "scope": "brand", "purpose": "Trustee licence number." },
-    "trustee.rse": { "type": "string", "scope": "brand", "purpose": "Trustee registrable superannuation entity licence." },
-    "contact.phone": { "type": "string", "scope": "brand", "purpose": "Help line, using numbers reserved for fiction." },
-    "contact.hours": { "type": "string", "scope": "shared", "purpose": "Help line opening hours; shared by both brands to show a shared data change." },
-    "contact.website": { "type": "string", "scope": "brand", "purpose": "Website on a reserved example domain." },
-    "contact.email": { "type": "string", "scope": "brand", "purpose": "Forms mailbox on a reserved example domain." },
-    "contact.postal.address": { "type": "string", "scope": "brand", "purpose": "Return address block." },
-    "contact.register.url": { "type": "string", "scope": "brand", "purpose": "Online registration address." },
-    "contact.identity.url": { "type": "string", "scope": "brand", "purpose": "Identity requirements fact sheet address." },
-    "letter.compliance.date": { "type": "date", "scope": "shared", "purpose": "Date on the compliance letter." },
-    "letter.signatory.name": { "type": "string", "scope": "brand", "purpose": "Fictional signatory of the compliance letter." },
-    "letter.signatory.title": { "type": "string", "scope": "shared", "purpose": "Signatory's position." },
-    "form.issue.date": { "type": "date", "scope": "shared", "purpose": "Issue date in footers." },
-    "form.consolidate.code": { "type": "string", "scope": "shared", "purpose": "Form code and version for the transfer form." },
-    "form.nomination.code": { "type": "string", "scope": "shared", "purpose": "Form code and version for the nomination form." },
-    "form.update.code": { "type": "string", "scope": "shared", "purpose": "Form code and version for the change of details form." }
+    "fund.name": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Fund name in headings, panels and footers."
+    },
+    "fund.abn": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Fund ABN; clearly fictitious values."
+    },
+    "fund.usi": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Unique superannuation identifier."
+    },
+    "fund.spin": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Legacy product identification number shown on the nomination form."
+    },
+    "fund.address": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Fund street address on one line."
+    },
+    "trustee.name": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Trustee legal name for issuer lines."
+    },
+    "trustee.abn": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Trustee ABN."
+    },
+    "trustee.afsl": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Trustee licence number."
+    },
+    "trustee.rse": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Trustee registrable superannuation entity licence."
+    },
+    "contact.phone": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Help line, using numbers reserved for fiction."
+    },
+    "contact.hours": {
+      "type": "string",
+      "scope": "shared",
+      "purpose": "Help line opening hours; shared by both brands to show a shared data change."
+    },
+    "contact.website": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Website on a reserved example domain."
+    },
+    "contact.email": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Forms mailbox on a reserved example domain."
+    },
+    "contact.postal.address": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Return address block."
+    },
+    "contact.register.url": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Online registration address."
+    },
+    "contact.identity.url": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Identity requirements fact sheet address."
+    },
+    "letter.compliance.date": {
+      "type": "date",
+      "scope": "shared",
+      "purpose": "Date on the compliance letter."
+    },
+    "letter.signatory.name": {
+      "type": "string",
+      "scope": "brand",
+      "purpose": "Fictional signatory of the compliance letter."
+    },
+    "letter.signatory.title": {
+      "type": "string",
+      "scope": "shared",
+      "purpose": "Signatory's position."
+    },
+    "form.issue.date": {
+      "type": "date",
+      "scope": "shared",
+      "purpose": "Issue date in footers."
+    },
+    "form.consolidate.code": {
+      "type": "string",
+      "scope": "shared",
+      "purpose": "Form code and version for the transfer form."
+    },
+    "form.nomination.code": {
+      "type": "string",
+      "scope": "shared",
+      "purpose": "Form code and version for the nomination form."
+    },
+    "form.update.code": {
+      "type": "string",
+      "scope": "shared",
+      "purpose": "Form code and version for the change of details form."
+    }
   },
   "assets": {
-    "brand.logo": { "scope": "brand", "purpose": "Abstract logo mark drawn for the prototype; the fund name beside it is live text from fund.name." },
-    "icon.online": { "scope": "shared", "purpose": "Small marker for details that can be changed online." }
+    "brand.logo": {
+      "scope": "brand",
+      "purpose": "Abstract logo mark drawn for the prototype; the fund name beside it is live text from fund.name."
+    },
+    "icon.online": {
+      "scope": "shared",
+      "purpose": "Small marker for details that can be changed online."
+    }
   }
 }

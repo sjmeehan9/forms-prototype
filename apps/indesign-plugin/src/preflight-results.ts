@@ -67,6 +67,31 @@ function walk(node: unknown, labels: string[], out: string[]): void {
   }
 }
 
+/** UXP returns findings as flat rows that start with a nesting level: [1, category], [2, rule], [3, item, page, description, ...]. */
+function isLevelRows(findings: unknown[]): findings is unknown[][] {
+  return findings.length > 0 && findings.every((row) => Array.isArray(row) && typeof row[0] === "number");
+}
+
+function flattenLevelRows(rows: unknown[][]): string[] {
+  const lines: string[] = [];
+  const stack: string[] = [];
+  for (const row of rows) {
+    const level = Math.max(1, Number(row[0]));
+    const parts = row.slice(1).filter((part): part is string | number => (typeof part === "string" && part.trim() !== "") || typeof part === "number").map((part) => String(part).replace(/\s*\n\s*/g, " / ").trim());
+    if (parts.length === 0) {
+      continue;
+    }
+    stack.length = level - 1;
+    if (parts.length === 1) {
+      stack[level - 1] = parts[0] as string;
+    } else {
+      const [item, page, ...rest] = parts;
+      lines.push([...stack.filter(Boolean), `${item} | page ${page}${rest.length > 0 ? ` | ${rest.join(" | ")}` : ""}`].join(" > "));
+    }
+  }
+  return lines;
+}
+
 /**
  * aggregatedResults is [profileName, documentName, findings]. Findings nest arbitrarily as
  * [label, children] groups (category, rule, sub-rule) ending in instance arrays. Each instance
@@ -78,8 +103,12 @@ export function flattenAggregatedResults(results: unknown): string[] {
     collectStrings(results, fallback);
     return fallback;
   }
+  const findings = results[2] as unknown[];
+  if (isLevelRows(findings)) {
+    return flattenLevelRows(findings);
+  }
   const lines: string[] = [];
-  for (const category of results[2] as unknown[]) {
+  for (const category of findings) {
     walk(category, [], lines);
   }
   return lines;

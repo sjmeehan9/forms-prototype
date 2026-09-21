@@ -1,0 +1,515 @@
+{
+  "schemaVersion": 1,
+  "id": "consolidate-super",
+  "archetype": "form",
+  "templateId": "consolidate-super.indt",
+  "brandIds": [
+    "example-super",
+    "northwind-retirement"
+  ],
+  "bindings": [
+    {
+      "target": "asset:brand.logo",
+      "source": {
+        "type": "asset",
+        "id": "brand.logo"
+      }
+    },
+    {
+      "target": "data:fund.name@header",
+      "source": {
+        "type": "data",
+        "key": "fund.name"
+      }
+    },
+    {
+      "target": "data:contact.website@intro",
+      "source": {
+        "type": "data",
+        "key": "contact.website"
+      }
+    },
+    {
+      "target": "data:fund.abn@section1",
+      "source": {
+        "type": "data",
+        "key": "fund.abn"
+      }
+    },
+    {
+      "target": "data:fund.usi@section1",
+      "source": {
+        "type": "data",
+        "key": "fund.usi"
+      }
+    },
+    {
+      "target": "content:tfn.notice",
+      "source": {
+        "type": "component",
+        "id": "tfn.notice"
+      }
+    },
+    {
+      "target": "content:privacy.statement",
+      "source": {
+        "type": "component",
+        "id": "privacy.statement"
+      }
+    },
+    {
+      "target": "data:trustee.name@footer1",
+      "source": {
+        "type": "data",
+        "key": "trustee.name"
+      }
+    },
+    {
+      "target": "data:trustee.abn@footer1",
+      "source": {
+        "type": "data",
+        "key": "trustee.abn"
+      }
+    },
+    {
+      "target": "data:trustee.afsl@footer1",
+      "source": {
+        "type": "data",
+        "key": "trustee.afsl"
+      }
+    },
+    {
+      "target": "data:fund.name@footer1",
+      "source": {
+        "type": "data",
+        "key": "fund.name"
+      }
+    },
+    {
+      "target": "data:fund.abn@footer1",
+      "source": {
+        "type": "data",
+        "key": "fund.abn"
+      }
+    },
+    {
+      "target": "content:declaration.transfer",
+      "source": {
+        "type": "component",
+        "id": "declaration.transfer"
+      }
+    },
+    {
+      "target": "content:return.instructions",
+      "source": {
+        "type": "component",
+        "id": "return.instructions"
+      }
+    },
+    {
+      "target": "data:contact.postal.address@return",
+      "source": {
+        "type": "data",
+        "key": "contact.postal.address"
+      }
+    },
+    {
+      "target": "data:contact.email@return",
+      "source": {
+        "type": "data",
+        "key": "contact.email"
+      }
+    },
+    {
+      "target": "data:contact.phone@return",
+      "source": {
+        "type": "data",
+        "key": "contact.phone"
+      }
+    },
+    {
+      "target": "data:contact.hours@return",
+      "source": {
+        "type": "data",
+        "key": "contact.hours"
+      }
+    },
+    {
+      "target": "data:form.consolidate.code@footer",
+      "source": {
+        "type": "data",
+        "key": "form.consolidate.code"
+      }
+    },
+    {
+      "target": "data:trustee.name@footer2",
+      "source": {
+        "type": "data",
+        "key": "trustee.name"
+      }
+    },
+    {
+      "target": "data:trustee.abn@footer2",
+      "source": {
+        "type": "data",
+        "key": "trustee.abn"
+      }
+    },
+    {
+      "target": "data:trustee.afsl@footer2",
+      "source": {
+        "type": "data",
+        "key": "trustee.afsl"
+      }
+    },
+    {
+      "target": "data:fund.name@footer2",
+      "source": {
+        "type": "data",
+        "key": "fund.name"
+      }
+    },
+    {
+      "target": "data:fund.abn@footer2",
+      "source": {
+        "type": "data",
+        "key": "fund.abn"
+      }
+    }
+  ],
+  "styleMap": {
+    "heading": "component-heading",
+    "body": "body",
+    "body-strong": "body-strong",
+    "list-item": "bullet",
+    "note": "note"
+  },
+  "formFields": [
+    {
+      "name": "account.number",
+      "type": "text",
+      "binding": "field:account.number",
+      "description": "Account number (if known)",
+      "tabOrder": 1
+    },
+    {
+      "name": "customer.number",
+      "type": "text",
+      "binding": "field:customer.number",
+      "description": "Customer number (if known)",
+      "tabOrder": 2
+    },
+    {
+      "name": "account.productName",
+      "type": "text",
+      "binding": "field:account.productName",
+      "description": "Product name",
+      "tabOrder": 3
+    },
+    {
+      "name": "member.gender",
+      "type": "radio",
+      "binding": "field:member.gender:male",
+      "description": "Gender: Male",
+      "required": true,
+      "exportValue": "male",
+      "group": "member.gender",
+      "tabOrder": 4
+    },
+    {
+      "name": "member.gender",
+      "type": "radio",
+      "binding": "field:member.gender:female",
+      "description": "Gender: Female",
+      "exportValue": "female",
+      "group": "member.gender",
+      "tabOrder": 5
+    },
+    {
+      "name": "member.gender",
+      "type": "radio",
+      "binding": "field:member.gender:other",
+      "description": "Gender: Another term",
+      "exportValue": "other",
+      "group": "member.gender",
+      "tabOrder": 6
+    },
+    {
+      "name": "member.title",
+      "type": "combo",
+      "binding": "field:member.title",
+      "description": "Title",
+      "options": [
+        "Mr",
+        "Mrs",
+        "Ms",
+        "Miss",
+        "Mx",
+        "Dr",
+        "Prof"
+      ],
+      "tabOrder": 7
+    },
+    {
+      "name": "member.firstName",
+      "type": "text",
+      "binding": "field:member.firstName",
+      "description": "First name",
+      "required": true,
+      "tabOrder": 8
+    },
+    {
+      "name": "member.middleNames",
+      "type": "text",
+      "binding": "field:member.middleNames",
+      "description": "Middle name(s)",
+      "tabOrder": 9
+    },
+    {
+      "name": "member.lastName",
+      "type": "text",
+      "binding": "field:member.lastName",
+      "description": "Last name",
+      "required": true,
+      "tabOrder": 10
+    },
+    {
+      "name": "member.previousNames",
+      "type": "text",
+      "binding": "field:member.previousNames",
+      "description": "Previous names",
+      "tabOrder": 11
+    },
+    {
+      "name": "member.email",
+      "type": "text",
+      "binding": "field:member.email",
+      "description": "Email",
+      "tabOrder": 12
+    },
+    {
+      "name": "member.phone.daytime",
+      "type": "text",
+      "binding": "field:member.phone.daytime",
+      "description": "Daytime phone number",
+      "required": true,
+      "tabOrder": 13
+    },
+    {
+      "name": "member.dateOfBirth",
+      "type": "text",
+      "binding": "field:member.dateOfBirth",
+      "description": "Date of birth (DD/MM/YYYY)",
+      "required": true,
+      "tabOrder": 14
+    },
+    {
+      "name": "member.taxFileNumber",
+      "type": "text",
+      "binding": "field:member.taxFileNumber",
+      "description": "Tax file number (TFN)",
+      "tabOrder": 15
+    },
+    {
+      "name": "address.residential.unit",
+      "type": "text",
+      "binding": "field:address.residential.unit",
+      "description": "Residential unit",
+      "tabOrder": 16
+    },
+    {
+      "name": "address.residential.streetNumber",
+      "type": "text",
+      "binding": "field:address.residential.streetNumber",
+      "description": "Residential street number",
+      "tabOrder": 17
+    },
+    {
+      "name": "address.residential.streetName",
+      "type": "text",
+      "binding": "field:address.residential.streetName",
+      "description": "Residential street name",
+      "required": true,
+      "tabOrder": 18
+    },
+    {
+      "name": "address.residential.suburb",
+      "type": "text",
+      "binding": "field:address.residential.suburb",
+      "description": "Residential suburb or town",
+      "required": true,
+      "tabOrder": 19
+    },
+    {
+      "name": "address.residential.state",
+      "type": "text",
+      "binding": "field:address.residential.state",
+      "description": "Residential state",
+      "required": true,
+      "tabOrder": 20
+    },
+    {
+      "name": "address.residential.postcode",
+      "type": "text",
+      "binding": "field:address.residential.postcode",
+      "description": "Residential postcode",
+      "required": true,
+      "tabOrder": 21
+    },
+    {
+      "name": "address.residential.country",
+      "type": "text",
+      "binding": "field:address.residential.country",
+      "description": "Residential country",
+      "tabOrder": 22
+    },
+    {
+      "name": "address.previous.unit",
+      "type": "text",
+      "binding": "field:address.previous.unit",
+      "description": "Previous unit",
+      "tabOrder": 23
+    },
+    {
+      "name": "address.previous.streetNumber",
+      "type": "text",
+      "binding": "field:address.previous.streetNumber",
+      "description": "Previous street number",
+      "tabOrder": 24
+    },
+    {
+      "name": "address.previous.streetName",
+      "type": "text",
+      "binding": "field:address.previous.streetName",
+      "description": "Previous street name",
+      "tabOrder": 25
+    },
+    {
+      "name": "address.previous.suburb",
+      "type": "text",
+      "binding": "field:address.previous.suburb",
+      "description": "Previous suburb or town",
+      "tabOrder": 26
+    },
+    {
+      "name": "address.previous.state",
+      "type": "text",
+      "binding": "field:address.previous.state",
+      "description": "Previous state",
+      "tabOrder": 27
+    },
+    {
+      "name": "address.previous.postcode",
+      "type": "text",
+      "binding": "field:address.previous.postcode",
+      "description": "Previous postcode",
+      "tabOrder": 28
+    },
+    {
+      "name": "address.previous.country",
+      "type": "text",
+      "binding": "field:address.previous.country",
+      "description": "Previous country",
+      "tabOrder": 29
+    },
+    {
+      "name": "fromFund.name",
+      "type": "text",
+      "binding": "field:fromFund.name",
+      "description": "Fund name",
+      "required": true,
+      "tabOrder": 30
+    },
+    {
+      "name": "fromFund.productName",
+      "type": "text",
+      "binding": "field:fromFund.productName",
+      "description": "Product name",
+      "tabOrder": 31
+    },
+    {
+      "name": "fromFund.memberNumber",
+      "type": "text",
+      "binding": "field:fromFund.memberNumber",
+      "description": "Member or account number",
+      "required": true,
+      "tabOrder": 32
+    },
+    {
+      "name": "fromFund.usi",
+      "type": "text",
+      "binding": "field:fromFund.usi",
+      "description": "Unique superannuation identifier (USI)",
+      "tabOrder": 33
+    },
+    {
+      "name": "fromFund.esa",
+      "type": "text",
+      "binding": "field:fromFund.esa",
+      "description": "Electronic service address (self-managed funds)",
+      "tabOrder": 34
+    },
+    {
+      "name": "fromFund.abn",
+      "type": "text",
+      "binding": "field:fromFund.abn",
+      "description": "Fund ABN (self-managed funds)",
+      "tabOrder": 35
+    },
+    {
+      "name": "transfer.amountType",
+      "type": "radio",
+      "binding": "field:transfer.amountType:total",
+      "description": "Amount to transfer: My whole balance",
+      "required": true,
+      "exportValue": "total",
+      "group": "transfer.amountType",
+      "tabOrder": 36
+    },
+    {
+      "name": "transfer.amountType",
+      "type": "radio",
+      "binding": "field:transfer.amountType:partial",
+      "description": "Amount to transfer: Part of my balance",
+      "exportValue": "partial",
+      "group": "transfer.amountType",
+      "tabOrder": 37
+    },
+    {
+      "name": "transfer.partialAmount",
+      "type": "text",
+      "binding": "field:transfer.partialAmount",
+      "description": "Amount to transfer ($)",
+      "tabOrder": 38
+    },
+    {
+      "name": "declaration.name",
+      "type": "text",
+      "binding": "field:declaration.name",
+      "description": "Full name (block letters)",
+      "required": true,
+      "tabOrder": 39
+    },
+    {
+      "name": "declaration.signature",
+      "type": "signature",
+      "binding": "field:declaration.signature",
+      "description": "Signature",
+      "required": true,
+      "tabOrder": 40
+    },
+    {
+      "name": "declaration.date",
+      "type": "text",
+      "binding": "field:declaration.date",
+      "description": "Date signed (DD/MM/YYYY)",
+      "required": true,
+      "tabOrder": 41
+    }
+  ],
+  "output": {
+    "printPdf": true,
+    "interactivePdf": true,
+    "saveIndd": true
+  }
+}

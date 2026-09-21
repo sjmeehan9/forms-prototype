@@ -79,8 +79,20 @@ async function readBuildRequest(ctx: RunContext, ref: BuildRequestRef, workDir: 
   return parseWithSchema(BuildRequestSchema, await readJson(destination), "request.json");
 }
 
-function mergeSource(defaults: Partial<BuildRequestSource>, fromRequest: Partial<BuildRequestSource> | undefined): BuildRequestSource {
+async function mergeSource(ctx: RunContext, defaults: Partial<BuildRequestSource>, fromRequest: Partial<BuildRequestSource> | undefined): Promise<BuildRequestSource> {
   const merged: Partial<BuildRequestSource> = { ...defaults, ...(fromRequest ?? {}) };
+  if (merged.sourceContentFolderId) {
+    // A re-uploaded library or data file has a new id, so follow the newest matching file instead of a stored id.
+    const files = (await ctx.storage.listChildren(merged.sourceContentFolderId)).filter((item) => item.type === "file");
+    const newest = (pattern: RegExp): string | undefined =>
+      files.filter((item) => pattern.test(item.name)).sort((a, b) => (b.updatedAt ?? "").localeCompare(a.updatedAt ?? "") || a.name.localeCompare(b.name))[0]?.id;
+    if (!fromRequest?.contentLibraryFileId) {
+      merged.contentLibraryFileId = newest(/\.indd$/i) ?? merged.contentLibraryFileId;
+    }
+    if (!fromRequest?.dataFileId) {
+      merged.dataFileId = newest(/\.csv$/i) ?? merged.dataFileId;
+    }
+  }
   const result = BuildRequestSourceSchema.safeParse(merged);
   if (!result.success) {
     const missing = result.error.issues.map((issue) => issue.path.map(String).join("."));
@@ -251,7 +263,7 @@ export async function runRequest(ctx: RunContext, ref: BuildRequestRef): Promise
     stage = "request";
     const request = await readBuildRequest(ctx, ref, workDir);
     requestId = request.requestId;
-    const source = mergeSource(ctx.layout.requestDefaults, request.source);
+    const source = await mergeSource(ctx, ctx.layout.requestDefaults, request.source);
 
     stage = "download";
     const pkg = await downloadSourcePackage(ctx.storage, source, path.join(workDir, "source"), log);

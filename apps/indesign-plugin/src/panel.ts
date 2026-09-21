@@ -1,4 +1,4 @@
-import { QueueWorker, type WorkerStatus } from "./queue-worker";
+import { PLUGIN_BUILD, QueueWorker, type WorkerStatus } from "./queue-worker";
 import { messageOf } from "./text-model";
 import { persistFolder, pickFolder, restoreFolder, type Entry } from "./uxp-fs";
 
@@ -77,5 +77,6 @@ element("stop-worker").addEventListener("click", () => {
   worker.stop();
 });
 
+setText("plugin-build", PLUGIN_BUILD);
 render(lastStatus);
 void restore();

@@ -1,0 +1,5568 @@
+{
+  "schemaVersion": 1,
+  "documentId": "update-details",
+  "templateId": "update-details.indt",
+  "page": {
+    "width": 595.28,
+    "height": 841.89
+  },
+  "swatches": {
+    "brand.primary": {
+      "cmyk": [
+        85,
+        60,
+        0,
+        0
+      ]
+    },
+    "brand.accent": {
+      "cmyk": [
+        0,
+        60,
+        50,
+        0
+      ]
+    },
+    "brand.dark": {
+      "cmyk": [
+        100,
+        85,
+        30,
+        35
+      ]
+    },
+    "brand.tint": {
+      "cmyk": [
+        7,
+        2,
+        0,
+        0
+      ]
+    },
+    "panel.warm": {
+      "cmyk": [
+        4,
+        5,
+        6,
+        2
+      ]
+    },
+    "panel.peach": {
+      "cmyk": [
+        0,
+        18,
+        18,
+        0
+      ]
+    },
+    "field.stroke": {
+      "cmyk": [
+        25,
+        8,
+        0,
+        0
+      ]
+    },
+    "text.body": {
+      "cmyk": [
+        0,
+        0,
+        0,
+        88
+      ]
+    }
+  },
+  "styles": {
+    "h1": {
+      "fontFamily": "Georgia",
+      "bold": true,
+      "pointSize": 23,
+      "leading": 25,
+      "color": "brand.dark"
+    },
+    "kicker": {
+      "fontFamily": "Georgia",
+      "bold": true,
+      "pointSize": 14,
+      "leading": 17,
+      "color": "brand.primary"
+    },
+    "lead": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 10.5,
+      "leading": 12.5,
+      "color": "text.body"
+    },
+    "section-title": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 11.5,
+      "leading": 14,
+      "color": "brand.primary"
+    },
+    "tab-number": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 11,
+      "leading": 14,
+      "color": "Paper"
+    },
+    "block-title": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 10.5,
+      "leading": 13,
+      "color": "brand.primary",
+      "spaceAfter": 3
+    },
+    "block-title-small": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 9,
+      "leading": 11.5,
+      "color": "brand.primary"
+    },
+    "body": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 8.3,
+      "leading": 10,
+      "color": "text.body",
+      "spaceAfter": 3.5
+    },
+    "body-strong": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 8.3,
+      "leading": 10,
+      "color": "text.body",
+      "spaceAfter": 3.5
+    },
+    "bullet": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 8.3,
+      "leading": 10.4,
+      "color": "text.body",
+      "bullets": true,
+      "indent": 9,
+      "spaceAfter": 2.5
+    },
+    "small": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 7.6,
+      "leading": 9.2,
+      "color": "text.body",
+      "spaceAfter": 2
+    },
+    "footnote": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 7,
+      "leading": 8.4,
+      "color": "text.body",
+      "spaceAfter": 1.5
+    },
+    "label": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 8.3,
+      "leading": 10.4,
+      "color": "text.body"
+    },
+    "option": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 8.3,
+      "leading": 10.4,
+      "color": "text.body"
+    },
+    "side-heading": {
+      "fontFamily": "Georgia",
+      "bold": true,
+      "pointSize": 15,
+      "leading": 18,
+      "color": "brand.primary",
+      "spaceAfter": 6
+    },
+    "side-body": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 10,
+      "leading": 14,
+      "color": "text.body",
+      "spaceAfter": 8
+    },
+    "side-link": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 10,
+      "leading": 14,
+      "color": "brand.primary"
+    },
+    "pill": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 8.3,
+      "leading": 10.4,
+      "color": "brand.dark"
+    },
+    "brandname": {
+      "fontFamily": "Georgia",
+      "bold": true,
+      "pointSize": 16,
+      "leading": 18,
+      "color": "brand.primary",
+      "align": "right"
+    },
+    "contact-strong": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 7.5,
+      "leading": 10,
+      "color": "brand.dark",
+      "align": "right"
+    },
+    "contact": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 7.5,
+      "leading": 10,
+      "color": "brand.primary",
+      "align": "right"
+    },
+    "page-number": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 8.5,
+      "leading": 11,
+      "color": "text.body"
+    },
+    "issuer": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 7,
+      "leading": 8.5,
+      "color": "text.body",
+      "align": "right"
+    },
+    "issuer-label": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 7,
+      "leading": 8.5,
+      "color": "text.body"
+    }
+  },
+  "pages": [
+    {
+      "number": 1,
+      "elements": [
+        {
+          "kind": "target",
+          "role": "asset",
+          "label": "asset:brand.logo@guide",
+          "bounds": {
+            "left": 503,
+            "top": 18,
+            "width": 50,
+            "height": 40
+          }
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.name@guide",
+          "bounds": {
+            "left": 285,
+            "top": 30,
+            "width": 212,
+            "height": 20
+          },
+          "style": "brandname",
+          "placeholder": "[fund.name]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.phone@guide",
+          "bounds": {
+            "left": 425,
+            "top": 83.3,
+            "width": 130,
+            "height": 10.5
+          },
+          "style": "contact-strong",
+          "placeholder": "[contact.phone]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.website@guide",
+          "bounds": {
+            "left": 425,
+            "top": 93.3,
+            "width": 130,
+            "height": 10.5
+          },
+          "style": "contact",
+          "placeholder": "[contact.website]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.postal.address@guide",
+          "bounds": {
+            "left": 425,
+            "top": 103.3,
+            "width": 130,
+            "height": 21
+          },
+          "style": "contact",
+          "placeholder": "[contact.postal.address]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 128,
+            "width": 360,
+            "height": 52
+          },
+          "text": "Do you need to update\ryour account details?",
+          "style": "h1"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51,
+            "top": 184.9,
+            "width": 158.5,
+            "height": 163.6
+          },
+          "fill": "panel.warm",
+          "cornerRadius": 8
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:guide.online.tip",
+          "bounds": {
+            "left": 68,
+            "top": 198,
+            "width": 126,
+            "height": 118
+          },
+          "style": "side-body",
+          "placeholder": "[guide.online.tip]"
+        },
+        {
+          "kind": "target",
+          "role": "asset",
+          "label": "asset:icon.online@guide",
+          "bounds": {
+            "left": 68,
+            "top": 322,
+            "width": 16,
+            "height": 16
+          }
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51,
+            "top": 362.6,
+            "width": 158.5,
+            "height": 135.6
+          },
+          "fill": "panel.warm",
+          "cornerRadius": 8
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:guide.register.tip",
+          "bounds": {
+            "left": 68,
+            "top": 375,
+            "width": 126,
+            "height": 92
+          },
+          "style": "side-body",
+          "placeholder": "[guide.register.tip]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.register.url@guide",
+          "bounds": {
+            "left": 68,
+            "top": 472,
+            "width": 136,
+            "height": 14
+          },
+          "style": "side-link",
+          "placeholder": "[contact.register.url]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 228.2,
+            "top": 186,
+            "width": 340,
+            "height": 28
+          },
+          "text": "What to keep in mind for each section of the form:",
+          "style": "lead"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 227.9,
+            "top": 222.6,
+            "width": 366.6,
+            "height": 73.7
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 227.9,
+            "top": 222.6,
+            "width": 36,
+            "height": 26
+          },
+          "fill": "brand.primary",
+          "cornerRadius": 10
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 233.9,
+            "top": 228.1,
+            "width": 28,
+            "height": 16
+          },
+          "text": "1",
+          "style": "tab-number"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:guide.section.current",
+          "bounds": {
+            "left": 277.29999999999995,
+            "top": 227.1,
+            "width": 285.6,
+            "height": 64.7
+          },
+          "style": "body",
+          "placeholder": "[guide.section.current]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 227.9,
+            "top": 304.8,
+            "width": 366.6,
+            "height": 61.2
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 227.9,
+            "top": 304.8,
+            "width": 36,
+            "height": 26
+          },
+          "fill": "brand.primary",
+          "cornerRadius": 10
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 233.9,
+            "top": 310.3,
+            "width": 28,
+            "height": 16
+          },
+          "text": "2",
+          "style": "tab-number"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:guide.section.contact",
+          "bounds": {
+            "left": 277.29999999999995,
+            "top": 309.3,
+            "width": 285.6,
+            "height": 52.2
+          },
+          "style": "body",
+          "placeholder": "[guide.section.contact]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 227.9,
+            "top": 374.5,
+            "width": 366.6,
+            "height": 78.5
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 227.9,
+            "top": 374.5,
+            "width": 36,
+            "height": 26
+          },
+          "fill": "brand.primary",
+          "cornerRadius": 10
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 233.9,
+            "top": 380,
+            "width": 28,
+            "height": 16
+          },
+          "text": "3",
+          "style": "tab-number"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:guide.section.personal",
+          "bounds": {
+            "left": 277.29999999999995,
+            "top": 379,
+            "width": 285.6,
+            "height": 69.5
+          },
+          "style": "body",
+          "placeholder": "[guide.section.personal]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 227.9,
+            "top": 461.4,
+            "width": 366.6,
+            "height": 82.3
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 227.9,
+            "top": 461.4,
+            "width": 36,
+            "height": 26
+          },
+          "fill": "brand.primary",
+          "cornerRadius": 10
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 233.9,
+            "top": 466.9,
+            "width": 28,
+            "height": 16
+          },
+          "text": "4-5",
+          "style": "tab-number"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:guide.section.income",
+          "bounds": {
+            "left": 277.29999999999995,
+            "top": 465.9,
+            "width": 285.6,
+            "height": 73.3
+          },
+          "style": "body",
+          "placeholder": "[guide.section.income]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 227.9,
+            "top": 552.2,
+            "width": 366.6,
+            "height": 51.9
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 227.9,
+            "top": 552.2,
+            "width": 48,
+            "height": 26
+          },
+          "fill": "brand.primary",
+          "cornerRadius": 10
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 233.9,
+            "top": 557.7,
+            "width": 40,
+            "height": 16
+          },
+          "text": "6-10",
+          "style": "tab-number"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:guide.section.checklist",
+          "bounds": {
+            "left": 289.29999999999995,
+            "top": 556.7,
+            "width": 273.6,
+            "height": 42.9
+          },
+          "style": "body",
+          "placeholder": "[guide.section.checklist]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 273.6,
+            "top": 612,
+            "width": 292,
+            "height": 12
+          },
+          "text": "Need to prove who you are? Our fact sheet explains how:",
+          "style": "body-strong"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.identity.url@guide",
+          "bounds": {
+            "left": 273.6,
+            "top": 624,
+            "width": 292,
+            "height": 12
+          },
+          "style": "side-link",
+          "placeholder": "[contact.identity.url]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 14.2,
+            "top": 813.8,
+            "width": 90,
+            "height": 12
+          },
+          "text": "Page 1 of 6",
+          "style": "page-number"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.name@guide",
+          "bounds": {
+            "left": 376,
+            "top": 791.4,
+            "width": 180,
+            "height": 9.5
+          },
+          "style": "issuer",
+          "placeholder": "[trustee.name]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 376,
+            "top": 799.4,
+            "width": 100,
+            "height": 9.5
+          },
+          "text": "Trustee ABN",
+          "style": "issuer-label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.abn@guide",
+          "bounds": {
+            "left": 466,
+            "top": 799.4,
+            "width": 90,
+            "height": 9.5
+          },
+          "style": "issuer",
+          "placeholder": "[trustee.abn]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 376,
+            "top": 807.4,
+            "width": 100,
+            "height": 9.5
+          },
+          "text": "AFSL",
+          "style": "issuer-label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.afsl@guide",
+          "bounds": {
+            "left": 466,
+            "top": 807.4,
+            "width": 90,
+            "height": 9.5
+          },
+          "style": "issuer",
+          "placeholder": "[trustee.afsl]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 376,
+            "top": 815.4,
+            "width": 100,
+            "height": 9.5
+          },
+          "text": "Fund ABN",
+          "style": "issuer-label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.abn@guide",
+          "bounds": {
+            "left": 466,
+            "top": 815.4,
+            "width": 90,
+            "height": 9.5
+          },
+          "style": "issuer",
+          "placeholder": "[fund.abn]"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "elements": [
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 27.3,
+            "width": 300,
+            "height": 19
+          },
+          "text": "Your account",
+          "style": "kicker"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 43.4,
+            "width": 380,
+            "height": 30
+          },
+          "text": "Update your details",
+          "style": "h1"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:form.completion.instructions",
+          "bounds": {
+            "left": 51,
+            "top": 77.8,
+            "width": 330,
+            "height": 30
+          },
+          "style": "small",
+          "placeholder": "[form.completion.instructions]"
+        },
+        {
+          "kind": "target",
+          "role": "asset",
+          "label": "asset:brand.logo@form",
+          "bounds": {
+            "left": 503,
+            "top": 18,
+            "width": 50,
+            "height": 40
+          }
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.name@form",
+          "bounds": {
+            "left": 285,
+            "top": 30,
+            "width": 212,
+            "height": 20
+          },
+          "style": "brandname",
+          "placeholder": "[fund.name]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.phone@form",
+          "bounds": {
+            "left": 425,
+            "top": 83.3,
+            "width": 130,
+            "height": 10.5
+          },
+          "style": "contact-strong",
+          "placeholder": "[contact.phone]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.website@form",
+          "bounds": {
+            "left": 425,
+            "top": 93.3,
+            "width": 130,
+            "height": 10.5
+          },
+          "style": "contact",
+          "placeholder": "[contact.website]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.postal.address@form",
+          "bounds": {
+            "left": 425,
+            "top": 103.3,
+            "width": 130,
+            "height": 21
+          },
+          "style": "contact",
+          "placeholder": "[contact.postal.address]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 437,
+            "top": 127,
+            "width": 132,
+            "height": 50
+          },
+          "fill": "panel.peach",
+          "cornerRadius": 6
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.5,
+            "top": 149.3,
+            "width": 552.8,
+            "height": 487.5
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.5,
+            "top": 149.3,
+            "width": 32,
+            "height": 26
+          },
+          "fill": "brand.primary",
+          "cornerRadius": 10
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 48.5,
+            "top": 154.8,
+            "width": 24,
+            "height": 16
+          },
+          "text": "1",
+          "style": "tab-number"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 84.5,
+            "top": 154.8,
+            "width": 440,
+            "height": 16
+          },
+          "text": "Your current details",
+          "style": "section-title"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 519.8,
+            "width": 300,
+            "height": 15
+          },
+          "text": "Tax file number (TFN)",
+          "style": "block-title"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:tfn.notice",
+          "bounds": {
+            "left": 51,
+            "top": 535.5,
+            "width": 500,
+            "height": 20
+          },
+          "style": "small",
+          "placeholder": "[tfn.notice]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51,
+            "top": 558,
+            "width": 516,
+            "height": 58
+          },
+          "fill": "Paper",
+          "cornerRadius": 4
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 62,
+            "top": 566.8,
+            "width": 124,
+            "height": 12
+          },
+          "text": "I want to update details for:",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 62,
+            "top": 578,
+            "width": 124,
+            "height": 11
+          },
+          "text": "(tick all that apply)",
+          "style": "option"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 452,
+            "top": 622,
+            "width": 118,
+            "height": 22
+          },
+          "fill": "panel.peach",
+          "cornerRadius": 11
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 464,
+            "top": 627.5,
+            "width": 100,
+            "height": 12
+          },
+          "text": "Please turn over",
+          "style": "pill"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 14.2,
+            "top": 813.8,
+            "width": 90,
+            "height": 12
+          },
+          "text": "Page 2 of 6",
+          "style": "page-number"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:form.update.code@form",
+          "bounds": {
+            "left": 14.2,
+            "top": 825.3,
+            "width": 160,
+            "height": 9
+          },
+          "style": "footnote",
+          "placeholder": "[form.update.code]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.name@form",
+          "bounds": {
+            "left": 376,
+            "top": 791.4,
+            "width": 180,
+            "height": 9.5
+          },
+          "style": "issuer",
+          "placeholder": "[trustee.name]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 376,
+            "top": 799.4,
+            "width": 100,
+            "height": 9.5
+          },
+          "text": "Trustee ABN",
+          "style": "issuer-label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.abn@form",
+          "bounds": {
+            "left": 466,
+            "top": 799.4,
+            "width": 90,
+            "height": 9.5
+          },
+          "style": "issuer",
+          "placeholder": "[trustee.abn]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 376,
+            "top": 807.4,
+            "width": 100,
+            "height": 9.5
+          },
+          "text": "AFSL",
+          "style": "issuer-label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.afsl@form",
+          "bounds": {
+            "left": 466,
+            "top": 807.4,
+            "width": 90,
+            "height": 9.5
+          },
+          "style": "issuer",
+          "placeholder": "[trustee.afsl]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 376,
+            "top": 815.4,
+            "width": 100,
+            "height": 9.5
+          },
+          "text": "Fund ABN",
+          "style": "issuer-label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.abn@form",
+          "bounds": {
+            "left": 466,
+            "top": 815.4,
+            "width": 90,
+            "height": 9.5
+          },
+          "style": "issuer",
+          "placeholder": "[fund.abn]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 450.2,
+            "top": 149.4,
+            "width": 114.4,
+            "height": 20.9
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51.1,
+            "top": 193.9,
+            "width": 87.5,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51.1,
+            "top": 227.4,
+            "width": 190.7,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 250.5,
+            "top": 227.4,
+            "width": 199.5,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51.1,
+            "top": 260.9,
+            "width": 190.7,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 250.7,
+            "top": 260.9,
+            "width": 130,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 51.7,
+            "top": 297.1,
+            "width": 11.3,
+            "height": 17.7
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 87.8,
+            "top": 297.1,
+            "width": 11.3,
+            "height": 17.7
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 138,
+            "top": 297.1,
+            "width": 11.3,
+            "height": 17.7
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51.1,
+            "top": 326.7,
+            "width": 398.8,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51.1,
+            "top": 360.4,
+            "width": 190.7,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 250.5,
+            "top": 360.4,
+            "width": 47.5,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 316.9,
+            "top": 360.4,
+            "width": 63.8,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51.1,
+            "top": 394.3,
+            "width": 398.8,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51.1,
+            "top": 428,
+            "width": 190.7,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 250.5,
+            "top": 428,
+            "width": 47.3,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 316.9,
+            "top": 428,
+            "width": 63.8,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51.1,
+            "top": 461.5,
+            "width": 163.4,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 233.9,
+            "top": 461.5,
+            "width": 163.4,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51.1,
+            "top": 496,
+            "width": 398.8,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 190.6,
+            "top": 566.5,
+            "width": 16.4,
+            "height": 16.4
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 341.8,
+            "top": 566.5,
+            "width": 16.4,
+            "height": 16.4
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 190.6,
+            "top": 592.1,
+            "width": 16.4,
+            "height": 16.4
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 341.8,
+            "top": 592.6,
+            "width": 16.4,
+            "height": 16.4
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 450.3,
+            "top": 130.7,
+            "width": 67.3,
+            "height": 18.6
+          },
+          "text": "Member number",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 181.5,
+            "width": 30.8,
+            "height": 13.8
+          },
+          "text": "Title",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 214.9,
+            "width": 62.8,
+            "height": 13.8
+          },
+          "text": "First name *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 250.3,
+            "top": 214.9,
+            "width": 71.9,
+            "height": 13.8
+          },
+          "text": "Middle name(s)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 248.4,
+            "width": 58.2,
+            "height": 13.8
+          },
+          "text": "Last name *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 250.3,
+            "top": 248.4,
+            "width": 135.8,
+            "height": 13.8
+          },
+          "text": "Date of birth (DD/MM/YYYY) *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 66.8,
+            "top": 299.6,
+            "width": 26.3,
+            "height": 13.6
+          },
+          "text": "Male",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 281.9,
+            "width": 44.5,
+            "height": 13.8
+          },
+          "text": "Gender *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 102.8,
+            "top": 299.6,
+            "width": 35.4,
+            "height": 13.6
+          },
+          "text": "Female",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 154,
+            "top": 299.6,
+            "width": 70,
+            "height": 12.3
+          },
+          "text": "Another term",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 313.8,
+            "width": 200,
+            "height": 13.8
+          },
+          "text": "Home address * (not a PO box)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 347.9,
+            "width": 81,
+            "height": 13.8
+          },
+          "text": "Suburb or town *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 250.3,
+            "top": 347.8,
+            "width": 40,
+            "height": 13.8
+          },
+          "text": "State *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 316.8,
+            "top": 347.8,
+            "width": 53.7,
+            "height": 13.8
+          },
+          "text": "Postcode *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 381.4,
+            "width": 300,
+            "height": 13.8
+          },
+          "text": "Postal address (if different from your home address)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 415.5,
+            "width": 71.9,
+            "height": 13.8
+          },
+          "text": "Suburb or town",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 250.3,
+            "top": 415.4,
+            "width": 30.8,
+            "height": 13.8
+          },
+          "text": "State",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 316.8,
+            "top": 415.4,
+            "width": 44.5,
+            "height": 13.8
+          },
+          "text": "Postcode",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 449,
+            "width": 67.3,
+            "height": 13.8
+          },
+          "text": "Mobile number",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 233.7,
+            "top": 449,
+            "width": 99.3,
+            "height": 13.8
+          },
+          "text": "Daytime phone number",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 483.2,
+            "width": 40,
+            "height": 13.8
+          },
+          "text": "Email *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 210.9,
+            "top": 570.3,
+            "width": 99.3,
+            "height": 13.8
+          },
+          "text": "Accumulation account",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 362.7,
+            "top": 570.3,
+            "width": 103.9,
+            "height": 13.8
+          },
+          "text": "Employer plan account",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 211.4,
+            "top": 595.9,
+            "width": 122.1,
+            "height": 13.8
+          },
+          "text": "Retirement income account",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 362.2,
+            "top": 596.4,
+            "width": 103.9,
+            "height": 13.8
+          },
+          "text": "Business plan account",
+          "style": "option"
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:member.number",
+          "bounds": {
+            "left": 450.2,
+            "top": 149.4,
+            "width": 114.4,
+            "height": 20.9
+          }
+        },
+        {
+          "kind": "control",
+          "control": "combo",
+          "label": "field:current.member.title",
+          "bounds": {
+            "left": 51.1,
+            "top": 193.9,
+            "width": 87.5,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:current.member.firstName",
+          "bounds": {
+            "left": 51.1,
+            "top": 227.4,
+            "width": 190.7,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:current.member.middleNames",
+          "bounds": {
+            "left": 250.5,
+            "top": 227.4,
+            "width": 199.5,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:current.member.lastName",
+          "bounds": {
+            "left": 51.1,
+            "top": 260.9,
+            "width": 190.7,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:current.member.dateOfBirth",
+          "bounds": {
+            "left": 250.7,
+            "top": 260.9,
+            "width": 130,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:current.member.gender:male",
+          "bounds": {
+            "left": 51.7,
+            "top": 297.1,
+            "width": 11.3,
+            "height": 17.7
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:current.member.gender:female",
+          "bounds": {
+            "left": 87.8,
+            "top": 297.1,
+            "width": 11.3,
+            "height": 17.7
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:current.member.gender:other",
+          "bounds": {
+            "left": 138,
+            "top": 297.1,
+            "width": 11.3,
+            "height": 17.7
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:current.address.residential.line1",
+          "bounds": {
+            "left": 51.1,
+            "top": 326.7,
+            "width": 398.8,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:current.address.residential.suburb",
+          "bounds": {
+            "left": 51.1,
+            "top": 360.4,
+            "width": 190.7,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:current.address.residential.state",
+          "bounds": {
+            "left": 250.5,
+            "top": 360.4,
+            "width": 47.5,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:current.address.residential.postcode",
+          "bounds": {
+            "left": 316.9,
+            "top": 360.4,
+            "width": 63.8,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:current.address.postal.line1",
+          "bounds": {
+            "left": 51.1,
+            "top": 394.3,
+            "width": 398.8,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:current.address.postal.suburb",
+          "bounds": {
+            "left": 51.1,
+            "top": 428,
+            "width": 190.7,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:current.address.postal.state",
+          "bounds": {
+            "left": 250.5,
+            "top": 428,
+            "width": 47.3,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:current.address.postal.postcode",
+          "bounds": {
+            "left": 316.9,
+            "top": 428,
+            "width": 63.8,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:current.member.phone.mobile",
+          "bounds": {
+            "left": 51.1,
+            "top": 461.5,
+            "width": 163.4,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:current.member.phone.daytime",
+          "bounds": {
+            "left": 233.9,
+            "top": 461.5,
+            "width": 163.4,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:current.member.email",
+          "bounds": {
+            "left": 51.1,
+            "top": 496,
+            "width": 398.8,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "checkbox",
+          "label": "field:change.account.accumulation",
+          "bounds": {
+            "left": 190.6,
+            "top": 566.5,
+            "width": 16.4,
+            "height": 16.4
+          }
+        },
+        {
+          "kind": "control",
+          "control": "checkbox",
+          "label": "field:change.account.employerPlan",
+          "bounds": {
+            "left": 341.8,
+            "top": 566.5,
+            "width": 16.4,
+            "height": 16.4
+          }
+        },
+        {
+          "kind": "control",
+          "control": "checkbox",
+          "label": "field:change.account.income",
+          "bounds": {
+            "left": 190.6,
+            "top": 592.1,
+            "width": 16.4,
+            "height": 16.4
+          }
+        },
+        {
+          "kind": "control",
+          "control": "checkbox",
+          "label": "field:change.account.businessPlan",
+          "bounds": {
+            "left": 341.8,
+            "top": 592.6,
+            "width": 16.4,
+            "height": 16.4
+          }
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "elements": [
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": -1.4,
+            "top": 14.6,
+            "width": 552.8,
+            "height": 242.9
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": -1.4,
+            "top": 14.6,
+            "width": 44,
+            "height": 26
+          },
+          "fill": "brand.primary",
+          "cornerRadius": 10
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 4.6,
+            "top": 20.1,
+            "width": 36,
+            "height": 16
+          },
+          "text": "2",
+          "style": "tab-number"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 52.6,
+            "top": 20.1,
+            "width": 440,
+            "height": 16
+          },
+          "text": "Your new contact details (only what has changed)",
+          "style": "section-title"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": -1.4,
+            "top": 260.4,
+            "width": 552.8,
+            "height": 147.9
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": -1.4,
+            "top": 260.4,
+            "width": 44,
+            "height": 26
+          },
+          "fill": "brand.primary",
+          "cornerRadius": 10
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 4.6,
+            "top": 265.9,
+            "width": 36,
+            "height": 16
+          },
+          "text": "3",
+          "style": "tab-number"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 52.6,
+            "top": 265.9,
+            "width": 440,
+            "height": 16
+          },
+          "text": "Your new personal details (only what has changed)",
+          "style": "section-title"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:identity.name.change.evidence",
+          "bounds": {
+            "left": 28.7,
+            "top": 370.3,
+            "width": 497,
+            "height": 30
+          },
+          "style": "small",
+          "placeholder": "[identity.name.change.evidence]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": -1.4,
+            "top": 411.1,
+            "width": 552.8,
+            "height": 121.9
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28,
+            "top": 421,
+            "width": 498,
+            "height": 88
+          },
+          "fill": "Paper",
+          "cornerRadius": 4
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:income.account.explainer",
+          "bounds": {
+            "left": 38.9,
+            "top": 429,
+            "width": 476,
+            "height": 74
+          },
+          "style": "body",
+          "placeholder": "[income.account.explainer]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 404,
+            "top": 512,
+            "width": 118,
+            "height": 22
+          },
+          "fill": "panel.peach",
+          "cornerRadius": 11
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 416,
+            "top": 517.5,
+            "width": 100,
+            "height": 12
+          },
+          "text": "Please turn over",
+          "style": "pill"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 14.2,
+            "top": 813.8,
+            "width": 90,
+            "height": 12
+          },
+          "text": "Page 3 of 6",
+          "style": "page-number"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28.5,
+            "top": 59.9,
+            "width": 398.8,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28.5,
+            "top": 93.6,
+            "width": 190.7,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 227.8,
+            "top": 93.6,
+            "width": 47.5,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 294.2,
+            "top": 93.6,
+            "width": 63.8,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28.5,
+            "top": 127.5,
+            "width": 398.8,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28.5,
+            "top": 161.2,
+            "width": 190.7,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 227.8,
+            "top": 161.2,
+            "width": 47.3,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 294.2,
+            "top": 161.2,
+            "width": 63.8,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28.5,
+            "top": 194.7,
+            "width": 163.4,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 211.2,
+            "top": 194.7,
+            "width": 163.4,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28.5,
+            "top": 229.2,
+            "width": 398.8,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28,
+            "top": 304.5,
+            "width": 62,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 98.3,
+            "top": 304.5,
+            "width": 199.9,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 306.7,
+            "top": 304.5,
+            "width": 217.7,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28,
+            "top": 339.5,
+            "width": 270.2,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 306.7,
+            "top": 339.4,
+            "width": 127.7,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 440.8,
+            "top": 339.4,
+            "width": 20.3,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 465.4,
+            "top": 339.4,
+            "width": 20.3,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 490,
+            "top": 339.4,
+            "width": 20.3,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.3,
+            "top": 47,
+            "width": 200,
+            "height": 13.8
+          },
+          "text": "New home address (not a PO box)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.3,
+            "top": 81.1,
+            "width": 71.9,
+            "height": 13.8
+          },
+          "text": "Suburb or town",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 227.7,
+            "top": 80.9,
+            "width": 30.8,
+            "height": 13.8
+          },
+          "text": "State",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 294.1,
+            "top": 80.9,
+            "width": 44.5,
+            "height": 13.8
+          },
+          "text": "Postcode",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.3,
+            "top": 114.6,
+            "width": 300,
+            "height": 13.8
+          },
+          "text": "New postal address (if different from your home address)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.3,
+            "top": 148.7,
+            "width": 71.9,
+            "height": 13.8
+          },
+          "text": "Suburb or town",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 227.7,
+            "top": 148.6,
+            "width": 30.8,
+            "height": 13.8
+          },
+          "text": "State",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 294.1,
+            "top": 148.6,
+            "width": 44.5,
+            "height": 13.8
+          },
+          "text": "Postcode",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.3,
+            "top": 182.2,
+            "width": 67.3,
+            "height": 13.8
+          },
+          "text": "Mobile number",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 211.1,
+            "top": 182.2,
+            "width": 99.3,
+            "height": 13.8
+          },
+          "text": "Daytime phone number",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.3,
+            "top": 216.4,
+            "width": 30.8,
+            "height": 13.8
+          },
+          "text": "Email",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28,
+            "top": 292.6,
+            "width": 30.8,
+            "height": 13.8
+          },
+          "text": "Title",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 98.3,
+            "top": 292.6,
+            "width": 53.7,
+            "height": 13.8
+          },
+          "text": "First name",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 306.7,
+            "top": 292.6,
+            "width": 71.9,
+            "height": 13.8
+          },
+          "text": "Middle name(s)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28,
+            "top": 327.5,
+            "width": 49.1,
+            "height": 13.8
+          },
+          "text": "Last name",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 306.7,
+            "top": 327.5,
+            "width": 126.7,
+            "height": 13.8
+          },
+          "text": "Date of birth (DD/MM/YYYY)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 447,
+            "top": 361.5,
+            "width": 12,
+            "height": 13.8
+          },
+          "text": "M",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 441.6,
+            "top": 327.5,
+            "width": 35.4,
+            "height": 13.8
+          },
+          "text": "Gender",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 472,
+            "top": 361.5,
+            "width": 12,
+            "height": 12.3
+          },
+          "text": "F",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 496.5,
+            "top": 361.5,
+            "width": 12,
+            "height": 12.3
+          },
+          "text": "X",
+          "style": "option"
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:new.address.residential.line1",
+          "bounds": {
+            "left": 28.5,
+            "top": 59.9,
+            "width": 398.8,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:new.address.residential.suburb",
+          "bounds": {
+            "left": 28.5,
+            "top": 93.6,
+            "width": 190.7,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:new.address.residential.state",
+          "bounds": {
+            "left": 227.8,
+            "top": 93.6,
+            "width": 47.5,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:new.address.residential.postcode",
+          "bounds": {
+            "left": 294.2,
+            "top": 93.6,
+            "width": 63.8,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:new.address.postal.line1",
+          "bounds": {
+            "left": 28.5,
+            "top": 127.5,
+            "width": 398.8,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:new.address.postal.suburb",
+          "bounds": {
+            "left": 28.5,
+            "top": 161.2,
+            "width": 190.7,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:new.address.postal.state",
+          "bounds": {
+            "left": 227.8,
+            "top": 161.2,
+            "width": 47.3,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:new.address.postal.postcode",
+          "bounds": {
+            "left": 294.2,
+            "top": 161.2,
+            "width": 63.8,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:new.member.phone.mobile",
+          "bounds": {
+            "left": 28.5,
+            "top": 194.7,
+            "width": 163.4,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:new.member.phone.daytime",
+          "bounds": {
+            "left": 211.2,
+            "top": 194.7,
+            "width": 163.4,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:new.member.email",
+          "bounds": {
+            "left": 28.5,
+            "top": 229.2,
+            "width": 398.8,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "combo",
+          "label": "field:new.member.title",
+          "bounds": {
+            "left": 28,
+            "top": 304.5,
+            "width": 62,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:new.member.firstName",
+          "bounds": {
+            "left": 98.3,
+            "top": 304.5,
+            "width": 199.9,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:new.member.middleNames",
+          "bounds": {
+            "left": 306.7,
+            "top": 304.5,
+            "width": 217.7,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:new.member.lastName",
+          "bounds": {
+            "left": 28,
+            "top": 339.5,
+            "width": 270.2,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:new.member.dateOfBirth",
+          "bounds": {
+            "left": 306.7,
+            "top": 339.4,
+            "width": 127.7,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:new.member.gender:male",
+          "bounds": {
+            "left": 440.8,
+            "top": 339.4,
+            "width": 20.3,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:new.member.gender:female",
+          "bounds": {
+            "left": 465.4,
+            "top": 339.4,
+            "width": 20.3,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:new.member.gender:other",
+          "bounds": {
+            "left": 490,
+            "top": 339.4,
+            "width": 20.3,
+            "height": 20.3
+          }
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "elements": [
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.5,
+            "top": 14.8,
+            "width": 552.8,
+            "height": 410.5
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.5,
+            "top": 14.8,
+            "width": 32,
+            "height": 26
+          },
+          "fill": "brand.primary",
+          "cornerRadius": 10
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 48.5,
+            "top": 20.3,
+            "width": 24,
+            "height": 16
+          },
+          "text": "4",
+          "style": "tab-number"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 84.5,
+            "top": 20.3,
+            "width": 440,
+            "height": 16
+          },
+          "text": "Bank account for your income payments",
+          "style": "section-title"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:bank.details.conditions",
+          "bounds": {
+            "left": 51,
+            "top": 45.5,
+            "width": 495,
+            "height": 34
+          },
+          "style": "body",
+          "placeholder": "[bank.details.conditions]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 82.8,
+            "width": 300,
+            "height": 12
+          },
+          "text": "Main bank account",
+          "style": "block-title-small"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 202.1,
+            "width": 380,
+            "height": 12
+          },
+          "text": "Second bank account (only if you split your payments)",
+          "style": "block-title-small"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.5,
+            "top": 428.2,
+            "width": 552.8,
+            "height": 353.3
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.5,
+            "top": 428.2,
+            "width": 32,
+            "height": 26
+          },
+          "fill": "brand.primary",
+          "cornerRadius": 10
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 48.5,
+            "top": 433.7,
+            "width": 24,
+            "height": 16
+          },
+          "text": "5",
+          "style": "tab-number"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 84.5,
+            "top": 433.7,
+            "width": 440,
+            "height": 16
+          },
+          "text": "Your income payments",
+          "style": "section-title"
+        },
+        {
+          "kind": "target",
+          "role": "asset",
+          "label": "asset:icon.online@payments",
+          "bounds": {
+            "left": 530,
+            "top": 433,
+            "width": 17,
+            "height": 17
+          }
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:income.payment.conditions",
+          "bounds": {
+            "left": 50.8,
+            "top": 462,
+            "width": 495,
+            "height": 42
+          },
+          "style": "body",
+          "placeholder": "[income.payment.conditions]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 135,
+            "top": 507,
+            "width": 422,
+            "height": 148
+          },
+          "fill": "Paper",
+          "cornerRadius": 4
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 412,
+            "top": 527.4,
+            "width": 8,
+            "height": 12
+          },
+          "text": "$",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 145.2,
+            "top": 546.1,
+            "width": 220,
+            "height": 12
+          },
+          "text": "If you have a transition to retirement account",
+          "style": "label"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:income.payment.footnotes",
+          "bounds": {
+            "left": 52.7,
+            "top": 664,
+            "width": 500,
+            "height": 62
+          },
+          "style": "footnote",
+          "placeholder": "[income.payment.footnotes]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 52.7,
+            "top": 738.1,
+            "width": 400,
+            "height": 15
+          },
+          "text": "Everyone completes sections 6 to 10 on the next pages.",
+          "style": "block-title"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 452,
+            "top": 766,
+            "width": 118,
+            "height": 22
+          },
+          "fill": "panel.peach",
+          "cornerRadius": 11
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 464,
+            "top": 771.5,
+            "width": 100,
+            "height": 12
+          },
+          "text": "Please turn over",
+          "style": "pill"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 14.2,
+            "top": 813.8,
+            "width": 90,
+            "height": 12
+          },
+          "text": "Page 4 of 6",
+          "style": "page-number"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51,
+            "top": 109.3,
+            "width": 399,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51.1,
+            "top": 144.4,
+            "width": 97,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 167.4,
+            "top": 143.7,
+            "width": 163.3,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51,
+            "top": 180,
+            "width": 399,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51,
+            "top": 228.7,
+            "width": 399,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51.1,
+            "top": 263.7,
+            "width": 97,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 168.1,
+            "top": 263.7,
+            "width": 163.3,
+            "height": 16.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 51,
+            "top": 299.3,
+            "width": 399,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 145.2,
+            "top": 522.3,
+            "width": 20.4,
+            "height": 20.4
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 273.5,
+            "top": 522.3,
+            "width": 20.4,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 420.2,
+            "top": 522.3,
+            "width": 120.1,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 145.5,
+            "top": 557.7,
+            "width": 20.3,
+            "height": 20.5
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 340,
+            "top": 557.8,
+            "width": 20.3,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 145,
+            "top": 592.2,
+            "width": 20.4,
+            "height": 20.5
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 222.8,
+            "top": 592.2,
+            "width": 20.4,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 329.8,
+            "top": 592.2,
+            "width": 20.3,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 414.4,
+            "top": 592.2,
+            "width": 20.4,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 499.1,
+            "top": 592.2,
+            "width": 20.4,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 144.6,
+            "top": 629.9,
+            "width": 185.9,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 97,
+            "width": 62.8,
+            "height": 13.8
+          },
+          "text": "Account name",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 131.9,
+            "width": 21.7,
+            "height": 13.8
+          },
+          "text": "BSB",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 167.3,
+            "top": 131.9,
+            "width": 71.9,
+            "height": 13.8
+          },
+          "text": "Account number",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 167.6,
+            "width": 103.9,
+            "height": 13.8
+          },
+          "text": "Financial institution",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 216.3,
+            "width": 62.8,
+            "height": 13.8
+          },
+          "text": "Account name",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 251.2,
+            "width": 21.7,
+            "height": 13.8
+          },
+          "text": "BSB",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 167.3,
+            "top": 251.2,
+            "width": 71.9,
+            "height": 13.8
+          },
+          "text": "Account number",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 286.9,
+            "width": 103.9,
+            "height": 13.8
+          },
+          "text": "Financial institution",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 169.9,
+            "top": 527.4,
+            "width": 71.9,
+            "height": 13.6
+          },
+          "text": "Minimum amount",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 52.2,
+            "top": 513.7,
+            "width": 90,
+            "height": 13.6
+          },
+          "text": "Payment amount",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 298.1,
+            "top": 523.9,
+            "width": 117.6,
+            "height": 18.8
+          },
+          "text": "A set amount per payment",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 170.1,
+            "top": 558,
+            "width": 150,
+            "height": 22
+          },
+          "text": "Maximum amount (transition to retirement)",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 364.5,
+            "top": 558,
+            "width": 185,
+            "height": 22
+          },
+          "text": "Pro rata maximum (transition to retirement)",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 169.6,
+            "top": 597.3,
+            "width": 58.2,
+            "height": 13.6
+          },
+          "text": "Fortnightly",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 52.7,
+            "top": 583.6,
+            "width": 90,
+            "height": 13.6
+          },
+          "text": "Payment frequency",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 247.4,
+            "top": 597.3,
+            "width": 40,
+            "height": 13.6
+          },
+          "text": "Monthly",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 354.4,
+            "top": 597.3,
+            "width": 49.1,
+            "height": 13.6
+          },
+          "text": "Quarterly",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 439,
+            "top": 597.3,
+            "width": 58.2,
+            "height": 13.6
+          },
+          "text": "Half yearly",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 523.8,
+            "top": 597.3,
+            "width": 35.4,
+            "height": 13.6
+          },
+          "text": "Yearly",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 145,
+            "top": 618.1,
+            "width": 154.1,
+            "height": 13.8
+          },
+          "text": "Start payments from (DD/MM/YYYY)",
+          "style": "label"
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:bank.primary.accountName",
+          "bounds": {
+            "left": 51,
+            "top": 109.3,
+            "width": 399,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:bank.primary.bsb",
+          "bounds": {
+            "left": 51.1,
+            "top": 144.4,
+            "width": 97,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:bank.primary.accountNumber",
+          "bounds": {
+            "left": 167.4,
+            "top": 143.7,
+            "width": 163.3,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:bank.primary.institution",
+          "bounds": {
+            "left": 51,
+            "top": 180,
+            "width": 399,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:bank.secondary.accountName",
+          "bounds": {
+            "left": 51,
+            "top": 228.7,
+            "width": 399,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:bank.secondary.bsb",
+          "bounds": {
+            "left": 51.1,
+            "top": 263.7,
+            "width": 97,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:bank.secondary.accountNumber",
+          "bounds": {
+            "left": 168.1,
+            "top": 263.7,
+            "width": 163.3,
+            "height": 16.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:bank.secondary.institution",
+          "bounds": {
+            "left": 51,
+            "top": 299.3,
+            "width": 399,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:income.amountType:minimum",
+          "bounds": {
+            "left": 145.2,
+            "top": 522.3,
+            "width": 20.4,
+            "height": 20.4
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:income.amountType:specific",
+          "bounds": {
+            "left": 273.5,
+            "top": 522.3,
+            "width": 20.4,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:income.specificAmount",
+          "bounds": {
+            "left": 420.2,
+            "top": 522.3,
+            "width": 120.1,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:income.amountType:maximum",
+          "bounds": {
+            "left": 145.5,
+            "top": 557.7,
+            "width": 20.3,
+            "height": 20.5
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:income.amountType:maximumProRata",
+          "bounds": {
+            "left": 340,
+            "top": 557.8,
+            "width": 20.3,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:income.frequency:fortnightly",
+          "bounds": {
+            "left": 145,
+            "top": 592.2,
+            "width": 20.4,
+            "height": 20.5
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:income.frequency:monthly",
+          "bounds": {
+            "left": 222.8,
+            "top": 592.2,
+            "width": 20.4,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:income.frequency:quarterly",
+          "bounds": {
+            "left": 329.8,
+            "top": 592.2,
+            "width": 20.3,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:income.frequency:halfYearly",
+          "bounds": {
+            "left": 414.4,
+            "top": 592.2,
+            "width": 20.4,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:income.frequency:yearly",
+          "bounds": {
+            "left": 499.1,
+            "top": 592.2,
+            "width": 20.4,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:income.startDate",
+          "bounds": {
+            "left": 144.6,
+            "top": 629.9,
+            "width": 185.9,
+            "height": 20.3
+          }
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "elements": [
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.5,
+            "top": 14.6,
+            "width": 552.8,
+            "height": 725.8
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.5,
+            "top": 14.6,
+            "width": 32,
+            "height": 26
+          },
+          "fill": "brand.primary",
+          "cornerRadius": 10
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 48.5,
+            "top": 20.1,
+            "width": 24,
+            "height": 16
+          },
+          "text": "6",
+          "style": "tab-number"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 84.5,
+            "top": 20.1,
+            "width": 440,
+            "height": 16
+          },
+          "text": "Proving who you are",
+          "style": "section-title"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51.9,
+            "top": 46.6,
+            "width": 320,
+            "height": 12
+          },
+          "text": "Choose one of the two options below.",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51.9,
+            "top": 66,
+            "width": 320,
+            "height": 13
+          },
+          "text": "Option 1: electronic check (preferred)",
+          "style": "block-title-small"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:identity.electronic.explainer",
+          "bounds": {
+            "left": 51.9,
+            "top": 82.6,
+            "width": 495,
+            "height": 116
+          },
+          "style": "body",
+          "placeholder": "[identity.electronic.explainer]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51.9,
+            "top": 250.6,
+            "width": 495,
+            "height": 12
+          },
+          "text": "Give your driver licence or passport details, plus your Medicare card if you have one.",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 67.8,
+            "top": 277.9,
+            "width": 12,
+            "height": 12
+          },
+          "text": "1.",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 85.7,
+            "top": 378.7,
+            "width": 360,
+            "height": 18
+          },
+          "text": "Some states print a separate card number on the licence. If yours does, give both numbers.",
+          "style": "footnote"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 67.8,
+            "top": 404.2,
+            "width": 12,
+            "height": 12
+          },
+          "text": "2.",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 67.8,
+            "top": 571.5,
+            "width": 12,
+            "height": 12
+          },
+          "text": "3.",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51.2,
+            "top": 668.4,
+            "width": 320,
+            "height": 13
+          },
+          "text": "Option 2: certified documents",
+          "style": "block-title-small"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:identity.document.option",
+          "bounds": {
+            "left": 70.2,
+            "top": 706,
+            "width": 470,
+            "height": 14
+          },
+          "style": "body",
+          "placeholder": "[identity.document.option]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 70.2,
+            "top": 722,
+            "width": 48,
+            "height": 11
+          },
+          "text": "Fact sheet:",
+          "style": "option"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.identity.url@identity",
+          "bounds": {
+            "left": 116,
+            "top": 722,
+            "width": 300,
+            "height": 11
+          },
+          "style": "side-link",
+          "placeholder": "[contact.identity.url]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 428,
+            "top": 712,
+            "width": 118,
+            "height": 22
+          },
+          "fill": "panel.peach",
+          "cornerRadius": 11
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 440,
+            "top": 717.5,
+            "width": 100,
+            "height": 12
+          },
+          "text": "Please turn over",
+          "style": "pill"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 14.2,
+            "top": 813.8,
+            "width": 90,
+            "height": 12
+          },
+          "text": "Page 5 of 6",
+          "style": "page-number"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 52.1,
+            "top": 210.3,
+            "width": 11.1,
+            "height": 17.7
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 84.8,
+            "top": 290.5,
+            "width": 365.2,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 84.8,
+            "top": 324.8,
+            "width": 163.7,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 266.9,
+            "top": 324.6,
+            "width": 163.7,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 84.7,
+            "top": 357.8,
+            "width": 47.2,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 267.4,
+            "top": 357.8,
+            "width": 130.5,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 84.8,
+            "top": 416.4,
+            "width": 163.3,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 267.4,
+            "top": 416.7,
+            "width": 130.5,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 84.8,
+            "top": 451.2,
+            "width": 365.2,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 85,
+            "top": 485.4,
+            "width": 365.4,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 84.8,
+            "top": 515.1,
+            "width": 365.2,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 84.8,
+            "top": 549.1,
+            "width": 365.2,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 84.8,
+            "top": 584.5,
+            "width": 365.2,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 85.4,
+            "top": 618.1,
+            "width": 163.3,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 268.3,
+            "top": 618.8,
+            "width": 96.4,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 435.7,
+            "top": 618.8,
+            "width": 14.2,
+            "height": 17
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 204.9,
+            "top": 641.2,
+            "width": 11.2,
+            "height": 17.7
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 248.8,
+            "top": 641.2,
+            "width": 11.2,
+            "height": 17.7
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 287.3,
+            "top": 641.2,
+            "width": 11.2,
+            "height": 17.7
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 52.1,
+            "top": 686.6,
+            "width": 11.1,
+            "height": 17.7
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 70.9,
+            "top": 219.1,
+            "width": 213.4,
+            "height": 13.6
+          },
+          "text": "I consent to electronic identity verification",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 84.8,
+            "top": 277.6,
+            "width": 172.3,
+            "height": 14.1
+          },
+          "text": "Full name as shown on driver licence",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 85.3,
+            "top": 312.1,
+            "width": 71.9,
+            "height": 13.8
+          },
+          "text": "Licence number",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 267.9,
+            "top": 312.1,
+            "width": 58.2,
+            "height": 13.8
+          },
+          "text": "Card number",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 85.3,
+            "top": 345.3,
+            "width": 71.9,
+            "height": 13.8
+          },
+          "text": "State of issue",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 268,
+            "top": 345.3,
+            "width": 154.1,
+            "height": 13.8
+          },
+          "text": "Licence expiry date (DD/MM/YYYY)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 84.8,
+            "top": 404.2,
+            "width": 76.5,
+            "height": 13.8
+          },
+          "text": "Passport number",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 268,
+            "top": 404.2,
+            "width": 158.6,
+            "height": 13.8
+          },
+          "text": "Passport expiry date (DD/MM/YYYY)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 85.3,
+            "top": 438.7,
+            "width": 145,
+            "height": 13.8
+          },
+          "text": "Full name as shown on passport",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 85.7,
+            "top": 473.1,
+            "width": 71.9,
+            "height": 13.8
+          },
+          "text": "Place of birth",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 85.3,
+            "top": 502.4,
+            "width": 81,
+            "height": 13.8
+          },
+          "text": "Country of birth",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 85.3,
+            "top": 536.6,
+            "width": 99.3,
+            "height": 13.8
+          },
+          "text": "Family name at birth",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 84.8,
+            "top": 571.2,
+            "width": 167.8,
+            "height": 14.1
+          },
+          "text": "Full name as shown on Medicare card",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 85.3,
+            "top": 606.2,
+            "width": 76.5,
+            "height": 13.8
+          },
+          "text": "Medicare number",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 268,
+            "top": 606.2,
+            "width": 135.8,
+            "height": 13.8
+          },
+          "text": "Medicare card expiry (MM/YY)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 375.3,
+            "top": 606.2,
+            "width": 110,
+            "height": 12.2
+          },
+          "text": "Individual reference number",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 220,
+            "top": 642,
+            "width": 30.8,
+            "height": 13.6
+          },
+          "text": "Green",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 85.3,
+            "top": 642.3,
+            "width": 110,
+            "height": 13.8
+          },
+          "text": "Medicare card colour",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 263.8,
+            "top": 642,
+            "width": 26.3,
+            "height": 13.6
+          },
+          "text": "Blue",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 302.6,
+            "top": 642,
+            "width": 35.4,
+            "height": 13.6
+          },
+          "text": "Yellow",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 70.2,
+            "top": 694.3,
+            "width": 240.8,
+            "height": 13.8
+          },
+          "text": "I will provide certified identity documents instead",
+          "style": "option"
+        },
+        {
+          "kind": "control",
+          "control": "checkbox",
+          "label": "field:identity.consentElectronic",
+          "bounds": {
+            "left": 52.1,
+            "top": 210.3,
+            "width": 11.1,
+            "height": 17.7
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:identity.licence.fullName",
+          "bounds": {
+            "left": 84.8,
+            "top": 290.5,
+            "width": 365.2,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:identity.licence.number",
+          "bounds": {
+            "left": 84.8,
+            "top": 324.8,
+            "width": 163.7,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:identity.licence.cardNumber",
+          "bounds": {
+            "left": 266.9,
+            "top": 324.6,
+            "width": 163.7,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:identity.licence.state",
+          "bounds": {
+            "left": 84.7,
+            "top": 357.8,
+            "width": 47.2,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:identity.licence.expiry",
+          "bounds": {
+            "left": 267.4,
+            "top": 357.8,
+            "width": 130.5,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:identity.passport.number",
+          "bounds": {
+            "left": 84.8,
+            "top": 416.4,
+            "width": 163.3,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:identity.passport.expiry",
+          "bounds": {
+            "left": 267.4,
+            "top": 416.7,
+            "width": 130.5,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:identity.passport.fullName",
+          "bounds": {
+            "left": 84.8,
+            "top": 451.2,
+            "width": 365.2,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:identity.passport.placeOfBirth",
+          "bounds": {
+            "left": 85,
+            "top": 485.4,
+            "width": 365.4,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:identity.passport.countryOfBirth",
+          "bounds": {
+            "left": 84.8,
+            "top": 515.1,
+            "width": 365.2,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:identity.passport.familyNameAtBirth",
+          "bounds": {
+            "left": 84.8,
+            "top": 549.1,
+            "width": 365.2,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:identity.medicare.fullName",
+          "bounds": {
+            "left": 84.8,
+            "top": 584.5,
+            "width": 365.2,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:identity.medicare.number",
+          "bounds": {
+            "left": 85.4,
+            "top": 618.1,
+            "width": 163.3,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:identity.medicare.expiry",
+          "bounds": {
+            "left": 268.3,
+            "top": 618.8,
+            "width": 96.4,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:identity.medicare.referenceNumber",
+          "bounds": {
+            "left": 435.7,
+            "top": 618.8,
+            "width": 14.2,
+            "height": 17
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:identity.medicare.cardColour:green",
+          "bounds": {
+            "left": 204.9,
+            "top": 641.2,
+            "width": 11.2,
+            "height": 17.7
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:identity.medicare.cardColour:blue",
+          "bounds": {
+            "left": 248.8,
+            "top": 641.2,
+            "width": 11.2,
+            "height": 17.7
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:identity.medicare.cardColour:yellow",
+          "bounds": {
+            "left": 287.3,
+            "top": 641.2,
+            "width": 11.2,
+            "height": 17.7
+          }
+        },
+        {
+          "kind": "control",
+          "control": "checkbox",
+          "label": "field:identity.documentBased",
+          "bounds": {
+            "left": 52.1,
+            "top": 686.6,
+            "width": 11.1,
+            "height": 17.7
+          }
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "elements": [
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": -1.4,
+            "top": 14.6,
+            "width": 552.8,
+            "height": 186.8
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": -1.4,
+            "top": 14.6,
+            "width": 44,
+            "height": 26
+          },
+          "fill": "brand.primary",
+          "cornerRadius": 10
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 4.6,
+            "top": 20.1,
+            "width": 36,
+            "height": 16
+          },
+          "text": "7",
+          "style": "tab-number"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 52.6,
+            "top": 20.1,
+            "width": 440,
+            "height": 16
+          },
+          "text": "Checklist",
+          "style": "section-title"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.3,
+            "top": 47.2,
+            "width": 470,
+            "height": 12
+          },
+          "text": "We act on your request once everything we need has arrived.",
+          "style": "option"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": -1.4,
+            "top": 204.3,
+            "width": 552.8,
+            "height": 180
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": -1.4,
+            "top": 204.3,
+            "width": 44,
+            "height": 26
+          },
+          "fill": "brand.primary",
+          "cornerRadius": 10
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 4.6,
+            "top": 209.8,
+            "width": 36,
+            "height": 16
+          },
+          "text": "8",
+          "style": "tab-number"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 52.6,
+            "top": 209.8,
+            "width": 440,
+            "height": 16
+          },
+          "text": "Your declaration",
+          "style": "section-title"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:declaration.update",
+          "bounds": {
+            "left": 29.1,
+            "top": 235.5,
+            "width": 495,
+            "height": 12
+          },
+          "style": "body",
+          "placeholder": "[declaration.update]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.3,
+            "top": 289.1,
+            "width": 495,
+            "height": 12
+          },
+          "text": "If you are under 15, a parent or guardian completes section 9 instead.",
+          "style": "small"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.6,
+            "top": 364.5,
+            "width": 495,
+            "height": 12
+          },
+          "text": "Sign in blue or black ink. A digital signature is accepted only on a certified, read-only copy.",
+          "style": "small"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": -1.4,
+            "top": 387.2,
+            "width": 552.8,
+            "height": 232.3
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": -1.4,
+            "top": 387.2,
+            "width": 44,
+            "height": 26
+          },
+          "fill": "brand.primary",
+          "cornerRadius": 10
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 4.6,
+            "top": 392.7,
+            "width": 36,
+            "height": 16
+          },
+          "text": "9",
+          "style": "tab-number"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 52.6,
+            "top": 392.7,
+            "width": 440,
+            "height": 16
+          },
+          "text": "Declaration by someone signing for the member",
+          "style": "section-title"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:declaration.representative",
+          "bounds": {
+            "left": 29.1,
+            "top": 419,
+            "width": 495,
+            "height": 70
+          },
+          "style": "body",
+          "placeholder": "[declaration.representative]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.6,
+            "top": 599,
+            "width": 495,
+            "height": 12
+          },
+          "text": "Sign in blue or black ink. A digital signature is accepted only on a certified, read-only copy.",
+          "style": "small"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": -1.4,
+            "top": 622.3,
+            "width": 552.8,
+            "height": 104.8
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": -1.4,
+            "top": 622.3,
+            "width": 44,
+            "height": 26
+          },
+          "fill": "brand.primary",
+          "cornerRadius": 10
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 4.6,
+            "top": 627.8,
+            "width": 36,
+            "height": 16
+          },
+          "text": "10",
+          "style": "tab-number"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 52.6,
+            "top": 627.8,
+            "width": 440,
+            "height": 16
+          },
+          "text": "Send us your form",
+          "style": "section-title"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:return.instructions",
+          "bounds": {
+            "left": 28.3,
+            "top": 656,
+            "width": 300,
+            "height": 28
+          },
+          "style": "body",
+          "placeholder": "[return.instructions]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.postal.address@return",
+          "bounds": {
+            "left": 28.3,
+            "top": 690,
+            "width": 300,
+            "height": 11
+          },
+          "style": "body-strong",
+          "placeholder": "[contact.postal.address]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.email@return",
+          "bounds": {
+            "left": 28.3,
+            "top": 702,
+            "width": 300,
+            "height": 11
+          },
+          "style": "body-strong",
+          "placeholder": "[contact.email]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 358,
+            "top": 656,
+            "width": 100,
+            "height": 12
+          },
+          "text": "Questions?",
+          "style": "label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.phone@return",
+          "bounds": {
+            "left": 358,
+            "top": 669,
+            "width": 160,
+            "height": 12
+          },
+          "style": "body-strong",
+          "placeholder": "[contact.phone]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.hours@return",
+          "bounds": {
+            "left": 358,
+            "top": 682,
+            "width": 190,
+            "height": 11
+          },
+          "style": "option",
+          "placeholder": "[contact.hours]"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:privacy.statement",
+          "bounds": {
+            "left": 28.3,
+            "top": 735,
+            "width": 520,
+            "height": 66
+          },
+          "style": "small",
+          "placeholder": "[privacy.statement]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 14.2,
+            "top": 813.8,
+            "width": 90,
+            "height": 12
+          },
+          "text": "Page 6 of 6",
+          "style": "page-number"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28.5,
+            "top": 66.7,
+            "width": 20.4,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 267.4,
+            "top": 66.7,
+            "width": 19.7,
+            "height": 20.5
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28.5,
+            "top": 92.7,
+            "width": 20.3,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 266.3,
+            "top": 92.8,
+            "width": 20.3,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 266.6,
+            "top": 126.2,
+            "width": 20.4,
+            "height": 20.4
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28.5,
+            "top": 143.3,
+            "width": 20.4,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 266.6,
+            "top": 155.1,
+            "width": 20.3,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28.3,
+            "top": 263.2,
+            "width": 327.1,
+            "height": 20.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28.1,
+            "top": 322.5,
+            "width": 217.4,
+            "height": 37.4
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 297.8,
+            "top": 321.5,
+            "width": 130.5,
+            "height": 19.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 29.1,
+            "top": 507.5,
+            "width": 325.6,
+            "height": 20.6
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28.1,
+            "top": 556.4,
+            "width": 217.4,
+            "height": 37.4
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 297.8,
+            "top": 556.4,
+            "width": 130.5,
+            "height": 19.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5,
+          "cornerRadius": 2
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 52.8,
+            "top": 70.3,
+            "width": 205,
+            "height": 22
+          },
+          "text": "I have read the guide on page 1",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 291.4,
+            "top": 70.3,
+            "width": 235,
+            "height": 22
+          },
+          "text": "I have completed every mandatory field",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 52.8,
+            "top": 90.5,
+            "width": 205,
+            "height": 22
+          },
+          "text": "My name has changed and I have attached evidence",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 290.6,
+            "top": 89.8,
+            "width": 235,
+            "height": 22
+          },
+          "text": "I am signing on behalf of the member and have attached my authority",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 291.2,
+            "top": 124.2,
+            "width": 235,
+            "height": 22
+          },
+          "text": "I have signed and dated the form",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 53.1,
+            "top": 140.9,
+            "width": 205,
+            "height": 32
+          },
+          "text": "I am correcting my name, date of birth or gender and have attached identification",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 290.8,
+            "top": 152.4,
+            "width": 235,
+            "height": 22
+          },
+          "text": "I have asked to change my income payments",
+          "style": "option"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 29.1,
+            "top": 250,
+            "width": 131.3,
+            "height": 13.8
+          },
+          "text": "Full name (block letters) *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.1,
+            "top": 310.7,
+            "width": 58.2,
+            "height": 12.3
+          },
+          "text": "Signature *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 297.8,
+            "top": 309.6,
+            "width": 126.7,
+            "height": 13.8
+          },
+          "text": "Date signed (DD/MM/YYYY) *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 29.1,
+            "top": 493.1,
+            "width": 199.7,
+            "height": 13.8
+          },
+          "text": "Representative's full name (block letters)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.1,
+            "top": 544.6,
+            "width": 126.7,
+            "height": 12.3
+          },
+          "text": "Representative's signature",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 297.8,
+            "top": 544.1,
+            "width": 199.7,
+            "height": 13.8
+          },
+          "text": "Date signed by representative (DD/MM/YYYY)",
+          "style": "label"
+        },
+        {
+          "kind": "control",
+          "control": "checkbox",
+          "label": "field:checklist.readGuide",
+          "bounds": {
+            "left": 28.5,
+            "top": 66.7,
+            "width": 20.4,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "checkbox",
+          "label": "field:checklist.mandatoryComplete",
+          "bounds": {
+            "left": 267.4,
+            "top": 66.7,
+            "width": 19.7,
+            "height": 20.5
+          }
+        },
+        {
+          "kind": "control",
+          "control": "checkbox",
+          "label": "field:checklist.nameChanged",
+          "bounds": {
+            "left": 28.5,
+            "top": 92.7,
+            "width": 20.3,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "checkbox",
+          "label": "field:checklist.signingOnBehalf",
+          "bounds": {
+            "left": 266.3,
+            "top": 92.8,
+            "width": 20.3,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "checkbox",
+          "label": "field:checklist.signedAndDated",
+          "bounds": {
+            "left": 266.6,
+            "top": 126.2,
+            "width": 20.4,
+            "height": 20.4
+          }
+        },
+        {
+          "kind": "control",
+          "control": "checkbox",
+          "label": "field:checklist.identityCorrected",
+          "bounds": {
+            "left": 28.5,
+            "top": 143.3,
+            "width": 20.4,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "checkbox",
+          "label": "field:checklist.incomeChange",
+          "bounds": {
+            "left": 266.6,
+            "top": 155.1,
+            "width": 20.3,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:declaration.name",
+          "bounds": {
+            "left": 28.3,
+            "top": 263.2,
+            "width": 327.1,
+            "height": 20.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "signature",
+          "label": "field:declaration.signature",
+          "bounds": {
+            "left": 28.1,
+            "top": 322.5,
+            "width": 217.4,
+            "height": 37.4
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:declaration.date",
+          "bounds": {
+            "left": 297.8,
+            "top": 321.5,
+            "width": 130.5,
+            "height": 19.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:representative.name",
+          "bounds": {
+            "left": 29.1,
+            "top": 507.5,
+            "width": 325.6,
+            "height": 20.6
+          }
+        },
+        {
+          "kind": "control",
+          "control": "signature",
+          "label": "field:representative.signature",
+          "bounds": {
+            "left": 28.1,
+            "top": 556.4,
+            "width": 217.4,
+            "height": 37.4
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:representative.date",
+          "bounds": {
+            "left": 297.8,
+            "top": 556.4,
+            "width": 130.5,
+            "height": 19.8
+          }
+        }
+      ]
+    }
+  ]
+}

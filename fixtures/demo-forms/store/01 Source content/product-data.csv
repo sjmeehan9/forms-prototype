@@ -1,0 +1,24 @@
+key,value,type,status,effectiveFrom,effectiveTo,source
+fund.name,Example Super,string,approved,2026-01-01,,Fund register
+fund.abn,00 111 222 333,string,approved,2026-01-01,,Fund register
+fund.usi,00111222333001,string,approved,2026-01-01,,Fund register
+fund.spin,EXS0100AU,string,approved,2026-01-01,,Fund register
+fund.address,"Level 1, 1 Example Street, Sydney NSW 2000",string,approved,2026-01-01,,Fund register
+trustee.name,Example Super Trustee Pty Ltd,string,approved,2026-01-01,,Licence register
+trustee.abn,00 444 555 666,string,approved,2026-01-01,,Licence register
+trustee.afsl,000001,string,approved,2026-01-01,,Licence register
+trustee.rse,L0000001,string,approved,2026-01-01,,Licence register
+contact.phone,1300 975 707,string,approved,2026-01-01,,Contact centre
+contact.hours,"8am to 6pm Sydney time, Monday to Friday",string,approved,2026-01-01,,Contact centre
+contact.website,examplesuper.example,string,approved,2026-01-01,,Digital team
+contact.email,forms@examplesuper.example,string,approved,2026-01-01,,Contact centre
+contact.postal.address,"Reply Paid 0000, Example Super, Sydney NSW 2001",string,approved,2026-01-01,,Contact centre
+contact.register.url,examplesuper.example/register,string,approved,2026-01-01,,Digital team
+contact.identity.url,examplesuper.example/identity,string,approved,2026-01-01,,Digital team
+letter.compliance.date,2026-07-01,date,approved,2026-07-01,,Company secretary
+letter.signatory.name,Alex Example,string,approved,2026-01-01,,Company secretary
+letter.signatory.title,Chief Executive Officer,string,approved,2026-01-01,,Company secretary
+form.issue.date,2026-09-01,date,approved,2026-09-01,,Forms register
+form.consolidate.code,EXF-101 v1 09/26,string,approved,2026-09-01,,Forms register
+form.nomination.code,EXF-102 v1 09/26,string,approved,2026-09-01,,Forms register
+form.update.code,EXF-103 v1 09/26,string,approved,2026-09-01,,Forms register

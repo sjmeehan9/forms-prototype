@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "northwind-retirement",
+  "name": "Northwind Retirement",
+  "swatches": {
+    "brand.primary": { "cmyk": [25, 100, 75, 15] },
+    "brand.accent": { "cmyk": [65, 0, 100, 0] },
+    "brand.dark": { "cmyk": [35, 100, 80, 50] },
+    "brand.tint": { "cmyk": [0, 7, 5, 0] }
+  },
+  "assets": {
+    "brand.logo": "logo-northwind-retirement.svg"
+  },
+  "data": {
+    "fund.name": "Northwind Retirement",
+    "fund.abn": "00 777 888 999",
+    "fund.usi": "00777888999001",
+    "fund.spin": "NWR0100AU",
+    "fund.address": "Level 2, 2 Sample Avenue, Melbourne VIC 3000",
+    "trustee.name": "Northwind Retirement Trustee Ltd",
+    "trustee.abn": "00 666 555 444",
+    "trustee.afsl": "000002",
+    "trustee.rse": "L0000002",
+    "contact.phone": "1800 975 708",
+    "contact.website": "northwind.example",
+    "contact.email": "forms@northwind.example",
+    "contact.postal.address": "Locked Bag 0000, Northwind Retirement, Melbourne VIC 3001",
+    "contact.register.url": "northwind.example/register",
+    "contact.identity.url": "northwind.example/identity",
+    "letter.signatory.name": "Sam Sample"
+  },
+  "mandatoryComponentIds": ["privacy.statement"]
+}

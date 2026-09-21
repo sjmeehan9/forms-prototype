@@ -33,6 +33,8 @@ export const BuildRequestSourceSchema = z.object({
   templateFolderId: z.string().min(1),
   assetFolderId: z.string().min(1),
   brandFolderId: z.string().min(1),
+  /** When set, the newest .indd and .csv in this folder are used unless the request names file ids itself. */
+  sourceContentFolderId: z.string().min(1).optional(),
 });
 export type BuildRequestSource = z.infer<typeof BuildRequestSourceSchema>;
 
@@ -207,6 +209,24 @@ export const UxpJobSchema = z.discriminatedUnion("type", [
     bundle: z.string().min(1),
     outputDir: z.string().min(1),
   }),
+  /** Liveness check: the panel answers with its build stamp and host version. */
+  z.object({ schemaVersion, jobId: z.string().min(1), type: z.literal("ping") }),
+  /** Build one controlled template from a declarative layout spec. */
+  z.object({
+    schemaVersion,
+    jobId: z.string().min(1),
+    type: z.literal("build-template"),
+    layout: z.string().min(1),
+    output: z.string().min(1),
+  }),
+  /** Build the business-readable content library from a component register. */
+  z.object({
+    schemaVersion,
+    jobId: z.string().min(1),
+    type: z.literal("build-library"),
+    register: z.string().min(1),
+    output: z.string().min(1),
+  }),
   /** Development helper: build a synthetic content library and templates from a register and manifests. */
   z.object({
     schemaVersion,
@@ -223,6 +243,8 @@ export type UxpJob = z.infer<typeof UxpJobSchema>;
 export type ExtractContentJob = Extract<UxpJob, { type: "extract-content" }>;
 export type ComposeDocumentJob = Extract<UxpJob, { type: "compose-document" }>;
 export type CreateSamplesJob = Extract<UxpJob, { type: "create-samples" }>;
+export type BuildTemplateJob = Extract<UxpJob, { type: "build-template" }>;
+export type BuildLibraryJob = Extract<UxpJob, { type: "build-library" }>;
 
 export const UxpChecksSchema = z.object({
   overset: z.boolean(),
@@ -244,6 +266,83 @@ export const UxpResultSchema = z.object({
 export type UxpResult = z.infer<typeof UxpResultSchema>;
 
 export const CLEAN_CHECKS: UxpChecks = { overset: false, missingLinks: [], missingFonts: [], preflightErrors: [] };
+
+// ---- Layout spec (input to build-template) -------------------------------
+
+/** Geometry in points from the page's top-left corner. */
+export const BoundsSchema = z.object({
+  left: z.number(),
+  top: z.number(),
+  width: z.number().nonnegative(),
+  height: z.number().nonnegative(),
+});
+export type Bounds = z.infer<typeof BoundsSchema>;
+
+export const LayoutTextStyleSchema = z.object({
+  pointSize: z.number().positive(),
+  leading: z.number().positive().optional(),
+  fontFamily: z.string().optional(),
+  bold: z.boolean().optional(),
+  italic: z.boolean().optional(),
+  /** Swatch name defined by the layout or a brand pack. */
+  color: z.string().optional(),
+  align: z.enum(["left", "center", "right"]).optional(),
+  allCaps: z.boolean().optional(),
+  bullets: z.boolean().optional(),
+  indent: z.number().optional(),
+  spaceAfter: z.number().optional(),
+});
+export type LayoutTextStyle = z.infer<typeof LayoutTextStyleSchema>;
+
+const paint = {
+  fill: z.string().optional(),
+  stroke: z.string().optional(),
+  strokeWeight: z.number().nonnegative().optional(),
+};
+
+export const LayoutElementSchema = z.discriminatedUnion("kind", [
+  z.object({ kind: z.literal("shape"), shape: z.enum(["rectangle", "line", "oval"]), bounds: BoundsSchema, cornerRadius: z.number().nonnegative().optional(), ...paint }),
+  /** Static text authored for the template; never reusable content. */
+  z.object({ kind: z.literal("text"), bounds: BoundsSchema, text: z.string().min(1), style: z.string().min(1), autoGrow: z.boolean().optional() }),
+  /** A labelled object that composition fills: reusable content, a data value or a placed asset. */
+  z.object({
+    kind: z.literal("target"),
+    role: z.enum(["content", "data", "asset"]),
+    label: z.string().min(1),
+    bounds: BoundsSchema,
+    style: z.string().optional(),
+    placeholder: z.string().optional(),
+    autoGrow: z.boolean().optional(),
+  }),
+  /** A form control whose script label matches a manifest form field binding. */
+  z.object({ kind: z.literal("control"), control: FormFieldTypeSchema, label: z.string().min(1), bounds: BoundsSchema, ...paint }),
+]);
+export type LayoutElement = z.infer<typeof LayoutElementSchema>;
+
+export const LayoutSpecSchema = z.object({
+  schemaVersion,
+  documentId: IdSchema,
+  templateId: z.string().min(1),
+  page: z.object({ width: z.number().positive(), height: z.number().positive() }),
+  /** Named colours. Brand packs override same-named swatches at composition time. */
+  swatches: z.record(z.string(), SwatchSchema),
+  styles: z.record(z.string(), LayoutTextStyleSchema),
+  pages: z.array(z.object({ number: z.number().int().min(1), elements: z.array(LayoutElementSchema) })).min(1),
+});
+export type LayoutSpec = z.infer<typeof LayoutSpecSchema>;
+
+/** Every script label a layout defines, with how many times it occurs. */
+export function layoutLabelCounts(layout: LayoutSpec): Map<string, number> {
+  const counts = new Map<string, number>();
+  for (const page of layout.pages) {
+    for (const element of page.elements) {
+      if (element.kind === "target" || element.kind === "control") {
+        counts.set(element.label, (counts.get(element.label) ?? 0) + 1);
+      }
+    }
+  }
+  return counts;
+}
 
 // ---- Resolved bundle (input to compose-document) -------------------------
 

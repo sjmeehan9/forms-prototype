@@ -45,6 +45,8 @@ describe("preflight results", () => {
       "TEXT (4) > Missing font (4) > Arial (2) > diagram.benefits.svg | 1 | Problem: Missing font / Fix: Edit the source file to apply a different font.",
       "LINKS (1) > Missing link (1) > photo.jpg | 2 | Problem: Missing link",
     ]);
+    const levelRows = ["[Basic]", "doc.indd", [[1, "TEXT (1)"], [2, "Overset text (1)"], [3, "Text Frame", "1", "Problem: Overset text: 5 characters\nFix: Resize the text frame."]]];
+    expect(flattenAggregatedResults(levelRows)).toEqual(["TEXT (1) > Overset text (1) > Text Frame | page 1 | Problem: Overset text: 5 characters / Fix: Resize the text frame."]);
     expect(flattenAggregatedResults(["[Basic]", "doc.indd", []])).toEqual([]);
     expect(flattenAggregatedResults("unexpected")).toEqual(["unexpected"]);
   });

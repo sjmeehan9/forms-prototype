@@ -32,7 +32,8 @@ export type ContextOptions = { now?: () => Date; resetLocalStore?: boolean };
 /** Wire adapters for the configured storage and composition modes. */
 export async function createContext(config: AppConfig, log: Logger, options: ContextOptions = {}): Promise<RunContext> {
   await ensureDir(config.home);
-  const state = new StateStore(path.join(config.home, config.storageMode === "local" ? "state.local.json" : "state.json"));
+  const stateFile = config.storageMode === "local" ? `state.${path.basename(config.localStorageRoot)}.json` : "state.json";
+  const state = new StateStore(path.join(config.home, stateFile));
   await state.load();
   const isProcessed = (folderId: string): boolean => state.isProcessed(folderId);
 
@@ -44,14 +45,14 @@ export async function createContext(config: AppConfig, log: Logger, options: Con
     const local = new LocalStorageAdapter(config.localStorageRoot);
     storage = local;
     orchestration = new LocalOrchestrationAdapter(local, isProcessed);
-    layout = { generatedVariantsFolderId: LOCAL_FOLDERS.generatedVariants, requestDefaults: LOCAL_REQUEST_DEFAULTS };
+    layout = { generatedVariantsFolderId: LOCAL_FOLDERS.generatedVariants, requestDefaults: { ...LOCAL_REQUEST_DEFAULTS, sourceContentFolderId: LOCAL_FOLDERS.sourceContent } };
   } else {
     const credentials = requireFrameioCredentials(config);
     const frameioLayout = await loadFrameioLayout(config.home);
     const client = new FrameioClient(createTokenProvider(credentials, config.home, log));
     storage = new FrameioStorageAdapter(client, frameioLayout.accountId, log);
     orchestration = new FrameioOrchestrationAdapter(storage, frameioLayout, isProcessed);
-    layout = { generatedVariantsFolderId: frameioLayout.folders.generatedVariants, requestDefaults: frameioLayout.defaults };
+    layout = { generatedVariantsFolderId: frameioLayout.folders.generatedVariants, requestDefaults: { ...frameioLayout.defaults, sourceContentFolderId: frameioLayout.folders.sourceContent } };
   }
 
   let composition: CompositionAdapter;

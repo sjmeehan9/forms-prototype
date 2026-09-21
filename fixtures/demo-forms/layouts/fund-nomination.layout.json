@@ -1,0 +1,1874 @@
+{
+  "schemaVersion": 1,
+  "documentId": "fund-nomination",
+  "templateId": "fund-nomination.indt",
+  "page": {
+    "width": 595.28,
+    "height": 841.89
+  },
+  "swatches": {
+    "brand.primary": {
+      "cmyk": [
+        85,
+        55,
+        5,
+        0
+      ]
+    },
+    "brand.accent": {
+      "cmyk": [
+        60,
+        0,
+        40,
+        0
+      ]
+    },
+    "brand.dark": {
+      "cmyk": [
+        100,
+        85,
+        25,
+        25
+      ]
+    },
+    "brand.tint": {
+      "cmyk": [
+        10,
+        4,
+        0,
+        0
+      ]
+    },
+    "panel.tint": {
+      "cmyk": [
+        0,
+        0,
+        0,
+        6
+      ]
+    },
+    "bar.grey": {
+      "cmyk": [
+        0,
+        0,
+        0,
+        55
+      ]
+    },
+    "text.body": {
+      "cmyk": [
+        0,
+        0,
+        0,
+        90
+      ]
+    }
+  },
+  "styles": {
+    "h1": {
+      "fontFamily": "Georgia",
+      "bold": true,
+      "pointSize": 24,
+      "leading": 27,
+      "color": "brand.primary"
+    },
+    "callout-heading": {
+      "fontFamily": "Georgia",
+      "bold": true,
+      "pointSize": 11,
+      "leading": 14,
+      "color": "brand.primary",
+      "spaceAfter": 3
+    },
+    "callout-body": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 9,
+      "leading": 12,
+      "color": "brand.primary"
+    },
+    "caps-heading": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 8.5,
+      "leading": 11,
+      "color": "brand.primary",
+      "allCaps": true,
+      "spaceAfter": 2
+    },
+    "body": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 9,
+      "leading": 11.2,
+      "color": "text.body",
+      "spaceAfter": 4
+    },
+    "body-strong": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 9,
+      "leading": 11.5,
+      "color": "text.body",
+      "spaceAfter": 3
+    },
+    "bullet": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 9,
+      "leading": 11.8,
+      "color": "text.body",
+      "bullets": true,
+      "indent": 11,
+      "spaceAfter": 1.5
+    },
+    "hint": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 8.5,
+      "leading": 10.5,
+      "color": "text.body"
+    },
+    "label": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 9,
+      "leading": 10.4,
+      "color": "text.body"
+    },
+    "value": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 9,
+      "leading": 11,
+      "color": "text.body"
+    },
+    "bar-tab": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 8.5,
+      "leading": 11,
+      "color": "Paper",
+      "allCaps": true
+    },
+    "bar-title": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 8.5,
+      "leading": 11,
+      "color": "Paper",
+      "allCaps": true
+    },
+    "brandname": {
+      "fontFamily": "Georgia",
+      "bold": true,
+      "pointSize": 15,
+      "leading": 17,
+      "color": "brand.primary",
+      "align": "right"
+    },
+    "letter-title": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 15,
+      "leading": 18,
+      "color": "brand.primary"
+    },
+    "footer": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 7,
+      "leading": 8.7,
+      "color": "text.body"
+    },
+    "footer-code": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 8,
+      "leading": 10,
+      "color": "text.body",
+      "align": "right"
+    },
+    "side-label": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 7.5,
+      "leading": 10.2,
+      "color": "text.body"
+    },
+    "side": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 7.5,
+      "leading": 10.2,
+      "color": "text.body"
+    }
+  },
+  "pages": [
+    {
+      "number": 1,
+      "elements": [
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 45,
+            "top": 38,
+            "width": 300,
+            "height": 58
+          },
+          "text": "Nominate us as\ryour super fund",
+          "style": "h1"
+        },
+        {
+          "kind": "target",
+          "role": "asset",
+          "label": "asset:brand.logo",
+          "bounds": {
+            "left": 497,
+            "top": 34,
+            "width": 58,
+            "height": 40
+          }
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.name@header",
+          "bounds": {
+            "left": 285,
+            "top": 47,
+            "width": 207,
+            "height": 18
+          },
+          "style": "brandname",
+          "placeholder": "[fund.name]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 47.8,
+            "top": 116.2,
+            "width": 250,
+            "height": 96.4
+          },
+          "stroke": "brand.primary",
+          "strokeWeight": 4,
+          "cornerRadius": 14
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:nomination.intro",
+          "bounds": {
+            "left": 65.2,
+            "top": 128.5,
+            "width": 216,
+            "height": 76
+          },
+          "style": "callout-body",
+          "placeholder": "[nomination.intro]"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:privacy.statement",
+          "bounds": {
+            "left": 317.5,
+            "top": 111.4,
+            "width": 254,
+            "height": 150
+          },
+          "style": "body",
+          "placeholder": "[privacy.statement]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 45.3,
+            "top": 276.4,
+            "width": 62.3,
+            "height": 18.5
+          },
+          "fill": "brand.dark"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 107.6,
+            "top": 276.4,
+            "width": 464.3,
+            "height": 18.5
+          },
+          "fill": "brand.primary"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 279.9,
+            "width": 54,
+            "height": 12
+          },
+          "text": "Section 1",
+          "style": "bar-tab"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 113.39999999999999,
+            "top": 279.9,
+            "width": 380,
+            "height": 12
+          },
+          "text": "Your details",
+          "style": "bar-title"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 45.3,
+            "top": 294.9,
+            "width": 526.6,
+            "height": 204
+          },
+          "fill": "panel.tint"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:form.completion.instructions",
+          "bounds": {
+            "left": 51,
+            "top": 299.5,
+            "width": 515,
+            "height": 16
+          },
+          "style": "body",
+          "placeholder": "[form.completion.instructions]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 197.2,
+            "top": 321.2,
+            "width": 368.1,
+            "height": 171
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 197.2,
+            "top": 342.5,
+            "width": 368.1,
+            "height": 0
+          },
+          "stroke": "panel.tint",
+          "strokeWeight": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 197.2,
+            "top": 363.7,
+            "width": 368.1,
+            "height": 0
+          },
+          "stroke": "panel.tint",
+          "strokeWeight": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 197.2,
+            "top": 384.9,
+            "width": 368.1,
+            "height": 0
+          },
+          "stroke": "panel.tint",
+          "strokeWeight": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 197.2,
+            "top": 406.2,
+            "width": 368.1,
+            "height": 0
+          },
+          "stroke": "panel.tint",
+          "strokeWeight": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 197.2,
+            "top": 427.4,
+            "width": 368.1,
+            "height": 0
+          },
+          "stroke": "panel.tint",
+          "strokeWeight": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 197.2,
+            "top": 449.2,
+            "width": 368.1,
+            "height": 0
+          },
+          "stroke": "panel.tint",
+          "strokeWeight": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 197.2,
+            "top": 471,
+            "width": 368.1,
+            "height": 0
+          },
+          "stroke": "panel.tint",
+          "strokeWeight": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 45.3,
+            "top": 508.6,
+            "width": 62.3,
+            "height": 18.5
+          },
+          "fill": "brand.dark"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 107.6,
+            "top": 508.6,
+            "width": 464.3,
+            "height": 18.5
+          },
+          "fill": "brand.primary"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 512.1,
+            "width": 54,
+            "height": 12
+          },
+          "text": "Section 2",
+          "style": "bar-tab"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 113.39999999999999,
+            "top": 512.1,
+            "width": 380,
+            "height": 12
+          },
+          "text": "Fund details",
+          "style": "bar-title"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 45.3,
+            "top": 527.1,
+            "width": 526.6,
+            "height": 193.3
+          },
+          "fill": "panel.tint"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 197.2,
+            "top": 536.6,
+            "width": 368.1,
+            "height": 127.4
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 197.2,
+            "top": 557.8,
+            "width": 368.1,
+            "height": 0
+          },
+          "stroke": "panel.tint",
+          "strokeWeight": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 197.2,
+            "top": 579.1,
+            "width": 368.1,
+            "height": 0
+          },
+          "stroke": "panel.tint",
+          "strokeWeight": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 197.2,
+            "top": 600.3,
+            "width": 368.1,
+            "height": 0
+          },
+          "stroke": "panel.tint",
+          "strokeWeight": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 197.2,
+            "top": 621.5,
+            "width": 368.1,
+            "height": 0
+          },
+          "stroke": "panel.tint",
+          "strokeWeight": 2
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 197.2,
+            "top": 642.8,
+            "width": 368.1,
+            "height": 0
+          },
+          "stroke": "panel.tint",
+          "strokeWeight": 2
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 541.9,
+            "width": 140,
+            "height": 12
+          },
+          "text": "Fund name",
+          "style": "label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.name@panel",
+          "bounds": {
+            "left": 203.2,
+            "top": 540.6,
+            "width": 355,
+            "height": 12
+          },
+          "style": "value",
+          "placeholder": "[fund.name]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 563.2,
+            "width": 140,
+            "height": 12
+          },
+          "text": "Fund address",
+          "style": "label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.address@panel",
+          "bounds": {
+            "left": 203.2,
+            "top": 561.8,
+            "width": 355,
+            "height": 12
+          },
+          "style": "value",
+          "placeholder": "[fund.address]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 584.4,
+            "width": 140,
+            "height": 12
+          },
+          "text": "Fund ABN",
+          "style": "label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.abn@panel",
+          "bounds": {
+            "left": 203.2,
+            "top": 583.1,
+            "width": 355,
+            "height": 12
+          },
+          "style": "value",
+          "placeholder": "[fund.abn]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 600.9,
+            "width": 142,
+            "height": 21
+          },
+          "text": "Product identification number (SPIN)",
+          "style": "label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.spin@panel",
+          "bounds": {
+            "left": 203.2,
+            "top": 604.3,
+            "width": 355,
+            "height": 12
+          },
+          "style": "value",
+          "placeholder": "[fund.spin]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 622.2,
+            "width": 142,
+            "height": 21
+          },
+          "text": "Unique superannuation identifier (USI)",
+          "style": "label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.usi@panel",
+          "bounds": {
+            "left": 203.2,
+            "top": 625.6,
+            "width": 355,
+            "height": 12
+          },
+          "style": "value",
+          "placeholder": "[fund.usi]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 648.2,
+            "width": 140,
+            "height": 12
+          },
+          "text": "Help line",
+          "style": "label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.phone@panel",
+          "bounds": {
+            "left": 203.2,
+            "top": 646.9,
+            "width": 355,
+            "height": 12
+          },
+          "style": "value",
+          "placeholder": "[contact.phone]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 197.5,
+            "top": 703.4,
+            "width": 360,
+            "height": 12
+          },
+          "text": "You can find this number on your latest statement.",
+          "style": "hint"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:nomination.alternative",
+          "bounds": {
+            "left": 45.4,
+            "top": 725.4,
+            "width": 520,
+            "height": 26
+          },
+          "style": "body",
+          "placeholder": "[nomination.alternative]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 56.7,
+            "top": 772,
+            "width": 40,
+            "height": 9
+          },
+          "text": "Issued by",
+          "style": "footer"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.name@footer",
+          "bounds": {
+            "left": 92,
+            "top": 772,
+            "width": 250,
+            "height": 9
+          },
+          "style": "footer",
+          "placeholder": "[trustee.name]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 56.7,
+            "top": 781,
+            "width": 16,
+            "height": 9
+          },
+          "text": "ABN",
+          "style": "footer"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.abn@footer",
+          "bounds": {
+            "left": 73,
+            "top": 781,
+            "width": 90,
+            "height": 9
+          },
+          "style": "footer",
+          "placeholder": "[trustee.abn]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 166,
+            "top": 781,
+            "width": 20,
+            "height": 9
+          },
+          "text": "AFSL",
+          "style": "footer"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.afsl@footer",
+          "bounds": {
+            "left": 186,
+            "top": 781,
+            "width": 80,
+            "height": 9
+          },
+          "style": "footer",
+          "placeholder": "[trustee.afsl]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 56.7,
+            "top": 790,
+            "width": 22,
+            "height": 9
+          },
+          "text": "Fund",
+          "style": "footer"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.name@footer",
+          "bounds": {
+            "left": 78,
+            "top": 790,
+            "width": 160,
+            "height": 9
+          },
+          "style": "footer",
+          "placeholder": "[fund.name]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 240,
+            "top": 790,
+            "width": 16,
+            "height": 9
+          },
+          "text": "ABN",
+          "style": "footer"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.abn@footer",
+          "bounds": {
+            "left": 257,
+            "top": 790,
+            "width": 90,
+            "height": 9
+          },
+          "style": "footer",
+          "placeholder": "[fund.abn]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 56.7,
+            "top": 799,
+            "width": 26,
+            "height": 9
+          },
+          "text": "Issued",
+          "style": "footer"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:form.issue.date@footer",
+          "bounds": {
+            "left": 83,
+            "top": 799,
+            "width": 120,
+            "height": 9
+          },
+          "style": "footer",
+          "placeholder": "[form.issue.date]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:form.nomination.code@p1",
+          "bounds": {
+            "left": 404,
+            "top": 807.9,
+            "width": 140,
+            "height": 10
+          },
+          "style": "footer-code",
+          "placeholder": "[form.nomination.code]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 197.5,
+            "top": 321.9,
+            "width": 368.6,
+            "height": 19.4
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 197.4,
+            "top": 343.2,
+            "width": 368.7,
+            "height": 19.3
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 197.5,
+            "top": 364.5,
+            "width": 368.5,
+            "height": 19.3
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 197.4,
+            "top": 385.7,
+            "width": 368.6,
+            "height": 19.3
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 197.5,
+            "top": 406.9,
+            "width": 368.5,
+            "height": 19.3
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 197.4,
+            "top": 428.2,
+            "width": 213.1,
+            "height": 20
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 466.7,
+            "top": 428,
+            "width": 99.4,
+            "height": 20.2
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 197.5,
+            "top": 449.8,
+            "width": 123,
+            "height": 20.2
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 197.5,
+            "top": 471.8,
+            "width": 368.4,
+            "height": 19.4
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 197.4,
+            "top": 680.8,
+            "width": 368.6,
+            "height": 19.3
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 326.3,
+            "width": 32.8,
+            "height": 13.6
+          },
+          "text": "Title",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 347.6,
+            "width": 62.5,
+            "height": 13.6
+          },
+          "text": "Last name *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 368.8,
+            "width": 67.4,
+            "height": 13.6
+          },
+          "text": "First name *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 390.1,
+            "width": 87.2,
+            "height": 13.6
+          },
+          "text": "Street address *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 411.3,
+            "width": 87.2,
+            "height": 13.6
+          },
+          "text": "Suburb or town *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 432.9,
+            "width": 42.7,
+            "height": 13.6
+          },
+          "text": "State *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 418,
+            "top": 433.2,
+            "width": 47,
+            "height": 13.6
+          },
+          "text": "Postcode",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 454.7,
+            "width": 140.5,
+            "height": 13.6
+          },
+          "text": "Date of birth (DD/MM/YYYY) *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 471.3,
+            "width": 140.5,
+            "height": 13.6
+          },
+          "text": "Employee or payroll number (if any)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 51,
+            "top": 685.2,
+            "width": 72.4,
+            "height": 13.6
+          },
+          "text": "Member number",
+          "style": "label"
+        },
+        {
+          "kind": "control",
+          "control": "combo",
+          "label": "field:member.title",
+          "bounds": {
+            "left": 197.5,
+            "top": 321.9,
+            "width": 368.6,
+            "height": 19.4
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:member.lastName",
+          "bounds": {
+            "left": 197.4,
+            "top": 343.2,
+            "width": 368.7,
+            "height": 19.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:member.firstName",
+          "bounds": {
+            "left": 197.5,
+            "top": 364.5,
+            "width": 368.5,
+            "height": 19.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.residential.line1",
+          "bounds": {
+            "left": 197.4,
+            "top": 385.7,
+            "width": 368.6,
+            "height": 19.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.residential.suburb",
+          "bounds": {
+            "left": 197.5,
+            "top": 406.9,
+            "width": 368.5,
+            "height": 19.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.residential.state",
+          "bounds": {
+            "left": 197.4,
+            "top": 428.2,
+            "width": 213.1,
+            "height": 20
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.residential.postcode",
+          "bounds": {
+            "left": 466.7,
+            "top": 428,
+            "width": 99.4,
+            "height": 20.2
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:member.dateOfBirth",
+          "bounds": {
+            "left": 197.5,
+            "top": 449.8,
+            "width": 123,
+            "height": 20.2
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:member.employeeId",
+          "bounds": {
+            "left": 197.5,
+            "top": 471.8,
+            "width": 368.4,
+            "height": 19.4
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:member.number",
+          "bounds": {
+            "left": 197.4,
+            "top": 680.8,
+            "width": 368.6,
+            "height": 19.3
+          }
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "elements": [
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 22.6,
+            "top": 57.1,
+            "width": 62.3,
+            "height": 18.5
+          },
+          "fill": "brand.dark"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 84.9,
+            "top": 57.1,
+            "width": 464.3,
+            "height": 18.5
+          },
+          "fill": "brand.primary"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.3,
+            "top": 60.6,
+            "width": 54,
+            "height": 12
+          },
+          "text": "Section 3",
+          "style": "bar-tab"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 90.69999999999999,
+            "top": 60.6,
+            "width": 380,
+            "height": 12
+          },
+          "text": "Your nomination",
+          "style": "bar-title"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 22.6,
+            "top": 75.6,
+            "width": 526.6,
+            "height": 89.3
+          },
+          "fill": "panel.tint"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:nomination.statement",
+          "bounds": {
+            "left": 28.3,
+            "top": 81.9,
+            "width": 510,
+            "height": 12
+          },
+          "style": "body",
+          "placeholder": "[nomination.statement]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 22.6,
+            "top": 174.6,
+            "width": 526.6,
+            "height": 18.5
+          },
+          "fill": "bar.grey"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.3,
+            "top": 178.1,
+            "width": 420,
+            "height": 12
+          },
+          "text": "For your employer to complete",
+          "style": "bar-title"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 22.6,
+            "top": 193.1,
+            "width": 526.6,
+            "height": 111.2
+          },
+          "fill": "panel.tint"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:employer.records.instructions",
+          "bounds": {
+            "left": 28.3,
+            "top": 199.5,
+            "width": 510,
+            "height": 12
+          },
+          "style": "body",
+          "placeholder": "[employer.records.instructions]"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:employer.retention.note",
+          "bounds": {
+            "left": 28.3,
+            "top": 266,
+            "width": 510,
+            "height": 26
+          },
+          "style": "body-strong",
+          "placeholder": "[employer.retention.note]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 252,
+            "top": 811,
+            "width": 90,
+            "height": 9
+          },
+          "text": "Page 2 of 2",
+          "style": "footer"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:form.nomination.code@p2",
+          "bounds": {
+            "left": 404,
+            "top": 809.7,
+            "width": 140,
+            "height": 10
+          },
+          "style": "footer-code",
+          "placeholder": "[form.nomination.code]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28.1,
+            "top": 116.6,
+            "width": 249.7,
+            "height": 39.6
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 294.8,
+            "top": 116.5,
+            "width": 120.4,
+            "height": 20
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 28.3,
+            "top": 234.1,
+            "width": 120.4,
+            "height": 20
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 294.7,
+            "top": 234,
+            "width": 120.5,
+            "height": 20.2
+          },
+          "fill": "Paper"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.3,
+            "top": 100.2,
+            "width": 120,
+            "height": 13
+          },
+          "text": "Signature *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 294.8,
+            "top": 100.2,
+            "width": 136.7,
+            "height": 13.6
+          },
+          "text": "Date signed (DD/MM/YYYY) *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 28.3,
+            "top": 217.9,
+            "width": 230.8,
+            "height": 13.6
+          },
+          "text": "Date the nomination was accepted (DD/MM/YYYY)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 294.8,
+            "top": 217.9,
+            "width": 230.8,
+            "height": 13.6
+          },
+          "text": "Date the nomination was actioned (DD/MM/YYYY)",
+          "style": "label"
+        },
+        {
+          "kind": "control",
+          "control": "signature",
+          "label": "field:nomination.signature",
+          "bounds": {
+            "left": 28.1,
+            "top": 116.6,
+            "width": 249.7,
+            "height": 39.6
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:nomination.date",
+          "bounds": {
+            "left": 294.8,
+            "top": 116.5,
+            "width": 120.4,
+            "height": 20
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:employer.dateAccepted",
+          "bounds": {
+            "left": 28.3,
+            "top": 234.1,
+            "width": 120.4,
+            "height": 20
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:employer.dateActioned",
+          "bounds": {
+            "left": 294.7,
+            "top": 234,
+            "width": 120.5,
+            "height": 20.2
+          }
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "elements": [
+        {
+          "kind": "target",
+          "role": "asset",
+          "label": "asset:brand.logo@letter",
+          "bounds": {
+            "left": 497,
+            "top": 34,
+            "width": 58,
+            "height": 40
+          }
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.name@letter",
+          "bounds": {
+            "left": 285,
+            "top": 47,
+            "width": 207,
+            "height": 18
+          },
+          "style": "brandname",
+          "placeholder": "[fund.name]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:letter.compliance.date@letter",
+          "bounds": {
+            "left": 41.7,
+            "top": 158.9,
+            "width": 220,
+            "height": 12
+          },
+          "style": "body",
+          "placeholder": "[letter.compliance.date]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 41.7,
+            "top": 189.3,
+            "width": 360,
+            "height": 20
+          },
+          "text": "Letter of compliance",
+          "style": "letter-title"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:compliance.letter.body",
+          "bounds": {
+            "left": 41.7,
+            "top": 221.1,
+            "width": 396,
+            "height": 250
+          },
+          "style": "body",
+          "placeholder": "[compliance.letter.body]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 41.7,
+            "top": 500,
+            "width": 200,
+            "height": 12
+          },
+          "text": "Yours sincerely",
+          "style": "body"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:letter.signatory.name@letter",
+          "bounds": {
+            "left": 41.7,
+            "top": 520,
+            "width": 260,
+            "height": 12
+          },
+          "style": "body-strong",
+          "placeholder": "[letter.signatory.name]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:letter.signatory.title@letter",
+          "bounds": {
+            "left": 41.7,
+            "top": 532,
+            "width": 260,
+            "height": 12
+          },
+          "style": "body",
+          "placeholder": "[letter.signatory.title]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 41.7,
+            "top": 544,
+            "width": 260,
+            "height": 12
+          },
+          "text": "On behalf of the trustee",
+          "style": "body"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 466.2,
+            "top": 549.5,
+            "width": 100,
+            "height": 10.5
+          },
+          "text": "Product identification number (SPIN)",
+          "style": "side-label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.spin@side",
+          "bounds": {
+            "left": 466.2,
+            "top": 570.5,
+            "width": 100,
+            "height": 10.5
+          },
+          "style": "side",
+          "placeholder": "[fund.spin]",
+          "autoGrow": true
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 466.2,
+            "top": 587,
+            "width": 100,
+            "height": 10.5
+          },
+          "text": "Unique superannuation identifier (USI)",
+          "style": "side-label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.usi@side",
+          "bounds": {
+            "left": 466.2,
+            "top": 608,
+            "width": 100,
+            "height": 10.5
+          },
+          "style": "side",
+          "placeholder": "[fund.usi]",
+          "autoGrow": true
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 466.2,
+            "top": 624.5,
+            "width": 100,
+            "height": 10.5
+          },
+          "text": "Fund",
+          "style": "side-label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.name@side",
+          "bounds": {
+            "left": 466.2,
+            "top": 635,
+            "width": 100,
+            "height": 10.5
+          },
+          "style": "side",
+          "placeholder": "[fund.name]",
+          "autoGrow": true
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 466.2,
+            "top": 645.5,
+            "width": 24,
+            "height": 10.5
+          },
+          "text": "ABN",
+          "style": "side"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.abn@side",
+          "bounds": {
+            "left": 486.2,
+            "top": 645.5,
+            "width": 78,
+            "height": 10.5
+          },
+          "style": "side",
+          "placeholder": "[fund.abn]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 466.2,
+            "top": 662,
+            "width": 100,
+            "height": 10.5
+          },
+          "text": "Trustee",
+          "style": "side-label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.name@side",
+          "bounds": {
+            "left": 466.2,
+            "top": 672.5,
+            "width": 100,
+            "height": 10.5
+          },
+          "style": "side",
+          "placeholder": "[trustee.name]",
+          "autoGrow": true
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 466.2,
+            "top": 694,
+            "width": 24,
+            "height": 10.5
+          },
+          "text": "ABN",
+          "style": "side"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.abn@side",
+          "bounds": {
+            "left": 486.2,
+            "top": 694,
+            "width": 78,
+            "height": 10.5
+          },
+          "style": "side",
+          "placeholder": "[trustee.abn]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 466.2,
+            "top": 704.5,
+            "width": 24,
+            "height": 10.5
+          },
+          "text": "AFSL",
+          "style": "side"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.afsl@side",
+          "bounds": {
+            "left": 491.2,
+            "top": 704.5,
+            "width": 78,
+            "height": 10.5
+          },
+          "style": "side",
+          "placeholder": "[trustee.afsl]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 466.2,
+            "top": 715,
+            "width": 24,
+            "height": 10.5
+          },
+          "text": "RSE",
+          "style": "side"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.rse@side",
+          "bounds": {
+            "left": 486.2,
+            "top": 715,
+            "width": 78,
+            "height": 10.5
+          },
+          "style": "side",
+          "placeholder": "[trustee.rse]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 466.2,
+            "top": 731,
+            "width": 100,
+            "height": 10.5
+          },
+          "text": "Contact",
+          "style": "side-label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.address@side",
+          "bounds": {
+            "left": 466.2,
+            "top": 741.5,
+            "width": 100,
+            "height": 10.5
+          },
+          "style": "side",
+          "placeholder": "[fund.address]",
+          "autoGrow": true
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.phone@side",
+          "bounds": {
+            "left": 466.2,
+            "top": 773,
+            "width": 100,
+            "height": 10.5
+          },
+          "style": "side",
+          "placeholder": "[contact.phone]",
+          "autoGrow": true
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.website@side",
+          "bounds": {
+            "left": 466.2,
+            "top": 783.5,
+            "width": 100,
+            "height": 10.5
+          },
+          "style": "side",
+          "placeholder": "[contact.website]",
+          "autoGrow": true
+        }
+      ]
+    }
+  ]
+}

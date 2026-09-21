@@ -157,6 +157,10 @@ export class FrameioClient {
     return (await this.request<Single<unknown>>("POST", `/v4/accounts/${accountId}/files/${fileId}/comments`, { body: { data: { text } } })).data;
   }
 
+  versionStackChildren(accountId: string, versionStackId: string): Promise<FrameioNode[]> {
+    return this.listAll<FrameioNode>(`/v4/accounts/${accountId}/version_stacks/${versionStackId}/children`);
+  }
+
   versionStacks(accountId: string, folderId: string): Promise<unknown[]> {
     return this.listAll<unknown>(`/v4/accounts/${accountId}/folders/${folderId}/version_stacks`);
   }

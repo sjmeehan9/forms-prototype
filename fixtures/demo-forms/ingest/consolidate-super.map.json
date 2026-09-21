@@ -41,7 +41,8 @@
       "exportValue": "male",
       "source": [
         "p1#6 Check Box1"
-      ]
+      ],
+      "required": true
     },
     {
       "name": "member.gender",
@@ -73,7 +74,15 @@
         "p1#10 Check Box2",
         "p1#11 Check Box2",
         "p1#5 Text5"
-      ]
+      ],
+      "bounds": {
+        "page": 1,
+        "left": 308.4,
+        "top": 335.1,
+        "width": 243.4,
+        "height": 16.7
+      },
+      "note": "Aligned with its label; the reference used a row of tick boxes here."
     },
     {
       "name": "member.firstName",

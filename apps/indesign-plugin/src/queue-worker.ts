@@ -1,9 +1,11 @@
 import { app } from "indesign";
 import type { UxpJob, UxpResult } from "@prototype/contracts";
+import { buildLibrary } from "./build-library";
+import { buildTemplate } from "./build-template";
 import { composeDocument } from "./compose";
 import { createSamples } from "./create-samples";
 import { extractContent } from "./extract-content";
-import { failedResult, messageOf, parseJobText } from "./text-model";
+import { completedResult, failedResult, messageOf, parseJobText } from "./text-model";
 import { deleteEntry, ensureFolder, getEntry, listJsonFiles, moveEntry, readEntryText, writeTextAtomic, type Entry } from "./uxp-fs";
 
 export type WorkerStatus = {
@@ -14,6 +16,10 @@ export type WorkerStatus = {
 };
 
 export type StatusListener = (status: WorkerStatus) => void;
+
+declare const __PLUGIN_BUILD__: string;
+/** Injected by the build so the panel and ping results show which bundle is loaded. */
+export const PLUGIN_BUILD: string = typeof __PLUGIN_BUILD__ === "string" ? __PLUGIN_BUILD__ : "dev";
 
 const IDLE_TASK_NAME = "prototype-queue-worker";
 const IDLE_SLEEP_MS = 2000;
@@ -103,10 +109,16 @@ export class QueueWorker {
 
     let result: UxpResult;
     try {
-      if (job.type === "extract-content") {
+      if (job.type === "ping") {
+        result = completedResult(job.jobId, [], undefined, [`plugin build ${PLUGIN_BUILD}`, `InDesign ${String(app.version)}`]);
+      } else if (job.type === "extract-content") {
         result = await extractContent(root, job);
       } else if (job.type === "compose-document") {
         result = await composeDocument(root, job);
+      } else if (job.type === "build-template") {
+        result = await buildTemplate(root, job);
+      } else if (job.type === "build-library") {
+        result = await buildLibrary(root, job);
       } else {
         result = await createSamples(root, job);
       }

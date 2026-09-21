@@ -43,7 +43,17 @@ export class FrameioStorageAdapter implements StorageAdapter {
     const items: StoredItem[] = [];
     for (const node of nodes) {
       if (node.type === "version_stack") {
-        this.log.warn(`skipping version stack ${node.name}; version stacks are outside the prototype scope`);
+        // Uploading a same-named file in the Frame.io UI can create a version stack; use its newest version.
+        try {
+          const versions = (await this.client.versionStackChildren(this.accountId, node.id)).filter((version) => version.type !== "folder");
+          const newest = versions.sort((a, b) => (b.updated_at ?? b.created_at ?? "").localeCompare(a.updated_at ?? a.created_at ?? ""))[0];
+          if (newest) {
+            items.push({ ...this.toItem(newest), name: node.name || newest.name, parentId });
+            continue;
+          }
+        } catch (error) {
+          this.log.warn(`could not read version stack ${node.name}: ${error instanceof Error ? error.message : String(error)}`);
+        }
         continue;
       }
       items.push(this.toItem(node));

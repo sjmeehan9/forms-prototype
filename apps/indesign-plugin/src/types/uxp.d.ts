@@ -16,6 +16,9 @@ declare module "indesign" {
   export const MeasurementUnits: any;
   export const AutoSizingTypeEnum: any;
   export const AutoSizingReferenceEnum: any;
+  export const CornerOptions: any;
+  export const Justification: any;
+  export const Capitalization: any;
 }
 
 declare module "uxp" {

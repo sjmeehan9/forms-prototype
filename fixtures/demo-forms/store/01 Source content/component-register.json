@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "sourceHash": "seed",
+  "components": [
+    {
+      "id": "privacy.statement",
+      "status": "approved",
+      "owner": "Privacy Officer",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Your privacy",
+          "style": "heading"
+        },
+        {
+          "type": "paragraph",
+          "text": "We collect the personal information on this form to administer your account and to keep in touch with you. We share it only with service providers who help us do that, and with regulators when the law requires it.",
+          "style": "body"
+        },
+        {
+          "type": "paragraph",
+          "text": "Our privacy policy explains how we handle your information, how to access or correct it, and how to make a complaint. You can read it on our website or ask us for a copy.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "tfn.notice",
+      "status": "approved",
+      "owner": "Tax Manager",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Super law allows us to collect your tax file number (TFN). Giving it is voluntary, but without it you may pay more tax on your super and some contributions cannot be accepted. We use your TFN only for lawful purposes.",
+          "style": "note"
+        }
+      ]
+    },
+    {
+      "id": "form.completion.instructions",
+      "status": "approved",
+      "owner": "Member Services",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Please write in black or blue pen using BLOCK letters, or complete the form on screen. Fields marked with a star (*) must be completed.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "return.instructions",
+      "status": "approved",
+      "owner": "Member Services",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Send your completed and signed form to the address below and keep a copy for your records. If anything is missing we will contact you before we process your request.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "declaration.transfer",
+      "status": "approved",
+      "owner": "Legal",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "By signing this form I confirm that:",
+          "style": "body-strong"
+        },
+        {
+          "type": "list-item",
+          "text": "the information I have given is true and complete",
+          "level": 1
+        },
+        {
+          "type": "list-item",
+          "text": "I have read this form and understand how the transfer works",
+          "level": 1
+        },
+        {
+          "type": "list-item",
+          "text": "I ask for the amount shown in section 3 to be transferred into my account with this fund, and I authorise both funds to act on this request",
+          "level": 1
+        },
+        {
+          "type": "list-item",
+          "text": "I understand that any insurance I hold in the other fund may end when my balance is transferred",
+          "level": 1
+        },
+        {
+          "type": "list-item",
+          "text": "I understand that I should claim any tax deduction for personal contributions with the other fund before the transfer takes place",
+          "level": 1
+        },
+        {
+          "type": "list-item",
+          "text": "I consent to my tax file number being passed to the other fund so that my account can be found",
+          "level": 1
+        },
+        {
+          "type": "list-item",
+          "text": "I release the trustee of the other fund from further liability for the amount transferred.",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "nomination.intro",
+      "status": "approved",
+      "owner": "Employer Services",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Give this form to your employer",
+          "style": "callout-heading"
+        },
+        {
+          "type": "paragraph",
+          "text": "Use this form to choose this fund for your employer's super contributions. Hand the completed and signed form to your employer. Please do not send it to us.",
+          "style": "callout-body"
+        }
+      ]
+    },
+    {
+      "id": "nomination.alternative",
+      "status": "approved",
+      "owner": "Employer Services",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "If you would rather nominate a different fund, ask your employer for the standard choice form published by the Australian Taxation Office.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "nomination.statement",
+      "status": "approved",
+      "owner": "Legal",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I nominate the fund named in section 2 to receive my future employer super contributions.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "employer.records.instructions",
+      "status": "approved",
+      "owner": "Employer Services",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Complete this section after your employee returns the signed form to you.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "employer.retention.note",
+      "status": "approved",
+      "owner": "Employer Services",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Keep this form with your records for five years. Do not send a copy to the fund or to the Australian Taxation Office.",
+          "style": "body-strong"
+        }
+      ]
+    },
+    {
+      "id": "compliance.letter.body",
+      "status": "approved",
+      "owner": "Company Secretary",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To whom it may concern",
+          "style": "body"
+        },
+        {
+          "type": "paragraph",
+          "text": "On behalf of the trustee named on this page, I confirm that:",
+          "style": "body"
+        },
+        {
+          "type": "list-item",
+          "text": "the fund is a complying, resident regulated superannuation fund under the Superannuation Industry (Supervision) Act 1993",
+          "level": 1
+        },
+        {
+          "type": "list-item",
+          "text": "the fund is not subject to a direction to stop accepting contributions and does not expect to receive one",
+          "level": 1
+        },
+        {
+          "type": "list-item",
+          "text": "the fund can accept employer contributions made for existing members",
+          "level": 1
+        },
+        {
+          "type": "list-item",
+          "text": "the fund's rules allow benefits to be rolled over or transferred into the fund",
+          "level": 1
+        },
+        {
+          "type": "list-item",
+          "text": "the fund offers insurance cover that meets the minimum requirements for default funds.",
+          "level": 1
+        },
+        {
+          "type": "paragraph",
+          "text": "How to pay contributions",
+          "style": "heading"
+        },
+        {
+          "type": "paragraph",
+          "text": "Employers pay contributions electronically using a SuperStream-compliant service. The identifiers needed are listed on this page.",
+          "style": "body"
+        },
+        {
+          "type": "paragraph",
+          "text": "More information",
+          "style": "heading"
+        },
+        {
+          "type": "paragraph",
+          "text": "If you have any questions, please call the help line shown on this page.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "guide.online.tip",
+      "status": "approved",
+      "owner": "Digital Team",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Did you know?",
+          "style": "callout-heading"
+        },
+        {
+          "type": "paragraph",
+          "text": "You can change many of your details online at any time.",
+          "style": "callout-body"
+        },
+        {
+          "type": "paragraph",
+          "text": "Look for this marker on the form:",
+          "style": "callout-body"
+        }
+      ]
+    },
+    {
+      "id": "guide.register.tip",
+      "status": "approved",
+      "owner": "Digital Team",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Not registered?",
+          "style": "callout-heading"
+        },
+        {
+          "type": "paragraph",
+          "text": "Register for online access to check and manage your super whenever it suits you.",
+          "style": "callout-body"
+        }
+      ]
+    },
+    {
+      "id": "guide.section.current",
+      "status": "approved",
+      "owner": "Member Services",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Your current details",
+          "style": "heading"
+        },
+        {
+          "type": "paragraph",
+          "text": "Fill in this section with the details we hold for you now, so we can find your account.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "guide.section.contact",
+      "status": "approved",
+      "owner": "Member Services",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Your new contact details",
+          "style": "heading"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tell us about any change to your address, phone number or email. We use these details to stay in touch with you.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "guide.section.personal",
+      "status": "approved",
+      "owner": "Member Services",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Your new personal details",
+          "style": "heading"
+        },
+        {
+          "type": "paragraph",
+          "text": "If your name has changed, send a certified copy of a document that links your old and new names, such as a marriage or change of name certificate.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "guide.section.income",
+      "status": "approved",
+      "owner": "Retirement Team",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Income accounts only",
+          "style": "heading"
+        },
+        {
+          "type": "paragraph",
+          "text": "Complete these sections if you receive regular payments from a retirement income account and want to change your bank account or your payments.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "guide.section.checklist",
+      "status": "approved",
+      "owner": "Member Services",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Checklist and declaration",
+          "style": "heading"
+        },
+        {
+          "type": "paragraph",
+          "text": "Use the checklist to confirm everything is complete, then read the declaration and sign.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "identity.name.change.evidence",
+      "status": "approved",
+      "owner": "Risk and Compliance",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Changed your name? Attach a certified copy of your marriage certificate or change of name certificate. If you are correcting your name, date of birth or gender, attach a certified copy of your identification.",
+          "style": "note"
+        }
+      ]
+    },
+    {
+      "id": "income.account.explainer",
+      "status": "approved",
+      "owner": "Retirement Team",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No retirement income account? Go to section 6",
+          "style": "heading"
+        },
+        {
+          "type": "paragraph",
+          "text": "A retirement income account pays you a regular income from your super, generally after you retire or reach your preservation age.",
+          "style": "body"
+        },
+        {
+          "type": "paragraph",
+          "text": "If you do not receive regular payments from us, leave sections 4 and 5 blank.",
+          "style": "body-strong"
+        }
+      ]
+    },
+    {
+      "id": "bank.details.conditions",
+      "status": "approved",
+      "owner": "Payments Team",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We can only pay into an Australian bank, building society or credit union account held in your name or jointly in your name, not a credit card or overseas account. Check the details carefully: we may not be able to recover a payment made to the wrong account.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "income.payment.conditions",
+      "status": "approved",
+      "owner": "Retirement Team",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tell us how much you would like to be paid and how often. Changes apply from your next payment.",
+          "style": "body-strong"
+        },
+        {
+          "type": "paragraph",
+          "text": "Each financial year we must pay you at least the minimum amount set by the government for your age. If the amount you choose is lower, we will pay the minimum instead.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "income.payment.footnotes",
+      "status": "approved",
+      "owner": "Retirement Team",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The minimum is a percentage of your account balance that depends on your age.",
+          "style": "footnote"
+        },
+        {
+          "type": "paragraph",
+          "text": "Maximum amounts apply only to transition to retirement accounts and are not available once you turn 65.",
+          "style": "footnote"
+        },
+        {
+          "type": "paragraph",
+          "text": "If you leave this section blank, your current payment arrangements continue.",
+          "style": "footnote"
+        }
+      ]
+    },
+    {
+      "id": "identity.electronic.explainer",
+      "status": "approved",
+      "owner": "Risk and Compliance",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "With your consent we confirm your identity electronically by checking the document details you give us against the records of the agency that issued them. We may use a government document verification service or a credit reporting body to do this.",
+          "style": "body"
+        },
+        {
+          "type": "paragraph",
+          "text": "We use your details only to confirm who you are. A check does not affect your credit rating and gives us no access to your credit history.",
+          "style": "body"
+        },
+        {
+          "type": "paragraph",
+          "text": "If you would rather not be checked electronically, choose option 2 and send us certified copies of your identity documents.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "identity.document.option",
+      "status": "approved",
+      "owner": "Risk and Compliance",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We will confirm your identity from certified copies of your documents instead. This can take longer.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "declaration.update",
+      "status": "approved",
+      "owner": "Legal",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I declare that the details I have given on this form are correct.",
+          "style": "body"
+        }
+      ]
+    },
+    {
+      "id": "declaration.representative",
+      "status": "approved",
+      "owner": "Legal",
+      "effectiveFrom": "2026-07-01",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I declare that:",
+          "style": "body-strong"
+        },
+        {
+          "type": "list-item",
+          "text": "I am authorised to sign for the member and have attached a certified copy of my guardianship order or power of attorney, or",
+          "level": 1
+        },
+        {
+          "type": "list-item",
+          "text": "I am the parent or guardian of a member aged under 15 and have attached proof of that relationship, and",
+          "level": 1
+        },
+        {
+          "type": "list-item",
+          "text": "the details given on this form are correct.",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "privacy.statement.draft2027",
+      "status": "draft",
+      "owner": "Privacy Officer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Your privacy",
+          "style": "heading"
+        },
+        {
+          "type": "paragraph",
+          "text": "Draft wording for the next privacy statement. It must not appear in any generated document until it is approved.",
+          "style": "body"
+        }
+      ]
+    }
+  ]
+}

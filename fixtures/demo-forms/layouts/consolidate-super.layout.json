@@ -1,0 +1,2309 @@
+{
+  "schemaVersion": 1,
+  "documentId": "consolidate-super",
+  "templateId": "consolidate-super.indt",
+  "page": {
+    "width": 595.28,
+    "height": 841.89
+  },
+  "swatches": {
+    "brand.primary": {
+      "cmyk": [
+        30,
+        40,
+        50,
+        30
+      ]
+    },
+    "brand.accent": {
+      "cmyk": [
+        0,
+        35,
+        85,
+        0
+      ]
+    },
+    "brand.tint": {
+      "cmyk": [
+        4,
+        5,
+        8,
+        4
+      ]
+    },
+    "panel.tint": {
+      "cmyk": [
+        6,
+        8,
+        11,
+        6
+      ]
+    },
+    "field.stroke": {
+      "cmyk": [
+        30,
+        40,
+        50,
+        30
+      ]
+    },
+    "text.body": {
+      "cmyk": [
+        0,
+        0,
+        0,
+        90
+      ]
+    }
+  },
+  "styles": {
+    "h1": {
+      "fontFamily": "Georgia",
+      "bold": true,
+      "pointSize": 24,
+      "leading": 28,
+      "color": "brand.primary"
+    },
+    "h2": {
+      "fontFamily": "Georgia",
+      "bold": true,
+      "pointSize": 14.5,
+      "leading": 17,
+      "color": "brand.primary"
+    },
+    "lead": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 9.5,
+      "leading": 12,
+      "color": "text.body"
+    },
+    "subhead": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 9.5,
+      "leading": 12,
+      "color": "text.body"
+    },
+    "body": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 8.5,
+      "leading": 10.6,
+      "color": "text.body",
+      "spaceAfter": 3
+    },
+    "body-strong": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 8.5,
+      "leading": 10.6,
+      "color": "text.body",
+      "spaceAfter": 3
+    },
+    "component-heading": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 9.5,
+      "leading": 12,
+      "color": "brand.primary",
+      "spaceAfter": 2
+    },
+    "bullet": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 8.5,
+      "leading": 10.6,
+      "color": "text.body",
+      "bullets": true,
+      "indent": 9,
+      "spaceAfter": 1.5
+    },
+    "note": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 7.6,
+      "leading": 9.4,
+      "color": "text.body"
+    },
+    "label": {
+      "fontFamily": "Myriad Pro",
+      "pointSize": 8.5,
+      "leading": 10.6,
+      "color": "text.body"
+    },
+    "value": {
+      "fontFamily": "Myriad Pro",
+      "bold": true,
+      "pointSize": 9.5,
+      "leading": 12,
+      "color": "text.body"
+    },
+    "brandname": {
+      "fontFamily": "Georgia",
+      "bold": true,
+      "pointSize": 13,
+      "leading": 15,
+      "color": "brand.primary",
+      "align": "right"
+    },
+    "footer": {
+      "fontFamily": "Georgia",
+      "pointSize": 7.5,
+      "leading": 9.4,
+      "color": "text.body"
+    },
+    "footer-right": {
+      "fontFamily": "Georgia",
+      "pointSize": 7.5,
+      "leading": 9.4,
+      "color": "text.body",
+      "align": "right"
+    }
+  },
+  "pages": [
+    {
+      "number": 1,
+      "elements": [
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 0,
+            "top": 0,
+            "width": 595.3,
+            "height": 121.3
+          },
+          "fill": "brand.tint"
+        },
+        {
+          "kind": "target",
+          "role": "asset",
+          "label": "asset:brand.logo",
+          "bounds": {
+            "left": 497,
+            "top": 12,
+            "width": 56,
+            "height": 38
+          }
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.name@header",
+          "bounds": {
+            "left": 300,
+            "top": 24,
+            "width": 190,
+            "height": 16
+          },
+          "style": "brandname",
+          "placeholder": "[fund.name]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 79.4,
+            "width": 400,
+            "height": 30
+          },
+          "text": "Combine your super",
+          "style": "h1"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 136.8,
+            "width": 420,
+            "height": 13
+          },
+          "text": "Ask us to bring your other super into your account",
+          "style": "lead"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 152.1,
+            "width": 132,
+            "height": 11
+          },
+          "text": "You can also do this online at",
+          "style": "body"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.website@intro",
+          "bounds": {
+            "left": 172,
+            "top": 152.1,
+            "width": 260,
+            "height": 11
+          },
+          "style": "body-strong",
+          "placeholder": "[contact.website]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 164.7,
+            "width": 200,
+            "height": 11
+          },
+          "text": "* Fields marked with a star must be completed.",
+          "style": "body-strong"
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 42.5,
+            "top": 188.2,
+            "width": 509.6,
+            "height": 0
+          },
+          "stroke": "brand.primary",
+          "strokeWeight": 3
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 194.3,
+            "width": 400,
+            "height": 18
+          },
+          "text": "1. Your account with us",
+          "style": "h2"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 308.5,
+            "top": 249.2,
+            "width": 100,
+            "height": 11
+          },
+          "text": "Fund ABN",
+          "style": "label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.abn@section1",
+          "bounds": {
+            "left": 308.9,
+            "top": 262.5,
+            "width": 186,
+            "height": 14
+          },
+          "style": "value",
+          "placeholder": "[fund.abn]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 287,
+            "width": 250,
+            "height": 11
+          },
+          "text": "Unique superannuation identifier (USI)",
+          "style": "label"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.usi@section1",
+          "bounds": {
+            "left": 42.5,
+            "top": 300.5,
+            "width": 243,
+            "height": 14
+          },
+          "style": "value",
+          "placeholder": "[fund.usi]"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.5,
+            "top": 505.2,
+            "width": 509.6,
+            "height": 43.8
+          },
+          "fill": "panel.tint"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:tfn.notice",
+          "bounds": {
+            "left": 51,
+            "top": 510.5,
+            "width": 492,
+            "height": 34
+          },
+          "style": "note",
+          "placeholder": "[tfn.notice]"
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 42.5,
+            "top": 562.2,
+            "width": 509.6,
+            "height": 0
+          },
+          "stroke": "brand.primary",
+          "strokeWeight": 3
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 568.8,
+            "width": 400,
+            "height": 18
+          },
+          "text": "2. Where you live",
+          "style": "h2"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 588.3,
+            "width": 300,
+            "height": 12
+          },
+          "text": "Current home address (not a PO box)",
+          "style": "subhead"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:privacy.statement",
+          "bounds": {
+            "left": 42.5,
+            "top": 694,
+            "width": 509.6,
+            "height": 84
+          },
+          "style": "body",
+          "placeholder": "[privacy.statement]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.name@footer1",
+          "bounds": {
+            "left": 42.5,
+            "top": 787.2,
+            "width": 135,
+            "height": 10
+          },
+          "style": "footer",
+          "placeholder": "[trustee.name]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 796.7,
+            "width": 20,
+            "height": 10
+          },
+          "text": "ABN",
+          "style": "footer"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.abn@footer1",
+          "bounds": {
+            "left": 61.5,
+            "top": 796.7,
+            "width": 110,
+            "height": 10
+          },
+          "style": "footer",
+          "placeholder": "[trustee.abn]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 806.2,
+            "width": 24,
+            "height": 10
+          },
+          "text": "AFSL",
+          "style": "footer"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.afsl@footer1",
+          "bounds": {
+            "left": 65.5,
+            "top": 806.2,
+            "width": 100,
+            "height": 10
+          },
+          "style": "footer",
+          "placeholder": "[trustee.afsl]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.name@footer1",
+          "bounds": {
+            "left": 184.3,
+            "top": 787.2,
+            "width": 150,
+            "height": 10
+          },
+          "style": "footer",
+          "placeholder": "[fund.name]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 184.3,
+            "top": 796.7,
+            "width": 20,
+            "height": 10
+          },
+          "text": "ABN",
+          "style": "footer"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.abn@footer1",
+          "bounds": {
+            "left": 203.3,
+            "top": 796.7,
+            "width": 110,
+            "height": 10
+          },
+          "style": "footer",
+          "placeholder": "[fund.abn]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 372,
+            "top": 805.8,
+            "width": 180,
+            "height": 10
+          },
+          "text": "Combine your super | 1 of 2",
+          "style": "footer-right"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.6,
+            "top": 227.9,
+            "width": 221,
+            "height": 17.3
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 309.4,
+            "top": 227.8,
+            "width": 243,
+            "height": 16.7
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 43,
+            "top": 261.4,
+            "width": 243,
+            "height": 16.7
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 43.1,
+            "top": 335.7,
+            "width": 15.9,
+            "height": 15.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 90,
+            "top": 335.7,
+            "width": 15.9,
+            "height": 15.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 150,
+            "top": 335.7,
+            "width": 15.9,
+            "height": 15.8
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 308.4,
+            "top": 335.1,
+            "width": 243.4,
+            "height": 16.7
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.6,
+            "top": 372.7,
+            "width": 243.5,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 309.2,
+            "top": 372.7,
+            "width": 243.5,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.6,
+            "top": 409.6,
+            "width": 243.5,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 309.2,
+            "top": 409.6,
+            "width": 243.5,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.6,
+            "top": 446.4,
+            "width": 510.2,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.6,
+            "top": 483.8,
+            "width": 169.7,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 238.8,
+            "top": 483.8,
+            "width": 135.7,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 400,
+            "top": 483.8,
+            "width": 152.2,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.4,
+            "top": 619.4,
+            "width": 68.1,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 127.5,
+            "top": 619.4,
+            "width": 68.1,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 213,
+            "top": 619.4,
+            "width": 339,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.8,
+            "top": 655.4,
+            "width": 152.2,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 212.6,
+            "top": 655.4,
+            "width": 50.1,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 280.7,
+            "top": 655.4,
+            "width": 67.1,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 366.7,
+            "top": 655.4,
+            "width": 185.3,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 215.6,
+            "width": 124.9,
+            "height": 12.6
+          },
+          "text": "Account number (if known)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 308.5,
+            "top": 215.6,
+            "width": 129.6,
+            "height": 12.6
+          },
+          "text": "Customer number (if known)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 249.2,
+            "width": 64.1,
+            "height": 12.6
+          },
+          "text": "Product name",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 63.3,
+            "top": 337.5,
+            "width": 26.7,
+            "height": 12.6
+          },
+          "text": "Male",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 323,
+            "width": 45.4,
+            "height": 12.6
+          },
+          "text": "Gender *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 110.1,
+            "top": 337.5,
+            "width": 36.1,
+            "height": 12.6
+          },
+          "text": "Female",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 170,
+            "top": 337.5,
+            "width": 70,
+            "height": 12.5
+          },
+          "text": "Another term",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 309.5,
+            "top": 323,
+            "width": 31.4,
+            "height": 12.6
+          },
+          "text": "Title",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 360,
+            "width": 64.1,
+            "height": 12.6
+          },
+          "text": "First name *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 308.5,
+            "top": 360,
+            "width": 73.5,
+            "height": 12.6
+          },
+          "text": "Middle name(s)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 397,
+            "width": 59.4,
+            "height": 12.6
+          },
+          "text": "Last name *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 308.5,
+            "top": 397,
+            "width": 73.5,
+            "height": 12.6
+          },
+          "text": "Previous names",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 434,
+            "width": 31.4,
+            "height": 12.6
+          },
+          "text": "Email",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 471,
+            "width": 110.9,
+            "height": 12.6
+          },
+          "text": "Daytime phone number *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 238.5,
+            "top": 471,
+            "width": 138.9,
+            "height": 12.6
+          },
+          "text": "Date of birth (DD/MM/YYYY) *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 399.5,
+            "top": 471,
+            "width": 106.2,
+            "height": 12.6
+          },
+          "text": "Tax file number (TFN)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 606.8,
+            "width": 26.7,
+            "height": 12.6
+          },
+          "text": "Unit",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 127.5,
+            "top": 606.8,
+            "width": 68.8,
+            "height": 12.6
+          },
+          "text": "Street number",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 212.5,
+            "top": 606.8,
+            "width": 68.8,
+            "height": 12.6
+          },
+          "text": "Street name *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 642.8,
+            "width": 82.8,
+            "height": 12.6
+          },
+          "text": "Suburb or town *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 212.5,
+            "top": 642.8,
+            "width": 40.7,
+            "height": 12.6
+          },
+          "text": "State *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 280.5,
+            "top": 642.8,
+            "width": 54.8,
+            "height": 12.6
+          },
+          "text": "Postcode *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 365.5,
+            "top": 642.8,
+            "width": 40.7,
+            "height": 12.6
+          },
+          "text": "Country",
+          "style": "label"
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:account.number",
+          "bounds": {
+            "left": 42.6,
+            "top": 227.9,
+            "width": 221,
+            "height": 17.3
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:customer.number",
+          "bounds": {
+            "left": 309.4,
+            "top": 227.8,
+            "width": 243,
+            "height": 16.7
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:account.productName",
+          "bounds": {
+            "left": 43,
+            "top": 261.4,
+            "width": 243,
+            "height": 16.7
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:member.gender:male",
+          "bounds": {
+            "left": 43.1,
+            "top": 335.7,
+            "width": 15.9,
+            "height": 15.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:member.gender:female",
+          "bounds": {
+            "left": 90,
+            "top": 335.7,
+            "width": 15.9,
+            "height": 15.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:member.gender:other",
+          "bounds": {
+            "left": 150,
+            "top": 335.7,
+            "width": 15.9,
+            "height": 15.8
+          }
+        },
+        {
+          "kind": "control",
+          "control": "combo",
+          "label": "field:member.title",
+          "bounds": {
+            "left": 308.4,
+            "top": 335.1,
+            "width": 243.4,
+            "height": 16.7
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:member.firstName",
+          "bounds": {
+            "left": 42.6,
+            "top": 372.7,
+            "width": 243.5,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:member.middleNames",
+          "bounds": {
+            "left": 309.2,
+            "top": 372.7,
+            "width": 243.5,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:member.lastName",
+          "bounds": {
+            "left": 42.6,
+            "top": 409.6,
+            "width": 243.5,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:member.previousNames",
+          "bounds": {
+            "left": 309.2,
+            "top": 409.6,
+            "width": 243.5,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:member.email",
+          "bounds": {
+            "left": 42.6,
+            "top": 446.4,
+            "width": 510.2,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:member.phone.daytime",
+          "bounds": {
+            "left": 42.6,
+            "top": 483.8,
+            "width": 169.7,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:member.dateOfBirth",
+          "bounds": {
+            "left": 238.8,
+            "top": 483.8,
+            "width": 135.7,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:member.taxFileNumber",
+          "bounds": {
+            "left": 400,
+            "top": 483.8,
+            "width": 152.2,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.residential.unit",
+          "bounds": {
+            "left": 42.4,
+            "top": 619.4,
+            "width": 68.1,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.residential.streetNumber",
+          "bounds": {
+            "left": 127.5,
+            "top": 619.4,
+            "width": 68.1,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.residential.streetName",
+          "bounds": {
+            "left": 213,
+            "top": 619.4,
+            "width": 339,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.residential.suburb",
+          "bounds": {
+            "left": 42.8,
+            "top": 655.4,
+            "width": 152.2,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.residential.state",
+          "bounds": {
+            "left": 212.6,
+            "top": 655.4,
+            "width": 50.1,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.residential.postcode",
+          "bounds": {
+            "left": 280.7,
+            "top": 655.4,
+            "width": 67.1,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.residential.country",
+          "bounds": {
+            "left": 366.7,
+            "top": 655.4,
+            "width": 185.3,
+            "height": 16.1
+          }
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "elements": [
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 42.5,
+            "top": 33.2,
+            "width": 509.6,
+            "height": 0
+          },
+          "stroke": "brand.primary",
+          "strokeWeight": 3
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 39.2,
+            "width": 400,
+            "height": 18
+          },
+          "text": "2. Where you live (continued)",
+          "style": "h2"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 59.8,
+            "width": 300,
+            "height": 12
+          },
+          "text": "Previous home address (if you know it)",
+          "style": "subhead"
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 42.5,
+            "top": 146.5,
+            "width": 509.6,
+            "height": 0
+          },
+          "stroke": "brand.primary",
+          "strokeWeight": 3
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 152.6,
+            "width": 400,
+            "height": 18
+          },
+          "text": "3. The fund you are transferring from",
+          "style": "h2"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 169.5,
+            "width": 480,
+            "height": 12
+          },
+          "text": "Tell us about the super account you want moved into this fund.",
+          "style": "subhead"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 142,
+            "top": 312.6,
+            "width": 9,
+            "height": 11
+          },
+          "text": "$",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 331.8,
+            "width": 300,
+            "height": 9
+          },
+          "text": "Fields for self-managed funds are needed only when transferring from one.",
+          "style": "note"
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 42.5,
+            "top": 345,
+            "width": 509.6,
+            "height": 0
+          },
+          "stroke": "brand.primary",
+          "strokeWeight": 3
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 351.4,
+            "width": 400,
+            "height": 18
+          },
+          "text": "4. Your authorisation",
+          "style": "h2"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:declaration.transfer",
+          "bounds": {
+            "left": 42.5,
+            "top": 370,
+            "width": 509.6,
+            "height": 210
+          },
+          "style": "body",
+          "placeholder": "[declaration.transfer]"
+        },
+        {
+          "kind": "shape",
+          "shape": "line",
+          "bounds": {
+            "left": 42.5,
+            "top": 677,
+            "width": 509.6,
+            "height": 0
+          },
+          "stroke": "brand.primary",
+          "strokeWeight": 3
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 686.5,
+            "width": 400,
+            "height": 18
+          },
+          "text": "5. Send us your form",
+          "style": "h2"
+        },
+        {
+          "kind": "target",
+          "role": "content",
+          "label": "content:return.instructions",
+          "bounds": {
+            "left": 42.5,
+            "top": 704.5,
+            "width": 300,
+            "height": 40
+          },
+          "style": "body",
+          "placeholder": "[return.instructions]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.postal.address@return",
+          "bounds": {
+            "left": 42.5,
+            "top": 748,
+            "width": 300,
+            "height": 11
+          },
+          "style": "body-strong",
+          "placeholder": "[contact.postal.address]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.email@return",
+          "bounds": {
+            "left": 42.5,
+            "top": 760,
+            "width": 300,
+            "height": 11
+          },
+          "style": "body-strong",
+          "placeholder": "[contact.email]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 330,
+            "top": 704.5,
+            "width": 60,
+            "height": 11
+          },
+          "text": "Questions?",
+          "style": "body-strong"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.phone@return",
+          "bounds": {
+            "left": 330,
+            "top": 716.5,
+            "width": 120,
+            "height": 11
+          },
+          "style": "body-strong",
+          "placeholder": "[contact.phone]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:contact.hours@return",
+          "bounds": {
+            "left": 330,
+            "top": 728.5,
+            "width": 222,
+            "height": 11
+          },
+          "style": "body",
+          "placeholder": "[contact.hours]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:form.consolidate.code@footer",
+          "bounds": {
+            "left": 42.5,
+            "top": 775,
+            "width": 200,
+            "height": 9
+          },
+          "style": "note",
+          "placeholder": "[form.consolidate.code]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.name@footer2",
+          "bounds": {
+            "left": 42.5,
+            "top": 787.2,
+            "width": 135,
+            "height": 10
+          },
+          "style": "footer",
+          "placeholder": "[trustee.name]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 796.7,
+            "width": 20,
+            "height": 10
+          },
+          "text": "ABN",
+          "style": "footer"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.abn@footer2",
+          "bounds": {
+            "left": 61.5,
+            "top": 796.7,
+            "width": 110,
+            "height": 10
+          },
+          "style": "footer",
+          "placeholder": "[trustee.abn]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 806.2,
+            "width": 24,
+            "height": 10
+          },
+          "text": "AFSL",
+          "style": "footer"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:trustee.afsl@footer2",
+          "bounds": {
+            "left": 65.5,
+            "top": 806.2,
+            "width": 100,
+            "height": 10
+          },
+          "style": "footer",
+          "placeholder": "[trustee.afsl]"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.name@footer2",
+          "bounds": {
+            "left": 184.3,
+            "top": 787.2,
+            "width": 150,
+            "height": 10
+          },
+          "style": "footer",
+          "placeholder": "[fund.name]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 184.3,
+            "top": 796.7,
+            "width": 20,
+            "height": 10
+          },
+          "text": "ABN",
+          "style": "footer"
+        },
+        {
+          "kind": "target",
+          "role": "data",
+          "label": "data:fund.abn@footer2",
+          "bounds": {
+            "left": 203.3,
+            "top": 796.7,
+            "width": 110,
+            "height": 10
+          },
+          "style": "footer",
+          "placeholder": "[fund.abn]"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 372,
+            "top": 805.8,
+            "width": 180,
+            "height": 10
+          },
+          "text": "Combine your super | 2 of 2",
+          "style": "footer-right"
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.4,
+            "top": 87.8,
+            "width": 68.1,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 127.5,
+            "top": 87.8,
+            "width": 68.1,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 213,
+            "top": 87.8,
+            "width": 339,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.8,
+            "top": 119,
+            "width": 152.2,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 212.6,
+            "top": 119,
+            "width": 50.1,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 280.7,
+            "top": 119,
+            "width": 67.1,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 366.7,
+            "top": 119,
+            "width": 185.3,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 43,
+            "top": 197.2,
+            "width": 226,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 325.8,
+            "top": 197.2,
+            "width": 226,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 43,
+            "top": 228.8,
+            "width": 221.3,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 325.8,
+            "top": 228.8,
+            "width": 226,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 43,
+            "top": 261,
+            "width": 226,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 325.8,
+            "top": 261,
+            "width": 226,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 43,
+            "top": 296.5,
+            "width": 12.1,
+            "height": 12.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "oval",
+          "bounds": {
+            "left": 43,
+            "top": 313.2,
+            "width": 12.1,
+            "height": 12.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 151.7,
+            "top": 310.2,
+            "width": 102.5,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 42.9,
+            "top": 601.9,
+            "width": 242.9,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 60,
+            "top": 636,
+            "width": 135,
+            "height": 32
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "shape",
+          "shape": "rectangle",
+          "bounds": {
+            "left": 201.3,
+            "top": 653.4,
+            "width": 84.5,
+            "height": 16.1
+          },
+          "fill": "Paper",
+          "stroke": "field.stroke",
+          "strokeWeight": 0.5
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 75.3,
+            "width": 26.7,
+            "height": 12.6
+          },
+          "text": "Unit",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 127.5,
+            "top": 75.3,
+            "width": 68.8,
+            "height": 12.6
+          },
+          "text": "Street number",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 212.5,
+            "top": 75.3,
+            "width": 59.4,
+            "height": 12.6
+          },
+          "text": "Street name",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 106.6,
+            "width": 73.5,
+            "height": 12.6
+          },
+          "text": "Suburb or town",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 212.5,
+            "top": 106.6,
+            "width": 31.4,
+            "height": 12.6
+          },
+          "text": "State",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 280.5,
+            "top": 106.6,
+            "width": 45.4,
+            "height": 12.6
+          },
+          "text": "Postcode",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 365.5,
+            "top": 106.6,
+            "width": 40.7,
+            "height": 12.6
+          },
+          "text": "Country",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 184.8,
+            "width": 59.4,
+            "height": 12.6
+          },
+          "text": "Fund name *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 325.5,
+            "top": 184.8,
+            "width": 64.1,
+            "height": 12.6
+          },
+          "text": "Product name",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 216.4,
+            "width": 129.6,
+            "height": 12.6
+          },
+          "text": "Member or account number *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 325.5,
+            "top": 216.4,
+            "width": 185.7,
+            "height": 12.6
+          },
+          "text": "Unique superannuation identifier (USI)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 247.2,
+            "width": 227.7,
+            "height": 12.6
+          },
+          "text": "Electronic service address (self-managed funds)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 325.5,
+            "top": 247.2,
+            "width": 143.6,
+            "height": 12.6
+          },
+          "text": "Fund ABN (self-managed funds)",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 71.3,
+            "top": 296.2,
+            "width": 82.8,
+            "height": 12.6
+          },
+          "text": "My whole balance",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 279.4,
+            "width": 260,
+            "height": 12.6
+          },
+          "text": "How much should we transfer? *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 71.3,
+            "top": 312.6,
+            "width": 92.2,
+            "height": 13
+          },
+          "text": "Part of my balance",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 588.8,
+            "width": 134.2,
+            "height": 12.7
+          },
+          "text": "Full name (block letters) *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 42.5,
+            "top": 620.2,
+            "width": 100,
+            "height": 12.5
+          },
+          "text": "Signature *",
+          "style": "label"
+        },
+        {
+          "kind": "text",
+          "bounds": {
+            "left": 200.7,
+            "top": 640.3,
+            "width": 84,
+            "height": 12.6
+          },
+          "text": "Date signed *",
+          "style": "label"
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.previous.unit",
+          "bounds": {
+            "left": 42.4,
+            "top": 87.8,
+            "width": 68.1,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.previous.streetNumber",
+          "bounds": {
+            "left": 127.5,
+            "top": 87.8,
+            "width": 68.1,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.previous.streetName",
+          "bounds": {
+            "left": 213,
+            "top": 87.8,
+            "width": 339,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.previous.suburb",
+          "bounds": {
+            "left": 42.8,
+            "top": 119,
+            "width": 152.2,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.previous.state",
+          "bounds": {
+            "left": 212.6,
+            "top": 119,
+            "width": 50.1,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.previous.postcode",
+          "bounds": {
+            "left": 280.7,
+            "top": 119,
+            "width": 67.1,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:address.previous.country",
+          "bounds": {
+            "left": 366.7,
+            "top": 119,
+            "width": 185.3,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:fromFund.name",
+          "bounds": {
+            "left": 43,
+            "top": 197.2,
+            "width": 226,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:fromFund.productName",
+          "bounds": {
+            "left": 325.8,
+            "top": 197.2,
+            "width": 226,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:fromFund.memberNumber",
+          "bounds": {
+            "left": 43,
+            "top": 228.8,
+            "width": 221.3,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:fromFund.usi",
+          "bounds": {
+            "left": 325.8,
+            "top": 228.8,
+            "width": 226,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:fromFund.esa",
+          "bounds": {
+            "left": 43,
+            "top": 261,
+            "width": 226,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:fromFund.abn",
+          "bounds": {
+            "left": 325.8,
+            "top": 261,
+            "width": 226,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:transfer.amountType:total",
+          "bounds": {
+            "left": 43,
+            "top": 296.5,
+            "width": 12.1,
+            "height": 12.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "radio",
+          "label": "field:transfer.amountType:partial",
+          "bounds": {
+            "left": 43,
+            "top": 313.2,
+            "width": 12.1,
+            "height": 12.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:transfer.partialAmount",
+          "bounds": {
+            "left": 151.7,
+            "top": 310.2,
+            "width": 102.5,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:declaration.name",
+          "bounds": {
+            "left": 42.9,
+            "top": 601.9,
+            "width": 242.9,
+            "height": 16.1
+          }
+        },
+        {
+          "kind": "control",
+          "control": "signature",
+          "label": "field:declaration.signature",
+          "bounds": {
+            "left": 60,
+            "top": 636,
+            "width": 135,
+            "height": 32
+          }
+        },
+        {
+          "kind": "control",
+          "control": "text",
+          "label": "field:declaration.date",
+          "bounds": {
+            "left": 201.3,
+            "top": 653.4,
+            "width": 84.5,
+            "height": 16.1
+          }
+        }
+      ]
+    }
+  ]
+}

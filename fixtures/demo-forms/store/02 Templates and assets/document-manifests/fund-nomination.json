@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 1,
+  "id": "fund-nomination",
+  "archetype": "short-guide",
+  "templateId": "fund-nomination.indt",
+  "brandIds": [
+    "example-super",
+    "northwind-retirement"
+  ],
+  "bindings": [
+    {
+      "target": "asset:brand.logo",
+      "source": {
+        "type": "asset",
+        "id": "brand.logo"
+      }
+    },
+    {
+      "target": "data:fund.name@header",
+      "source": {
+        "type": "data",
+        "key": "fund.name"
+      }
+    },
+    {
+      "target": "content:nomination.intro",
+      "source": {
+        "type": "component",
+        "id": "nomination.intro"
+      }
+    },
+    {
+      "target": "content:privacy.statement",
+      "source": {
+        "type": "component",
+        "id": "privacy.statement"
+      }
+    },
+    {
+      "target": "content:form.completion.instructions",
+      "source": {
+        "type": "component",
+        "id": "form.completion.instructions"
+      }
+    },
+    {
+      "target": "data:fund.name@panel",
+      "source": {
+        "type": "data",
+        "key": "fund.name"
+      }
+    },
+    {
+      "target": "data:fund.address@panel",
+      "source": {
+        "type": "data",
+        "key": "fund.address"
+      }
+    },
+    {
+      "target": "data:fund.abn@panel",
+      "source": {
+        "type": "data",
+        "key": "fund.abn"
+      }
+    },
+    {
+      "target": "data:fund.spin@panel",
+      "source": {
+        "type": "data",
+        "key": "fund.spin"
+      }
+    },
+    {
+      "target": "data:fund.usi@panel",
+      "source": {
+        "type": "data",
+        "key": "fund.usi"
+      }
+    },
+    {
+      "target": "data:contact.phone@panel",
+      "source": {
+        "type": "data",
+        "key": "contact.phone"
+      }
+    },
+    {
+      "target": "content:nomination.alternative",
+      "source": {
+        "type": "component",
+        "id": "nomination.alternative"
+      }
+    },
+    {
+      "target": "data:trustee.name@footer",
+      "source": {
+        "type": "data",
+        "key": "trustee.name"
+      }
+    },
+    {
+      "target": "data:trustee.abn@footer",
+      "source": {
+        "type": "data",
+        "key": "trustee.abn"
+      }
+    },
+    {
+      "target": "data:trustee.afsl@footer",
+      "source": {
+        "type": "data",
+        "key": "trustee.afsl"
+      }
+    },
+    {
+      "target": "data:fund.name@footer",
+      "source": {
+        "type": "data",
+        "key": "fund.name"
+      }
+    },
+    {
+      "target": "data:fund.abn@footer",
+      "source": {
+        "type": "data",
+        "key": "fund.abn"
+      }
+    },
+    {
+      "target": "data:form.issue.date@footer",
+      "source": {
+        "type": "data",
+        "key": "form.issue.date"
+      }
+    },
+    {
+      "target": "data:form.nomination.code@p1",
+      "source": {
+        "type": "data",
+        "key": "form.nomination.code"
+      }
+    },
+    {
+      "target": "content:nomination.statement",
+      "source": {
+        "type": "component",
+        "id": "nomination.statement"
+      }
+    },
+    {
+      "target": "content:employer.records.instructions",
+      "source": {
+        "type": "component",
+        "id": "employer.records.instructions"
+      }
+    },
+    {
+      "target": "content:employer.retention.note",
+      "source": {
+        "type": "component",
+        "id": "employer.retention.note"
+      }
+    },
+    {
+      "target": "data:form.nomination.code@p2",
+      "source": {
+        "type": "data",
+        "key": "form.nomination.code"
+      }
+    },
+    {
+      "target": "asset:brand.logo@letter",
+      "source": {
+        "type": "asset",
+        "id": "brand.logo"
+      }
+    },
+    {
+      "target": "data:fund.name@letter",
+      "source": {
+        "type": "data",
+        "key": "fund.name"
+      }
+    },
+    {
+      "target": "data:letter.compliance.date@letter",
+      "source": {
+        "type": "data",
+        "key": "letter.compliance.date"
+      }
+    },
+    {
+      "target": "content:compliance.letter.body",
+      "source": {
+        "type": "component",
+        "id": "compliance.letter.body"
+      }
+    },
+    {
+      "target": "data:letter.signatory.name@letter",
+      "source": {
+        "type": "data",
+        "key": "letter.signatory.name"
+      }
+    },
+    {
+      "target": "data:letter.signatory.title@letter",
+      "source": {
+        "type": "data",
+        "key": "letter.signatory.title"
+      }
+    },
+    {
+      "target": "data:fund.spin@side",
+      "source": {
+        "type": "data",
+        "key": "fund.spin"
+      }
+    },
+    {
+      "target": "data:fund.usi@side",
+      "source": {
+        "type": "data",
+        "key": "fund.usi"
+      }
+    },
+    {
+      "target": "data:fund.name@side",
+      "source": {
+        "type": "data",
+        "key": "fund.name"
+      }
+    },
+    {
+      "target": "data:fund.abn@side",
+      "source": {
+        "type": "data",
+        "key": "fund.abn"
+      }
+    },
+    {
+      "target": "data:trustee.name@side",
+      "source": {
+        "type": "data",
+        "key": "trustee.name"
+      }
+    },
+    {
+      "target": "data:trustee.abn@side",
+      "source": {
+        "type": "data",
+        "key": "trustee.abn"
+      }
+    },
+    {
+      "target": "data:trustee.afsl@side",
+      "source": {
+        "type": "data",
+        "key": "trustee.afsl"
+      }
+    },
+    {
+      "target": "data:trustee.rse@side",
+      "source": {
+        "type": "data",
+        "key": "trustee.rse"
+      }
+    },
+    {
+      "target": "data:fund.address@side",
+      "source": {
+        "type": "data",
+        "key": "fund.address"
+      }
+    },
+    {
+      "target": "data:contact.phone@side",
+      "source": {
+        "type": "data",
+        "key": "contact.phone"
+      }
+    },
+    {
+      "target": "data:contact.website@side",
+      "source": {
+        "type": "data",
+        "key": "contact.website"
+      }
+    }
+  ],
+  "styleMap": {
+    "heading": "caps-heading",
+    "body": "body",
+    "body-strong": "body-strong",
+    "list-item": "bullet",
+    "callout-heading": "callout-heading",
+    "callout-body": "callout-body",
+    "note": "hint"
+  },
+  "formFields": [
+    {
+      "name": "member.title",
+      "type": "combo",
+      "binding": "field:member.title",
+      "description": "Title",
+      "options": [
+        "Mr",
+        "Mrs",
+        "Ms",
+        "Miss",
+        "Mx",
+        "Dr",
+        "Prof"
+      ],
+      "tabOrder": 1
+    },
+    {
+      "name": "member.lastName",
+      "type": "text",
+      "binding": "field:member.lastName",
+      "description": "Last name",
+      "required": true,
+      "tabOrder": 2
+    },
+    {
+      "name": "member.firstName",
+      "type": "text",
+      "binding": "field:member.firstName",
+      "description": "First name",
+      "required": true,
+      "tabOrder": 3
+    },
+    {
+      "name": "address.residential.line1",
+      "type": "text",
+      "binding": "field:address.residential.line1",
+      "description": "Residential street address",
+      "required": true,
+      "tabOrder": 4
+    },
+    {
+      "name": "address.residential.suburb",
+      "type": "text",
+      "binding": "field:address.residential.suburb",
+      "description": "Residential suburb or town",
+      "required": true,
+      "tabOrder": 5
+    },
+    {
+      "name": "address.residential.state",
+      "type": "text",
+      "binding": "field:address.residential.state",
+      "description": "Residential state",
+      "required": true,
+      "tabOrder": 6
+    },
+    {
+      "name": "address.residential.postcode",
+      "type": "text",
+      "binding": "field:address.residential.postcode",
+      "description": "Residential postcode",
+      "required": true,
+      "tabOrder": 7
+    },
+    {
+      "name": "member.dateOfBirth",
+      "type": "text",
+      "binding": "field:member.dateOfBirth",
+      "description": "Date of birth (DD/MM/YYYY)",
+      "required": true,
+      "tabOrder": 8
+    },
+    {
+      "name": "member.employeeId",
+      "type": "text",
+      "binding": "field:member.employeeId",
+      "description": "Employee or payroll number (if any)",
+      "tabOrder": 9
+    },
+    {
+      "name": "member.number",
+      "type": "text",
+      "binding": "field:member.number",
+      "description": "Member number",
+      "tabOrder": 10
+    },
+    {
+      "name": "nomination.signature",
+      "type": "signature",
+      "binding": "field:nomination.signature",
+      "description": "Signature",
+      "required": true,
+      "tabOrder": 11
+    },
+    {
+      "name": "nomination.date",
+      "type": "text",
+      "binding": "field:nomination.date",
+      "description": "Date signed (DD/MM/YYYY)",
+      "required": true,
+      "tabOrder": 12
+    },
+    {
+      "name": "employer.dateAccepted",
+      "type": "text",
+      "binding": "field:employer.dateAccepted",
+      "description": "Date the nomination was accepted (DD/MM/YYYY)",
+      "tabOrder": 13
+    },
+    {
+      "name": "employer.dateActioned",
+      "type": "text",
+      "binding": "field:employer.dateActioned",
+      "description": "Date the nomination was actioned (DD/MM/YYYY)",
+      "tabOrder": 14
+    }
+  ],
+  "output": {
+    "printPdf": true,
+    "interactivePdf": true,
+    "saveIndd": true
+  }
+}

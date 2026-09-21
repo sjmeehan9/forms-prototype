@@ -214,6 +214,45 @@ npm run ingest:worksheet -- path/to/binding-worksheet.md
 `ingest:validate` fails unless every source field is mapped or dropped exactly once and every name resolves in
 the dictionary. `ingest:worksheet` renders the binding worksheet for approval from the same files.
 
+## Demo document set
+
+The demo uses three forms modelled on measured reference layouts, with every word, logo and image authored
+for the prototype. Their inputs live under `fixtures/demo-forms/`: `designs/` (hand-authored drawing lists),
+`layouts/` (generated layout specs), `store/` (component register, product data, two brand packs, assets,
+generated manifests) and `ingest/` (field dictionary, content plan, per-document maps).
+
+Regenerate the layout specs and manifests after changing a map, the dictionary or a design. This needs the
+local inventories under `.prototype/ingest/`:
+
+```bash
+npm run demo:layouts
+```
+
+Preview a layout without InDesign (writes SVG pages under `.prototype/preview/`):
+
+```bash
+node tools/pdf-inventory/preview-layout.mjs fixtures/demo-forms/layouts/update-details.layout.json
+```
+
+With the InDesign panel running, build the real content library and the three templates into the local demo
+store at `.prototype/local-demo`, then run the seeded request through genuine extraction and composition:
+
+```bash
+npm run demo:build
+```
+
+```bash
+npm run demo:run -- req-001-demo-build
+```
+
+`npm run demo:dry -- req-001-demo-build` runs the same request with placeholder outputs and no InDesign.
+To move the demo set into Frame.io, replacing same-named files and moving anything no longer in the store
+into a `99 Archive` folder rather than deleting it:
+
+```bash
+npm run seed:frameio -- --from .prototype/local-demo --replace --prune --request req-010-demo-forms
+```
+
 ## Layout
 
 ```text

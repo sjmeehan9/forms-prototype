@@ -1,0 +1,1109 @@
+{
+  "schemaVersion": 1,
+  "id": "update-details",
+  "archetype": "long-guide",
+  "templateId": "update-details.indt",
+  "brandIds": [
+    "example-super",
+    "northwind-retirement"
+  ],
+  "bindings": [
+    {
+      "target": "asset:brand.logo@guide",
+      "source": {
+        "type": "asset",
+        "id": "brand.logo"
+      }
+    },
+    {
+      "target": "data:fund.name@guide",
+      "source": {
+        "type": "data",
+        "key": "fund.name"
+      }
+    },
+    {
+      "target": "data:contact.phone@guide",
+      "source": {
+        "type": "data",
+        "key": "contact.phone"
+      }
+    },
+    {
+      "target": "data:contact.website@guide",
+      "source": {
+        "type": "data",
+        "key": "contact.website"
+      }
+    },
+    {
+      "target": "data:contact.postal.address@guide",
+      "source": {
+        "type": "data",
+        "key": "contact.postal.address"
+      }
+    },
+    {
+      "target": "content:guide.online.tip",
+      "source": {
+        "type": "component",
+        "id": "guide.online.tip"
+      }
+    },
+    {
+      "target": "asset:icon.online@guide",
+      "source": {
+        "type": "asset",
+        "id": "icon.online"
+      }
+    },
+    {
+      "target": "content:guide.register.tip",
+      "source": {
+        "type": "component",
+        "id": "guide.register.tip"
+      }
+    },
+    {
+      "target": "data:contact.register.url@guide",
+      "source": {
+        "type": "data",
+        "key": "contact.register.url"
+      }
+    },
+    {
+      "target": "content:guide.section.current",
+      "source": {
+        "type": "component",
+        "id": "guide.section.current"
+      }
+    },
+    {
+      "target": "content:guide.section.contact",
+      "source": {
+        "type": "component",
+        "id": "guide.section.contact"
+      }
+    },
+    {
+      "target": "content:guide.section.personal",
+      "source": {
+        "type": "component",
+        "id": "guide.section.personal"
+      }
+    },
+    {
+      "target": "content:guide.section.income",
+      "source": {
+        "type": "component",
+        "id": "guide.section.income"
+      }
+    },
+    {
+      "target": "content:guide.section.checklist",
+      "source": {
+        "type": "component",
+        "id": "guide.section.checklist"
+      }
+    },
+    {
+      "target": "data:contact.identity.url@guide",
+      "source": {
+        "type": "data",
+        "key": "contact.identity.url"
+      }
+    },
+    {
+      "target": "data:trustee.name@guide",
+      "source": {
+        "type": "data",
+        "key": "trustee.name"
+      }
+    },
+    {
+      "target": "data:trustee.abn@guide",
+      "source": {
+        "type": "data",
+        "key": "trustee.abn"
+      }
+    },
+    {
+      "target": "data:trustee.afsl@guide",
+      "source": {
+        "type": "data",
+        "key": "trustee.afsl"
+      }
+    },
+    {
+      "target": "data:fund.abn@guide",
+      "source": {
+        "type": "data",
+        "key": "fund.abn"
+      }
+    },
+    {
+      "target": "content:form.completion.instructions",
+      "source": {
+        "type": "component",
+        "id": "form.completion.instructions"
+      }
+    },
+    {
+      "target": "asset:brand.logo@form",
+      "source": {
+        "type": "asset",
+        "id": "brand.logo"
+      }
+    },
+    {
+      "target": "data:fund.name@form",
+      "source": {
+        "type": "data",
+        "key": "fund.name"
+      }
+    },
+    {
+      "target": "data:contact.phone@form",
+      "source": {
+        "type": "data",
+        "key": "contact.phone"
+      }
+    },
+    {
+      "target": "data:contact.website@form",
+      "source": {
+        "type": "data",
+        "key": "contact.website"
+      }
+    },
+    {
+      "target": "data:contact.postal.address@form",
+      "source": {
+        "type": "data",
+        "key": "contact.postal.address"
+      }
+    },
+    {
+      "target": "content:tfn.notice",
+      "source": {
+        "type": "component",
+        "id": "tfn.notice"
+      }
+    },
+    {
+      "target": "data:form.update.code@form",
+      "source": {
+        "type": "data",
+        "key": "form.update.code"
+      }
+    },
+    {
+      "target": "data:trustee.name@form",
+      "source": {
+        "type": "data",
+        "key": "trustee.name"
+      }
+    },
+    {
+      "target": "data:trustee.abn@form",
+      "source": {
+        "type": "data",
+        "key": "trustee.abn"
+      }
+    },
+    {
+      "target": "data:trustee.afsl@form",
+      "source": {
+        "type": "data",
+        "key": "trustee.afsl"
+      }
+    },
+    {
+      "target": "data:fund.abn@form",
+      "source": {
+        "type": "data",
+        "key": "fund.abn"
+      }
+    },
+    {
+      "target": "content:identity.name.change.evidence",
+      "source": {
+        "type": "component",
+        "id": "identity.name.change.evidence"
+      }
+    },
+    {
+      "target": "content:income.account.explainer",
+      "source": {
+        "type": "component",
+        "id": "income.account.explainer"
+      }
+    },
+    {
+      "target": "content:bank.details.conditions",
+      "source": {
+        "type": "component",
+        "id": "bank.details.conditions"
+      }
+    },
+    {
+      "target": "asset:icon.online@payments",
+      "source": {
+        "type": "asset",
+        "id": "icon.online"
+      }
+    },
+    {
+      "target": "content:income.payment.conditions",
+      "source": {
+        "type": "component",
+        "id": "income.payment.conditions"
+      }
+    },
+    {
+      "target": "content:income.payment.footnotes",
+      "source": {
+        "type": "component",
+        "id": "income.payment.footnotes"
+      }
+    },
+    {
+      "target": "content:identity.electronic.explainer",
+      "source": {
+        "type": "component",
+        "id": "identity.electronic.explainer"
+      }
+    },
+    {
+      "target": "content:identity.document.option",
+      "source": {
+        "type": "component",
+        "id": "identity.document.option"
+      }
+    },
+    {
+      "target": "data:contact.identity.url@identity",
+      "source": {
+        "type": "data",
+        "key": "contact.identity.url"
+      }
+    },
+    {
+      "target": "content:declaration.update",
+      "source": {
+        "type": "component",
+        "id": "declaration.update"
+      }
+    },
+    {
+      "target": "content:declaration.representative",
+      "source": {
+        "type": "component",
+        "id": "declaration.representative"
+      }
+    },
+    {
+      "target": "content:return.instructions",
+      "source": {
+        "type": "component",
+        "id": "return.instructions"
+      }
+    },
+    {
+      "target": "data:contact.postal.address@return",
+      "source": {
+        "type": "data",
+        "key": "contact.postal.address"
+      }
+    },
+    {
+      "target": "data:contact.email@return",
+      "source": {
+        "type": "data",
+        "key": "contact.email"
+      }
+    },
+    {
+      "target": "data:contact.phone@return",
+      "source": {
+        "type": "data",
+        "key": "contact.phone"
+      }
+    },
+    {
+      "target": "data:contact.hours@return",
+      "source": {
+        "type": "data",
+        "key": "contact.hours"
+      }
+    },
+    {
+      "target": "content:privacy.statement",
+      "source": {
+        "type": "component",
+        "id": "privacy.statement"
+      }
+    }
+  ],
+  "styleMap": {
+    "heading": "block-title",
+    "body": "body",
+    "body-strong": "body-strong",
+    "list-item": "bullet",
+    "note": "small",
+    "callout-heading": "side-heading",
+    "callout-body": "side-body",
+    "footnote": "footnote"
+  },
+  "formFields": [
+    {
+      "name": "member.number",
+      "type": "text",
+      "binding": "field:member.number",
+      "description": "Member number",
+      "tabOrder": 1
+    },
+    {
+      "name": "current.member.title",
+      "type": "combo",
+      "binding": "field:current.member.title",
+      "description": "Current title",
+      "options": [
+        "Mr",
+        "Mrs",
+        "Ms",
+        "Miss",
+        "Mx",
+        "Dr",
+        "Prof"
+      ],
+      "tabOrder": 2
+    },
+    {
+      "name": "current.member.firstName",
+      "type": "text",
+      "binding": "field:current.member.firstName",
+      "description": "Current first name",
+      "required": true,
+      "tabOrder": 3
+    },
+    {
+      "name": "current.member.middleNames",
+      "type": "text",
+      "binding": "field:current.member.middleNames",
+      "description": "Current middle name(s)",
+      "tabOrder": 4
+    },
+    {
+      "name": "current.member.lastName",
+      "type": "text",
+      "binding": "field:current.member.lastName",
+      "description": "Current last name",
+      "required": true,
+      "tabOrder": 5
+    },
+    {
+      "name": "current.member.dateOfBirth",
+      "type": "text",
+      "binding": "field:current.member.dateOfBirth",
+      "description": "Current date of birth (DD/MM/YYYY)",
+      "required": true,
+      "tabOrder": 6
+    },
+    {
+      "name": "current.member.gender",
+      "type": "radio",
+      "binding": "field:current.member.gender:male",
+      "description": "Current gender: Male",
+      "required": true,
+      "exportValue": "male",
+      "group": "current.member.gender",
+      "tabOrder": 7
+    },
+    {
+      "name": "current.member.gender",
+      "type": "radio",
+      "binding": "field:current.member.gender:female",
+      "description": "Current gender: Female",
+      "exportValue": "female",
+      "group": "current.member.gender",
+      "tabOrder": 8
+    },
+    {
+      "name": "current.member.gender",
+      "type": "radio",
+      "binding": "field:current.member.gender:other",
+      "description": "Current gender: Another term",
+      "exportValue": "other",
+      "group": "current.member.gender",
+      "tabOrder": 9
+    },
+    {
+      "name": "current.address.residential.line1",
+      "type": "text",
+      "binding": "field:current.address.residential.line1",
+      "description": "Current Residential street address",
+      "required": true,
+      "tabOrder": 10
+    },
+    {
+      "name": "current.address.residential.suburb",
+      "type": "text",
+      "binding": "field:current.address.residential.suburb",
+      "description": "Current Residential suburb or town",
+      "required": true,
+      "tabOrder": 11
+    },
+    {
+      "name": "current.address.residential.state",
+      "type": "text",
+      "binding": "field:current.address.residential.state",
+      "description": "Current Residential state",
+      "required": true,
+      "tabOrder": 12
+    },
+    {
+      "name": "current.address.residential.postcode",
+      "type": "text",
+      "binding": "field:current.address.residential.postcode",
+      "description": "Current Residential postcode",
+      "required": true,
+      "tabOrder": 13
+    },
+    {
+      "name": "current.address.postal.line1",
+      "type": "text",
+      "binding": "field:current.address.postal.line1",
+      "description": "Current Postal street address",
+      "tabOrder": 14
+    },
+    {
+      "name": "current.address.postal.suburb",
+      "type": "text",
+      "binding": "field:current.address.postal.suburb",
+      "description": "Current Postal suburb or town",
+      "tabOrder": 15
+    },
+    {
+      "name": "current.address.postal.state",
+      "type": "text",
+      "binding": "field:current.address.postal.state",
+      "description": "Current Postal state",
+      "tabOrder": 16
+    },
+    {
+      "name": "current.address.postal.postcode",
+      "type": "text",
+      "binding": "field:current.address.postal.postcode",
+      "description": "Current Postal postcode",
+      "tabOrder": 17
+    },
+    {
+      "name": "current.member.phone.mobile",
+      "type": "text",
+      "binding": "field:current.member.phone.mobile",
+      "description": "Current mobile number",
+      "tabOrder": 18
+    },
+    {
+      "name": "current.member.phone.daytime",
+      "type": "text",
+      "binding": "field:current.member.phone.daytime",
+      "description": "Current daytime phone number",
+      "tabOrder": 19
+    },
+    {
+      "name": "current.member.email",
+      "type": "text",
+      "binding": "field:current.member.email",
+      "description": "Current email",
+      "required": true,
+      "tabOrder": 20
+    },
+    {
+      "name": "change.account.accumulation",
+      "type": "checkbox",
+      "binding": "field:change.account.accumulation",
+      "description": "Accumulation account",
+      "exportValue": "Yes",
+      "tabOrder": 21
+    },
+    {
+      "name": "change.account.employerPlan",
+      "type": "checkbox",
+      "binding": "field:change.account.employerPlan",
+      "description": "Employer plan account",
+      "exportValue": "Yes",
+      "tabOrder": 22
+    },
+    {
+      "name": "change.account.income",
+      "type": "checkbox",
+      "binding": "field:change.account.income",
+      "description": "Retirement income account",
+      "exportValue": "Yes",
+      "tabOrder": 23
+    },
+    {
+      "name": "change.account.businessPlan",
+      "type": "checkbox",
+      "binding": "field:change.account.businessPlan",
+      "description": "Business plan account",
+      "exportValue": "Yes",
+      "tabOrder": 24
+    },
+    {
+      "name": "new.address.residential.line1",
+      "type": "text",
+      "binding": "field:new.address.residential.line1",
+      "description": "New Residential street address",
+      "tabOrder": 25
+    },
+    {
+      "name": "new.address.residential.suburb",
+      "type": "text",
+      "binding": "field:new.address.residential.suburb",
+      "description": "New Residential suburb or town",
+      "tabOrder": 26
+    },
+    {
+      "name": "new.address.residential.state",
+      "type": "text",
+      "binding": "field:new.address.residential.state",
+      "description": "New Residential state",
+      "tabOrder": 27
+    },
+    {
+      "name": "new.address.residential.postcode",
+      "type": "text",
+      "binding": "field:new.address.residential.postcode",
+      "description": "New Residential postcode",
+      "tabOrder": 28
+    },
+    {
+      "name": "new.address.postal.line1",
+      "type": "text",
+      "binding": "field:new.address.postal.line1",
+      "description": "New Postal street address",
+      "tabOrder": 29
+    },
+    {
+      "name": "new.address.postal.suburb",
+      "type": "text",
+      "binding": "field:new.address.postal.suburb",
+      "description": "New Postal suburb or town",
+      "tabOrder": 30
+    },
+    {
+      "name": "new.address.postal.state",
+      "type": "text",
+      "binding": "field:new.address.postal.state",
+      "description": "New Postal state",
+      "tabOrder": 31
+    },
+    {
+      "name": "new.address.postal.postcode",
+      "type": "text",
+      "binding": "field:new.address.postal.postcode",
+      "description": "New Postal postcode",
+      "tabOrder": 32
+    },
+    {
+      "name": "new.member.phone.mobile",
+      "type": "text",
+      "binding": "field:new.member.phone.mobile",
+      "description": "New mobile number",
+      "tabOrder": 33
+    },
+    {
+      "name": "new.member.phone.daytime",
+      "type": "text",
+      "binding": "field:new.member.phone.daytime",
+      "description": "New daytime phone number",
+      "tabOrder": 34
+    },
+    {
+      "name": "new.member.email",
+      "type": "text",
+      "binding": "field:new.member.email",
+      "description": "New email",
+      "tabOrder": 35
+    },
+    {
+      "name": "new.member.title",
+      "type": "combo",
+      "binding": "field:new.member.title",
+      "description": "New title",
+      "options": [
+        "Mr",
+        "Mrs",
+        "Ms",
+        "Miss",
+        "Mx",
+        "Dr",
+        "Prof"
+      ],
+      "tabOrder": 36
+    },
+    {
+      "name": "new.member.firstName",
+      "type": "text",
+      "binding": "field:new.member.firstName",
+      "description": "New first name",
+      "tabOrder": 37
+    },
+    {
+      "name": "new.member.middleNames",
+      "type": "text",
+      "binding": "field:new.member.middleNames",
+      "description": "New middle name(s)",
+      "tabOrder": 38
+    },
+    {
+      "name": "new.member.lastName",
+      "type": "text",
+      "binding": "field:new.member.lastName",
+      "description": "New last name",
+      "tabOrder": 39
+    },
+    {
+      "name": "new.member.dateOfBirth",
+      "type": "text",
+      "binding": "field:new.member.dateOfBirth",
+      "description": "New date of birth (DD/MM/YYYY)",
+      "tabOrder": 40
+    },
+    {
+      "name": "new.member.gender",
+      "type": "radio",
+      "binding": "field:new.member.gender:male",
+      "description": "New gender: Male",
+      "exportValue": "male",
+      "group": "new.member.gender",
+      "tabOrder": 41
+    },
+    {
+      "name": "new.member.gender",
+      "type": "radio",
+      "binding": "field:new.member.gender:female",
+      "description": "New gender: Female",
+      "exportValue": "female",
+      "group": "new.member.gender",
+      "tabOrder": 42
+    },
+    {
+      "name": "new.member.gender",
+      "type": "radio",
+      "binding": "field:new.member.gender:other",
+      "description": "New gender: Another term",
+      "exportValue": "other",
+      "group": "new.member.gender",
+      "tabOrder": 43
+    },
+    {
+      "name": "bank.primary.accountName",
+      "type": "text",
+      "binding": "field:bank.primary.accountName",
+      "description": "Primary account account name",
+      "tabOrder": 44
+    },
+    {
+      "name": "bank.primary.bsb",
+      "type": "text",
+      "binding": "field:bank.primary.bsb",
+      "description": "Primary account BSB",
+      "tabOrder": 45
+    },
+    {
+      "name": "bank.primary.accountNumber",
+      "type": "text",
+      "binding": "field:bank.primary.accountNumber",
+      "description": "Primary account account number",
+      "tabOrder": 46
+    },
+    {
+      "name": "bank.primary.institution",
+      "type": "text",
+      "binding": "field:bank.primary.institution",
+      "description": "Primary account financial institution",
+      "tabOrder": 47
+    },
+    {
+      "name": "bank.secondary.accountName",
+      "type": "text",
+      "binding": "field:bank.secondary.accountName",
+      "description": "Secondary account account name",
+      "tabOrder": 48
+    },
+    {
+      "name": "bank.secondary.bsb",
+      "type": "text",
+      "binding": "field:bank.secondary.bsb",
+      "description": "Secondary account BSB",
+      "tabOrder": 49
+    },
+    {
+      "name": "bank.secondary.accountNumber",
+      "type": "text",
+      "binding": "field:bank.secondary.accountNumber",
+      "description": "Secondary account account number",
+      "tabOrder": 50
+    },
+    {
+      "name": "bank.secondary.institution",
+      "type": "text",
+      "binding": "field:bank.secondary.institution",
+      "description": "Secondary account financial institution",
+      "tabOrder": 51
+    },
+    {
+      "name": "income.amountType",
+      "type": "radio",
+      "binding": "field:income.amountType:minimum",
+      "description": "Payment amount: Minimum amount",
+      "exportValue": "minimum",
+      "group": "income.amountType",
+      "tabOrder": 52
+    },
+    {
+      "name": "income.amountType",
+      "type": "radio",
+      "binding": "field:income.amountType:specific",
+      "description": "Payment amount: A set amount per payment",
+      "exportValue": "specific",
+      "group": "income.amountType",
+      "tabOrder": 53
+    },
+    {
+      "name": "income.specificAmount",
+      "type": "text",
+      "binding": "field:income.specificAmount",
+      "description": "Amount per payment ($)",
+      "tabOrder": 54
+    },
+    {
+      "name": "income.amountType",
+      "type": "radio",
+      "binding": "field:income.amountType:maximum",
+      "description": "Payment amount: Maximum amount (transition to retirement)",
+      "exportValue": "maximum",
+      "group": "income.amountType",
+      "tabOrder": 55
+    },
+    {
+      "name": "income.amountType",
+      "type": "radio",
+      "binding": "field:income.amountType:maximumProRata",
+      "description": "Payment amount: Pro rata maximum (transition to retirement)",
+      "exportValue": "maximumProRata",
+      "group": "income.amountType",
+      "tabOrder": 56
+    },
+    {
+      "name": "income.frequency",
+      "type": "radio",
+      "binding": "field:income.frequency:fortnightly",
+      "description": "Payment frequency: Fortnightly",
+      "exportValue": "fortnightly",
+      "group": "income.frequency",
+      "tabOrder": 57
+    },
+    {
+      "name": "income.frequency",
+      "type": "radio",
+      "binding": "field:income.frequency:monthly",
+      "description": "Payment frequency: Monthly",
+      "exportValue": "monthly",
+      "group": "income.frequency",
+      "tabOrder": 58
+    },
+    {
+      "name": "income.frequency",
+      "type": "radio",
+      "binding": "field:income.frequency:quarterly",
+      "description": "Payment frequency: Quarterly",
+      "exportValue": "quarterly",
+      "group": "income.frequency",
+      "tabOrder": 59
+    },
+    {
+      "name": "income.frequency",
+      "type": "radio",
+      "binding": "field:income.frequency:halfYearly",
+      "description": "Payment frequency: Half yearly",
+      "exportValue": "halfYearly",
+      "group": "income.frequency",
+      "tabOrder": 60
+    },
+    {
+      "name": "income.frequency",
+      "type": "radio",
+      "binding": "field:income.frequency:yearly",
+      "description": "Payment frequency: Yearly",
+      "exportValue": "yearly",
+      "group": "income.frequency",
+      "tabOrder": 61
+    },
+    {
+      "name": "income.startDate",
+      "type": "text",
+      "binding": "field:income.startDate",
+      "description": "Start payments from (DD/MM/YYYY)",
+      "tabOrder": 62
+    },
+    {
+      "name": "identity.consentElectronic",
+      "type": "checkbox",
+      "binding": "field:identity.consentElectronic",
+      "description": "I consent to electronic identity verification",
+      "exportValue": "Yes",
+      "tabOrder": 63
+    },
+    {
+      "name": "identity.licence.fullName",
+      "type": "text",
+      "binding": "field:identity.licence.fullName",
+      "description": "Full name as shown on driver licence",
+      "tabOrder": 64
+    },
+    {
+      "name": "identity.licence.number",
+      "type": "text",
+      "binding": "field:identity.licence.number",
+      "description": "Licence number",
+      "tabOrder": 65
+    },
+    {
+      "name": "identity.licence.cardNumber",
+      "type": "text",
+      "binding": "field:identity.licence.cardNumber",
+      "description": "Card number",
+      "tabOrder": 66
+    },
+    {
+      "name": "identity.licence.state",
+      "type": "text",
+      "binding": "field:identity.licence.state",
+      "description": "State of issue",
+      "tabOrder": 67
+    },
+    {
+      "name": "identity.licence.expiry",
+      "type": "text",
+      "binding": "field:identity.licence.expiry",
+      "description": "Licence expiry date (DD/MM/YYYY)",
+      "tabOrder": 68
+    },
+    {
+      "name": "identity.passport.number",
+      "type": "text",
+      "binding": "field:identity.passport.number",
+      "description": "Passport number",
+      "tabOrder": 69
+    },
+    {
+      "name": "identity.passport.expiry",
+      "type": "text",
+      "binding": "field:identity.passport.expiry",
+      "description": "Passport expiry date (DD/MM/YYYY)",
+      "tabOrder": 70
+    },
+    {
+      "name": "identity.passport.fullName",
+      "type": "text",
+      "binding": "field:identity.passport.fullName",
+      "description": "Full name as shown on passport",
+      "tabOrder": 71
+    },
+    {
+      "name": "identity.passport.placeOfBirth",
+      "type": "text",
+      "binding": "field:identity.passport.placeOfBirth",
+      "description": "Place of birth",
+      "tabOrder": 72
+    },
+    {
+      "name": "identity.passport.countryOfBirth",
+      "type": "text",
+      "binding": "field:identity.passport.countryOfBirth",
+      "description": "Country of birth",
+      "tabOrder": 73
+    },
+    {
+      "name": "identity.passport.familyNameAtBirth",
+      "type": "text",
+      "binding": "field:identity.passport.familyNameAtBirth",
+      "description": "Family name at birth",
+      "tabOrder": 74
+    },
+    {
+      "name": "identity.medicare.fullName",
+      "type": "text",
+      "binding": "field:identity.medicare.fullName",
+      "description": "Full name as shown on Medicare card",
+      "tabOrder": 75
+    },
+    {
+      "name": "identity.medicare.number",
+      "type": "text",
+      "binding": "field:identity.medicare.number",
+      "description": "Medicare number",
+      "tabOrder": 76
+    },
+    {
+      "name": "identity.medicare.expiry",
+      "type": "text",
+      "binding": "field:identity.medicare.expiry",
+      "description": "Medicare card expiry (MM/YY)",
+      "tabOrder": 77
+    },
+    {
+      "name": "identity.medicare.referenceNumber",
+      "type": "text",
+      "binding": "field:identity.medicare.referenceNumber",
+      "description": "Individual reference number",
+      "tabOrder": 78
+    },
+    {
+      "name": "identity.medicare.cardColour",
+      "type": "radio",
+      "binding": "field:identity.medicare.cardColour:green",
+      "description": "Medicare card colour: Green",
+      "exportValue": "green",
+      "group": "identity.medicare.cardColour",
+      "tabOrder": 79
+    },
+    {
+      "name": "identity.medicare.cardColour",
+      "type": "radio",
+      "binding": "field:identity.medicare.cardColour:blue",
+      "description": "Medicare card colour: Blue",
+      "exportValue": "blue",
+      "group": "identity.medicare.cardColour",
+      "tabOrder": 80
+    },
+    {
+      "name": "identity.medicare.cardColour",
+      "type": "radio",
+      "binding": "field:identity.medicare.cardColour:yellow",
+      "description": "Medicare card colour: Yellow",
+      "exportValue": "yellow",
+      "group": "identity.medicare.cardColour",
+      "tabOrder": 81
+    },
+    {
+      "name": "identity.documentBased",
+      "type": "checkbox",
+      "binding": "field:identity.documentBased",
+      "description": "I will provide certified identity documents instead",
+      "exportValue": "Yes",
+      "tabOrder": 82
+    },
+    {
+      "name": "checklist.readGuide",
+      "type": "checkbox",
+      "binding": "field:checklist.readGuide",
+      "description": "I have read the guide on page 1",
+      "exportValue": "Yes",
+      "tabOrder": 83
+    },
+    {
+      "name": "checklist.mandatoryComplete",
+      "type": "checkbox",
+      "binding": "field:checklist.mandatoryComplete",
+      "description": "I have completed every mandatory field",
+      "exportValue": "Yes",
+      "tabOrder": 84
+    },
+    {
+      "name": "checklist.nameChanged",
+      "type": "checkbox",
+      "binding": "field:checklist.nameChanged",
+      "description": "My name has changed and I have attached evidence",
+      "exportValue": "Yes",
+      "tabOrder": 85
+    },
+    {
+      "name": "checklist.signingOnBehalf",
+      "type": "checkbox",
+      "binding": "field:checklist.signingOnBehalf",
+      "description": "I am signing on behalf of the member and have attached my authority",
+      "exportValue": "Yes",
+      "tabOrder": 86
+    },
+    {
+      "name": "checklist.signedAndDated",
+      "type": "checkbox",
+      "binding": "field:checklist.signedAndDated",
+      "description": "I have signed and dated the form",
+      "exportValue": "Yes",
+      "tabOrder": 87
+    },
+    {
+      "name": "checklist.identityCorrected",
+      "type": "checkbox",
+      "binding": "field:checklist.identityCorrected",
+      "description": "I am correcting my name, date of birth or gender and have attached identification",
+      "exportValue": "Yes",
+      "tabOrder": 88
+    },
+    {
+      "name": "checklist.incomeChange",
+      "type": "checkbox",
+      "binding": "field:checklist.incomeChange",
+      "description": "I have asked to change my income payments",
+      "exportValue": "Yes",
+      "tabOrder": 89
+    },
+    {
+      "name": "declaration.name",
+      "type": "text",
+      "binding": "field:declaration.name",
+      "description": "Full name (block letters)",
+      "required": true,
+      "tabOrder": 90
+    },
+    {
+      "name": "declaration.signature",
+      "type": "signature",
+      "binding": "field:declaration.signature",
+      "description": "Signature",
+      "required": true,
+      "tabOrder": 91
+    },
+    {
+      "name": "declaration.date",
+      "type": "text",
+      "binding": "field:declaration.date",
+      "description": "Date signed (DD/MM/YYYY)",
+      "required": true,
+      "tabOrder": 92
+    },
+    {
+      "name": "representative.name",
+      "type": "text",
+      "binding": "field:representative.name",
+      "description": "Representative's full name (block letters)",
+      "tabOrder": 93
+    },
+    {
+      "name": "representative.signature",
+      "type": "signature",
+      "binding": "field:representative.signature",
+      "description": "Representative's signature",
+      "tabOrder": 94
+    },
+    {
+      "name": "representative.date",
+      "type": "text",
+      "binding": "field:representative.date",
+      "description": "Date signed by representative (DD/MM/YYYY)",
+      "tabOrder": 95
+    }
+  ],
+  "output": {
+    "printPdf": true,
+    "interactivePdf": true,
+    "saveIndd": true
+  }
+}

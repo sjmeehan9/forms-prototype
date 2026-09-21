@@ -25,7 +25,12 @@
     "list:frameio": "npm run prototype --silent -- list-frameio",
     "request:frameio": "npm run prototype --silent -- request-frameio",
     "samples:create": "npm run prototype --silent -- create-samples",
+    "panel:ping": "npm run prototype --silent -- ping-panel",
     "fixture:e2e": "npm run prototype --silent -- fixture-e2e",
+    "demo:layouts": "node tools/pdf-inventory/build-layouts.mjs",
+    "demo:build": "FIXTURE_STORE=fixtures/demo-forms/store LOCAL_STORAGE_ROOT=.prototype/local-demo npm run prototype --silent -- build-demo",
+    "demo:run": "FIXTURE_STORE=fixtures/demo-forms/store LOCAL_STORAGE_ROOT=.prototype/local-demo npm run prototype --silent -- --storage local --composition uxp run",
+    "demo:dry": "FIXTURE_STORE=fixtures/demo-forms/store LOCAL_STORAGE_ROOT=.prototype/local-demo npm run prototype --silent -- --storage local --composition dry-run run",
     "ingest:inventory": "node tools/pdf-inventory/inventory.mjs",
     "ingest:validate": "node tools/pdf-inventory/validate-maps.mjs",
     "ingest:worksheet": "node tools/pdf-inventory/worksheet.mjs"

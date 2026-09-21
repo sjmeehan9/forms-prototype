@@ -6,9 +6,11 @@ import { loadConfig, requireFrameioCredentials } from "./config.js";
 import { errorDetails, errorMessage } from "./domain/models.js";
 import { createLogger } from "./log.js";
 import { bootstrapFrameio } from "./orchestrator/bootstrap-frameio.js";
+import { buildDemo } from "./orchestrator/build-demo.js";
 import { createContext } from "./orchestrator/context.js";
 import { createSamples } from "./orchestrator/create-samples.js";
 import { assertExpectedE2E, runFixtureE2E } from "./orchestrator/fixture-e2e.js";
+import { pingPanel } from "./orchestrator/ping-panel.js";
 import { watch } from "./orchestrator/poller.js";
 import { probeFrameio } from "./orchestrator/probe-frameio.js";
 import { requestFrameio } from "./orchestrator/request-frameio.js";
@@ -53,6 +55,9 @@ program
   .action(async () => {
     const config = await loadConfig({ overrides: overrides() });
     const ctx = await createContext(config, log);
+    if (config.compositionMode === "uxp") {
+      await pingPanel(config, log);
+    }
     const controller = new AbortController();
     process.once("SIGINT", () => {
       log.info("stopping after the current request");
@@ -70,6 +75,9 @@ program
     const ref = await ctx.orchestration.findRequest(requestId);
     if (!ref) {
       throw new Error(`request folder ${requestId} was not found in any state folder`);
+    }
+    if (config.compositionMode === "uxp") {
+      await pingPanel(config, log);
     }
     const outcome = await runRequest(ctx, ref);
     printOutcome(outcome);
@@ -118,14 +126,36 @@ program
   .description("Upload the synthetic fixture source package into the Frame.io layout and optionally create a request")
   .option("--request <name>", "also create this request folder under Ready to generate")
   .option("--replace", "delete same-named files before uploading", false)
-  .option("--from <dir>", "seed from this store instead of the fixture, e.g. .prototype/local-frameio after create-samples")
-  .action(async (options: { request?: string; replace: boolean; from?: string }) => {
+  .option("--from <dir>", "seed from this store instead of the fixture, e.g. .prototype/local-demo after build-demo")
+  .option("--prune", "move Frame.io items that are not in the source store into 99 Archive instead of leaving them", false)
+  .action(async (options: { request?: string; replace: boolean; from?: string; prune: boolean }) => {
     const config = await loadConfig({ overrides: overrides() });
-    const summary = await seedFrameio(config, log, { requestName: options.request, replace: options.replace, from: options.from });
-    log.info(`uploaded ${summary.uploaded} file(s), skipped ${summary.skipped} existing, replaced ${summary.replaced}`);
+    const summary = await seedFrameio(config, log, { requestName: options.request, replace: options.replace, from: options.from, prune: options.prune });
+    log.info(`uploaded ${summary.uploaded} file(s), skipped ${summary.skipped} existing, replaced ${summary.replaced}, archived ${summary.archived}`);
     if (summary.requestFolderId) {
       log.info(`request ${options.request} is waiting in Ready to generate (${summary.requestFolderId})`);
     }
+  });
+
+program
+  .command("ping-panel")
+  .description("Check that the InDesign panel is running the current build")
+  .action(async () => {
+    const config = await loadConfig({ overrides: overrides() });
+    await pingPanel(config, log);
+  });
+
+program
+  .command("build-demo")
+  .description("Ask the running InDesign panel to build the content library and the layout-driven templates into the local store")
+  .action(async () => {
+    const config = await loadConfig({ overrides: { ...overrides(), STORAGE_MODE: "local", COMPOSITION_MODE: "uxp" } });
+    await pingPanel(config, log);
+    const result = await buildDemo(config, log);
+    for (const note of result.notes) {
+      log.info(`  ${note}`);
+    }
+    log.info(`built ${result.outputs.length} file(s) into ${config.localStorageRoot}`);
   });
 
 program

@@ -17,6 +17,7 @@ await build({
   external: ["uxp", "indesign"],
   mainFields: ["module", "main"],
   conditions: ["import", "default"],
+  define: { __PLUGIN_BUILD__: JSON.stringify(new Date().toISOString().slice(0, 16).replace("T", " ")) },
   logLevel: "warning",
 });
 cpSync(path.join(here, "manifest.json"), path.join(dist, "manifest.json"));
