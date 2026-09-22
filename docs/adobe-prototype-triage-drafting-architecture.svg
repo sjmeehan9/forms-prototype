@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="1070" viewBox="0 0 1640 1070">
+
+<rect width="1640" height="1070" fill="#ffffff"/>
+<text x="40" y="44" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#1d1d1f" text-anchor="start">From brief to published document: request triage, drafting and the generation loop</text>
+<text x="40" y="70" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#555" text-anchor="start">Solid blue: built in the prototype.  Dashed purple: proposed extension.  Grey: production equivalent of each prototype part.</text>
+<text x="40" y="108" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#6f42c1" text-anchor="start">Request intake, triage and drafting (proposed)</text>
+<rect x="60" y="122" width="330" height="190" rx="10" fill="#f4eefc" stroke="#6f42c1" stroke-width="2" stroke-dasharray="9 5"/>
+<text x="76" y="150" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1d1d1f">Workfront: structured brief</text>
+<text x="76" y="174" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Request type, documents and brands</text>
+<text x="76" y="193" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Change set: what, where, effective date</text>
+<text x="76" y="212" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Owner, priority and release date</text>
+<text x="76" y="231" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Markups attached, never re-typed</text>
+<text x="76" y="300" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-style="italic" fill="#5a5a5a">Problems 14, 17, 19, 20</text>
+<rect x="450" y="122" width="330" height="190" rx="10" fill="#f4eefc" stroke="#6f42c1" stroke-width="2" stroke-dasharray="9 5"/>
+<text x="466" y="150" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1d1d1f">Triage application (AI-enabled)</text>
+<text x="466" y="174" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Checks structure and required data</text>
+<text x="466" y="193" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Reads markups into one structured change set</text>
+<text x="466" y="212" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Asks the requester for anything missing</text>
+<text x="466" y="231" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Routes to drafting or back to the requester</text>
+<text x="466" y="300" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-style="italic" fill="#5a5a5a">Problems 14, 15, 17</text>
+<rect x="840" y="122" width="330" height="190" rx="10" fill="#f4eefc" stroke="#6f42c1" stroke-width="2" stroke-dasharray="9 5"/>
+<text x="856" y="150" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1d1d1f">Drafting application (AI-enabled)</text>
+<text x="856" y="174" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Applies the change set as a draft: stories,</text>
+<text x="856" y="193" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">data values and templates, within brand rules</text>
+<text x="856" y="212" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Runs the prototype's validation and checks</text>
+<text x="856" y="231" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Writes a change summary for the reviewer</text>
+<text x="856" y="300" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-style="italic" fill="#5a5a5a">Problems 5, 15, 16, 17</text>
+<rect x="1230" y="122" width="330" height="190" rx="10" fill="#f4eefc" stroke="#6f42c1" stroke-width="2" stroke-dasharray="9 5"/>
+<text x="1246" y="150" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1d1d1f">Workfront: review and approval</text>
+<text x="1246" y="174" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Content owner reviews the draft release</text>
+<text x="1246" y="193" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Approve: a generation request is raised</text>
+<text x="1246" y="212" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Reject: back to drafting with comments</text>
+<text x="1246" y="231" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Every step recorded for audit</text>
+<text x="1246" y="300" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-style="italic" fill="#5a5a5a">Problems 13, 20</text>
+<path d="M 390.0 200.0 L 444.0 200.0" fill="none" stroke="#1d1d1f" stroke-width="1.8"/><polygon points="450.0,200.0 439.0,205.5 439.0,194.5" fill="#1d1d1f"/>
+<text x="400" y="193" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#333">brief</text>
+<path d="M 780.0 200.0 L 834.0 200.0" fill="none" stroke="#1d1d1f" stroke-width="1.8"/><polygon points="840.0,200.0 829.0,205.5 829.0,194.5" fill="#1d1d1f"/>
+<text x="787" y="193" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#333">change set</text>
+<path d="M 1170.0 200.0 L 1224.0 200.0" fill="none" stroke="#1d1d1f" stroke-width="1.8"/><polygon points="1230.0,200.0 1219.0,205.5 1219.0,194.5" fill="#1d1d1f"/>
+<text x="1172" y="193" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#333">draft release</text>
+<path d="M 450.0 292.0 L 396.0 292.0" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-dasharray="7 5"/><polygon points="390.0,292.0 401.0,286.5 401.0,297.5" fill="#1d1d1f"/>
+<text x="402" y="306" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#333">clarify</text>
+<path d="M 1230.0 292.0 L 1176.0 292.0" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-dasharray="7 5"/><polygon points="1170.0,292.0 1181.0,286.5 1181.0,297.5" fill="#1d1d1f"/>
+<text x="1178" y="306" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#333">changes</text>
+<rect x="40" y="385" width="1560" height="400" rx="14" fill="#fbfcfe" stroke="#1f5fbf" stroke-width="2"/>
+<text x="60" y="409" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f5fbf" text-anchor="start">Generation loop (built in the prototype)</text>
+<rect x="60" y="435" width="330" height="140" rx="10" fill="#e8f1fb" stroke="#1f5fbf" stroke-width="2"/>
+<text x="76" y="463" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1d1d1f">InDesign library and templates</text>
+<text x="76" y="487" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Business user edits approved stories</text>
+<text x="76" y="506" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Specialist maintains labelled templates</text>
+<text x="76" y="563" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-style="italic" fill="#5a5a5a">Problems 4, 9, 16</text>
+<rect x="60" y="615" width="330" height="140" rx="10" fill="#e8f1fb" stroke="#1f5fbf" stroke-width="2"/>
+<text x="76" y="643" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1d1d1f">Shared workspace (Frame.io)</text>
+<text x="76" y="667" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Sources, templates, requests,</text>
+<text x="76" y="686" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">outputs and evidence in one place</text>
+<text x="76" y="743" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-style="italic" fill="#5a5a5a">Problems 1, 2, 3, 8</text>
+<rect x="645" y="435" width="330" height="140" rx="10" fill="#e8f1fb" stroke="#1f5fbf" stroke-width="2"/>
+<text x="661" y="463" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1d1d1f">Approval and publishing</text>
+<text x="661" y="487" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Ready for review in the workspace</text>
+<text x="661" y="506" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Workfront approval, then AEM Sites</text>
+<text x="661" y="563" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-style="italic" fill="#5a5a5a">Problems 11, 20</text>
+<rect x="645" y="615" width="330" height="140" rx="10" fill="#e8f1fb" stroke="#1f5fbf" stroke-width="2"/>
+<text x="661" y="643" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1d1d1f">Checks and outputs</text>
+<text x="661" y="667" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Preflight, fields, links and fonts on every build</text>
+<text x="661" y="686" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">INDD, print PDF, interactive PDF, manifest</text>
+<text x="661" y="743" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-style="italic" fill="#5a5a5a">Problems 7, 10, 12</text>
+<rect x="1230" y="435" width="330" height="140" rx="10" fill="#e8f1fb" stroke="#1f5fbf" stroke-width="2"/>
+<text x="1246" y="463" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1d1d1f">Orchestration service</text>
+<text x="1246" y="487" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Detect request, validate, find affected outputs</text>
+<text x="1246" y="506" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Resolve brand and data, record evidence</text>
+<text x="1246" y="563" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-style="italic" fill="#5a5a5a">Problems 3, 4, 6, 11</text>
+<rect x="1230" y="615" width="330" height="140" rx="10" fill="#e8f1fb" stroke="#1f5fbf" stroke-width="2"/>
+<text x="1246" y="643" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1d1d1f">Composition (InDesign)</text>
+<text x="1246" y="667" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Populate labelled targets, configure fields</text>
+<text x="1246" y="686" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">Export INDD and PDF; hard-fail on overset</text>
+<text x="1246" y="743" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-style="italic" fill="#5a5a5a">Problems 9, 10, 11</text>
+<path d="M 1395.0 312.0 L 1395.0 429.0" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-dasharray="7 5"/><polygon points="1395.0,435.0 1389.5,424.0 1400.5,424.0" fill="#1d1d1f"/>
+<text x="1405" y="380" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#333">approved: generation request</text>
+<path d="M 1005.0 312.0 L 1005.0 345.0 L 225.0 345.0 L 225.0 429.0" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-dasharray="7 5"/><polygon points="225.0,435.0 219.5,424.0 230.5,424.0" fill="#1d1d1f"/>
+<text x="300" y="338" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#333">draft edits to stories, data and templates</text>
+<path d="M 390.0 650.0 L 430.0 650.0 L 430.0 412.0 L 1300.0 412.0 L 1300.0 429.0" fill="none" stroke="#1d1d1f" stroke-width="1.8"/><polygon points="1300.0,435.0 1294.5,424.0 1305.5,424.0" fill="#1d1d1f"/>
+<text x="700" y="407" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#333">source snapshot and request</text>
+<path d="M 1395.0 575.0 L 1395.0 609.0" fill="none" stroke="#1d1d1f" stroke-width="1.8"/><polygon points="1395.0,615.0 1389.5,604.0 1400.5,604.0" fill="#1d1d1f"/>
+<text x="1405" y="600" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#333">compose job</text>
+<path d="M 1230.0 700.0 L 981.0 700.0" fill="none" stroke="#1d1d1f" stroke-width="1.8"/><polygon points="975.0,700.0 986.0,694.5 986.0,705.5" fill="#1d1d1f"/>
+<text x="1020" y="693" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#333">INDD, PDF and check results</text>
+<path d="M 810.0 615.0 L 810.0 581.0" fill="none" stroke="#1d1d1f" stroke-width="1.8"/><polygon points="810.0,575.0 815.5,586.0 804.5,586.0" fill="#1d1d1f"/>
+<text x="820" y="600" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#333">verified outputs</text>
+<path d="M 645.0 735.0 L 396.0 735.0" fill="none" stroke="#1d1d1f" stroke-width="1.8"/><polygon points="390.0,735.0 401.0,729.5 401.0,740.5" fill="#1d1d1f"/>
+<text x="420" y="750" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#333">outputs and evidence returned</text>
+<path d="M 225.0 581.0 L 225.0 609.0" fill="none" stroke="#1d1d1f" stroke-width="1.8"/><polygon points="225.0,615.0 219.5,604.0 230.5,604.0" fill="#1d1d1f"/><polygon points="225.0,575.0 230.5,586.0 219.5,586.0" fill="#1d1d1f"/>
+<text x="235" y="600" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#333">open, edit, save</text>
+<text x="40" y="826" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#555" text-anchor="start">Production equivalents</text>
+<rect x="60" y="838" width="330" height="118" rx="10" fill="#f3f3f3" stroke="#7a7a7a" stroke-width="2"/>
+<text x="76" y="866" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1d1d1f">Frame.io workspace</text>
+<text x="76" y="890" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">becomes AEM Assets for governed</text>
+<text x="76" y="909" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">content and digital assets</text>
+<rect x="450" y="838" width="330" height="118" rx="10" fill="#f3f3f3" stroke="#7a7a7a" stroke-width="2"/>
+<text x="466" y="866" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1d1d1f">Status folders and manifests</text>
+<text x="466" y="890" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">become Workfront workflow states,</text>
+<text x="466" y="909" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">approvals and audit records</text>
+<rect x="840" y="838" width="330" height="118" rx="10" fill="#f3f3f3" stroke="#7a7a7a" stroke-width="2"/>
+<text x="856" y="866" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1d1d1f">Local orchestration service</text>
+<text x="856" y="890" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">becomes Adobe App Builder: I/O Runtime</text>
+<text x="856" y="909" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">actions, I/O Events triggers, State storage</text>
+<rect x="1230" y="838" width="330" height="118" rx="10" fill="#f3f3f3" stroke="#7a7a7a" stroke-width="2"/>
+<text x="1246" y="866" font-family="Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1d1d1f">InDesign desktop panel</text>
+<text x="1246" y="890" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">becomes the InDesign API (Firefly Services)</text>
+<text x="1246" y="909" font-family="Helvetica, Arial, sans-serif" font-size="12.8" fill="#1d1d1f">or InDesign Server</text>
+<rect x="60" y="1001" width="26" height="14" fill="#e8f1fb" stroke="#1f5fbf" stroke-width="2"/>
+<text x="94" y="1012" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#333" text-anchor="start">Built and demonstrated in the prototype</text>
+<rect x="380" y="1001" width="26" height="14" fill="#f4eefc" stroke="#6f42c1" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="414" y="1012" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#333" text-anchor="start">Proposed: not built, depends on the production platform</text>
+<rect x="800" y="1001" width="26" height="14" fill="#f3f3f3" stroke="#7a7a7a" stroke-width="2"/>
+<text x="834" y="1012" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#333" text-anchor="start">Production equivalent</text>
+<text x="1600" y="1012" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#555" text-anchor="end">Problem numbers refer to uc3-document-production-problem-statements.md</text>
+</svg>
